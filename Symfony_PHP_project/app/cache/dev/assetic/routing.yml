@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /home/minoflaz/Projet_IP/project/app/config/routing_dev.yml
