@@ -1,0 +1,4 @@
+IPBundle\Entity\Eleve:
+    properties:
+        sexe:
+            - Choice: { choices: [male, female], message: Choose a valid gender. }

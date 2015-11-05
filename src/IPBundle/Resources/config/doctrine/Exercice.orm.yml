@@ -1,0 +1,20 @@
+IPBundle\Entity\Exercice:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        intitule:
+            type: string
+            length: 255
+        reponse:
+            type: string
+            length: 255
+        difficulte:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

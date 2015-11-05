@@ -1,0 +1,14 @@
+IPBundle\Entity\Mask:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        mask:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

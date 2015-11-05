@@ -1,0 +1,93 @@
+<?php
+
+namespace IPBundle\Entity;
+
+use IPBundle\Entity\Exercice;
+
+/**
+ * Note
+ */
+class Note
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $valeur;
+
+    /**
+     * @var \DateTime
+     */
+    private $date;
+    
+    protected $exercice;
+
+    public function __construct()
+    {
+        $this->exercice = new Exercice();
+    }
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set valeur
+     *
+     * @param integer $valeur
+     *
+     * @return Note
+     */
+    public function setValeur($valeur)
+    {
+        $this->valeur = $valeur;
+
+        return $this;
+    }
+
+    /**
+     * Get valeur
+     *
+     * @return integer
+     */
+    public function getValeur()
+    {
+        return $this->valeur;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Note
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+}

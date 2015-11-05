@@ -1,0 +1,21 @@
+IPBundle\Entity\Note:
+    type: entity
+    manyToOne:
+        eleve:
+            targetEntity: IPBundle\Entity\Eleve
+            inversedBy: notes
+            joinColumn:
+                nullable: false
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        valeur:
+            type: integer
+        date:
+            type: date
+    lifecycleCallbacks: {  }

@@ -1,0 +1,35 @@
+ip:
+    resource: "@IPBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+giveMask:
+    path: /giveMask/{ip}/{nbSubNet}
+    defaults: {_controller : IPBundle:Default:giveMask}
+
+addEleve:
+    path: /addEleve
+    defaults: {_controller : IPBundle:Database:addEleve}
+
+addNoteEleve:
+    path: /addNoteEleve/{valeur}/{idEleve}
+    defaults: {_controller : IPBundle:Database:addNoteEleve}
+
+showAllEleve:
+    path: /showAllEleve
+    defaults: {_controller : IPBundle:Database:showAllEleve}
+
+showNotesEleve:
+    path: /showNotesEleve/{idEleve}
+    defaults: {_controller : IPBundle:Database:showNotesEleve}
+
+testAffichage:
+    path: /testAffichage
+    defaults: {_controller : IPBundle:Default:testAffichage}
+
+exoMask:
+    path: /exoMask
+    defaults: {_controller : IPBundle:Default:exoMask}

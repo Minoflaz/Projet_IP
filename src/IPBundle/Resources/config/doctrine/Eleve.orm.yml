@@ -1,0 +1,37 @@
+IPBundle\Entity\Eleve:
+    type: entity
+    oneToMany: 
+        notes:
+            targetEntity: IPBundle\Entity\Note
+            mappedBy: eleve
+            cascade: [persist]
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        login:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        dateNaissance:
+            type: date
+            column: date_naissance
+        niveau:
+            type: string
+            length: 255
+        sexe:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
