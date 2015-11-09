@@ -1,0 +1,152 @@
+body
+{
+	background-image:url(Images/feuillecarreaux.jpg);
+	background-attachment:fixed;
+	background-size:contain;
+	color:#fff;
+	margin:0;
+	font-family:Arial, Helvetica, Sans-Serif;
+	font-size:15px;
+}
+
+#wrap
+{
+	width:980px;
+	position:relative;
+	margin:0 auto!important
+}
+
+a#logo
+{
+	text-align:center;
+	display:block;
+	border-bottom:1px solid #353535;
+	width:100%;
+	position:relative;
+	z-index:999;
+	opacity:1;
+	transition:all 300ms;
+	padding: 15px 0 9px 0;
+}
+
+a#logo:hover
+{
+	opacity:0.5;
+}
+
+#sidebar
+{
+	width:220px;
+	height:100%;
+	float:left;
+	background:#2c2c2c;
+	border-right:1px solid #2e2f2f;
+	position:fixed;
+}
+
+#navigation {
+	color:#FFF;
+	margin-right:-5px;
+	position:relative;
+	width:220px;
+	z-index:999
+}
+
+#navigation li {
+	color:#FFF;
+	border:none;
+	background:none;
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+#navigation li a:link, #navigation li a:visited {
+	color:#FFF;
+	text-decoration:none;
+	font-family:'OstrichSansBlack', Arial, sans-serif;
+	margin-bottom:1px;
+	width:auto;
+	font-size:20px;
+	text-align:left;
+	padding-left:10px !important;
+	display:block;
+	padding:5px 10px 5px 0; /* top, right, bottom, left */
+}
+
+#navigation li a:hover, #navigation li a.active {
+	background:grey;
+	color:#FFF;
+}
+
+#container, #container_accueil
+{
+	width:730px;
+	height:100%;
+	float:right;
+	padding-right:25px;
+	left:-5px;
+	position:relative;
+	padding-top:0;
+	background-color:grey;
+}
+
+.page_title
+{
+	font-family: 'OstrichSansBlack';
+	margin-left: 25px;
+	font-size: 30px;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	text-shadow: 1px 1px 2px #185477;
+	line-height: 2;
+	padding: 5px 0 0px 0px;
+	text-transform:uppercase;
+}
+
+.page_content
+{
+	padding:20px 0 30px 25px; 
+}
+
+
+/* Correction */
+
+#correction a
+{
+	color:black;
+	font-size:20px;
+}
+
+.ui-tooltip
+{
+	background: black;
+	border: 1px solid white;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 20px;
+	font-size:15px;
+	box-shadow: 0 0 7px black;
+	width: 30%;
+	height: 40%;
+}
+
+/* Accueil */
+
+#container_accueil
+{
+	text-align:center;
+	padding-bottom: 40%;
+}
+
+#accueil
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	font-size:30px;
+}
+
+#connexion a, a:hover, a:visited, a:active
+{
+	color:white;
+}
