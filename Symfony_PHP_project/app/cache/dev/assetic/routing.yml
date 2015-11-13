@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /home/minoflaz/Projet_IP/project/app/config/routing_dev.yml
+    resource: /home/minoflaz/Projet_IP/project/Symfony_PHP_project/app/config/routing_dev.yml

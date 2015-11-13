@@ -8,7 +8,7 @@ IPBundle\Entity\Mask:
             generator:
                 strategy: AUTO
     fields:
-        mask:
+        octets:
             type: string
             length: 255
     lifecycleCallbacks: {  }

@@ -58,7 +58,7 @@ class DatabaseController extends Controller
 
 		$eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
 
-		$affichage = "Id des eleves : ";
+		$affichage = "Nom des eleves : ";
 
 		foreach ($eleves as $eleve) {
 			$affichage .= $eleve->getPrenom()." | ";

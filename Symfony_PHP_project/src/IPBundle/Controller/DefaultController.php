@@ -20,6 +20,18 @@ class DefaultController extends Controller
         return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
     }
 
+    /** give Mask Action
+     *
+     * @param string $ip
+     *
+     * @param int $nbSubNet
+     *
+     * @return array
+     *
+     * Return an array of  4 integers representing 4 Bytes of a mask constructed with the ip and the number 
+     * of Sub Network passed in paramaters.
+     *
+     */
     public function giveMaskAction($ip,$nbSubNet) 
     {
     	$nbrBit = 0;  // Nombre de bit a utiliser pour le masque
@@ -143,36 +155,22 @@ class DefaultController extends Controller
     public function exoMaskAction(Request $request) {
 
         $givenMask = new Mask();
-        $ip = "192.168.1.1";
+        $rightMask = new Mask();
+        $rightMask->setOctets($givenMask->giveMask("192.168.1.1",20));
         $nbSubNet = 20;
 
         $form = $this->createFormBuilder($givenMask)
-            ->add('mask','text')
+            ->add('octets','text')
             ->add('valider','submit')
             ->getForm();
 
         $form->handleRequest($request);
 
-        if($form->isValid()) {
+        if($form->isValid()) {/* code en cours d'édition avec l'entity mask
 
-            $maskTested = explode(".",($givenMask->getMask()));  // Permet de séparer les octets de l'ip donnée
+            
 
-            $octet1 = intval($maskTested[0]);
-            $octet2 = intval($maskTested[1]);
-            $octet3 = intval($maskTested[2]);
-            $octet4 = intval($maskTested[3]);
-
-            $rightMask = giveMaskAction($ip,$nbSubNet);
-
-            $same = true;
-
-            for($i = 0;$i<4;$i++) {
-
-                $same = ($same && ($maskTested[$i]==$rightMask[$i]));
-
-            }
-
-            if($same == true) {
+            if($givenMask->isSame()) {  // Si le masque donné est égale au bon masque calculé
 
 
             }
@@ -180,7 +178,7 @@ class DefaultController extends Controller
             else {
 
 
-            }
+            }*/
         }
 
         return $this->render('IPBundle:Default:exoMask.html.twig',array(
