@@ -11,6 +11,7 @@ use IPBundle\Entity\Eleve;
 use IPBundle\Entity\Note;
 use IPBundle\Entity\Exercice;
 use IPBundle\Entity\Mask;
+use IPBundle\Entity\IPAdress;
 
 
 class DefaultController extends Controller
@@ -37,15 +38,9 @@ class DefaultController extends Controller
     	$nbrBit = 0;  // Nombre de bit a utiliser pour le masque
         $classe = '';
         $Moctet = 0;  
-        $nbAdresse = 0;  // Nombre d'adresse par sous réseau
-    	$ipConv = explode(".",$ip);  // Permet de séparer les octets de l'ip donnée
+        $nbAdresse = 0;  // Nombre d'adresse par sous réseau   	
 
-    	$octet1 = intval($ipConv[0]);
-    	$octet2 = intval($ipConv[1]);
-    	$octet3 = intval($ipConv[2]);
-    	$octet4 = intval($ipConv[3]);
-
-    	if($octet1>=1 && $octet1<=127) {  // Pour une IP de classe A
+    	if($ip->getClasse() == "A") {  // Pour une IP de classe A
 
             $classe = 'A';
 
@@ -86,7 +81,7 @@ class DefaultController extends Controller
             
 
     	}
-    	if($octet1>=128 && $octet1<=191) {  // Pour une IP de classe B
+    	if($ip->getClasse() == "B") {  // Pour une IP de classe B
 
             $classe = 'B';
 
@@ -120,7 +115,7 @@ class DefaultController extends Controller
 
 
     	}
-    	if($octet1>=192 && $octet1<=223) {  // Pour une IP de classe C
+    	if($ip->getClasse() == "C") {  // Pour une IP de classe C
 
             $classe = 'C';
 
@@ -166,19 +161,21 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
 
-        if($form->isValid()) {/* code en cours d'édition avec l'entity mask
+        if($form->isValid()) { code en cours d'édition avec l'entity mask
 
             
 
             if($givenMask->isSame()) {  // Si le masque donné est égale au bon masque calculé
-
+                
+                return $this->render('IPBundle:Default:maskSuccess.html.twig');
 
             }
 
             else {
 
+                return $this->render('IPBundle:Default:maskFailed.html.twig');
 
-            }*/
+            }
         }
 
         return $this->render('IPBundle:Default:exoMask.html.twig',array(
@@ -188,7 +185,7 @@ class DefaultController extends Controller
     }
 
 
-    public function testAffichageAction(Request $request) {
+    public function newEleveAction(Request $request) {
 
         $eleve = new Eleve();
 

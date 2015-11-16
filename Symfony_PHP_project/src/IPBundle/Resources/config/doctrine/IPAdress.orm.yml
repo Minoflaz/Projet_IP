@@ -1,0 +1,4 @@
+IPBundle\Entity\IPAdress:
+    type: entity
+    table: null
+    lifecycleCallbacks: {  }

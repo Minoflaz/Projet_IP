@@ -26,9 +26,9 @@ showNotesEleve:
     path: /showNotesEleve/{idEleve}
     defaults: {_controller : IPBundle:Database:showNotesEleve}
 
-testAffichage:
-    path: /testAffichage
-    defaults: {_controller : IPBundle:Default:testAffichage}
+newEleve:
+    path: /newEleve
+    defaults: {_controller : IPBundle:Default:newEleve}
 
 exoMask:
     path: /exoMask
