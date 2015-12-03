@@ -7,7 +7,7 @@ IPBundle\Entity\Mask:
             id: true
             generator:
                 strategy: AUTO
-    fields:
+    bytes:
         octets:
             type: string
             length: 255
