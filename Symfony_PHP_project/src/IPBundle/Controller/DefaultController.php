@@ -82,7 +82,7 @@ class DefaultController extends Controller
             $em->persist($eleve);
             $em->flush();
 
-            return $this->render('IPBundle:Default:taskSuccess.html.twig');
+            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig');
         }
 
         else {
@@ -113,13 +113,18 @@ class DefaultController extends Controller
             if( strcmp( strtoupper( $ipAdress->getClass() ),( $ipAdress->giveClass() ) ) == 0 ) // strtoupper allows to compare properly
                 return $this->render('IPBundle:Default:taskSuccess.html.twig');
             else
-                return $this->render('IPBundle:Default:maskFailed.html.twig');
+                return $this->render('IPBundle:Default:taskFailed.html.twig');
        
         }
 
         return $this->render('IPBundle:Default:exoClass.html.twig',array(
                 'form' => $form->createView(),
+                'ip' => $ipAdress,
             ));
 
     }
+
+    public function exoMask
+
+
 }

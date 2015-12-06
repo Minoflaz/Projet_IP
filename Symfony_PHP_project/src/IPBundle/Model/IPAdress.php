@@ -9,7 +9,7 @@ class IPAdress extends Adress
 
      private $class;
 
-    
+
     /**
      * Set the class
      * @param string $class 
@@ -60,7 +60,6 @@ class IPAdress extends Adress
    public function giveMask($ip,$nbSubNet) {
 
         $nbrBit = 0;  // Nombre de bit a utiliser pour le masque
-        $classe = '';
         $Mbyte = 0;  
         $nbAdresse = 0;  // Nombre d'adresse par sous réseau
         $ipConv = explode(".",$ip);  // Permet de séparer les bytes de l'ip donnée
@@ -70,9 +69,7 @@ class IPAdress extends Adress
         $byte3 = intval($ipConv[2]);
         $byte4 = intval($ipConv[3]);
 
-        if($byte1>=1 && $byte1<=127) {  // Pour une IP de classe A
-
-            $classe = 'A';
+        if($this->giveMask() == "A") {  // Pour une IP de classe A
 
             if($nbSubNet>2)
                 $nbrBit = ((int)log($nbSubNet,2)) +1;  //Le nombre de bit utilisé est log2 du nombre de sous reseau +1 pour avoir lentier superieur

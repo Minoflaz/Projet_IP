@@ -1,8 +1,13 @@
 IPBundle\Entity\Eleve:
     properties:
         sexe:
-            - Choice: { choices: [male, female], message: Choose a valid gender. }
+            - Choice:
+                choices: [male, female]
+                message: Choose a valid gender. 
+
 IPBundle\Model\IPAdress:
-	properties:
-		class:
-			- Choice: { choices: [a,A,b,B,c,C,d,D], message: Choose an existing class. }
+    properties:
+        class:
+            - Choice:
+                choices: [a,A,b,B,c,C,d,D]
+                message: Choose an existing class. 

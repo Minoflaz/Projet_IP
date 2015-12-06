@@ -2,7 +2,7 @@
 
 namespace IPBundle\Model;
 
-class Adress 
+abstract class Adress 
 {
 
     /**
@@ -68,9 +68,9 @@ class Adress
         for($i=0;$i<4;$i++) {
 
             if($i<3)
-                $this->bytes.strval($arrayOfInteger[$i]).".";
+                $this->bytes = $this->bytes.strval($arrayOfInteger[$i]).".";
             else
-                $this->bytes.strval($arrayOfInteger[$i]);
+                $this->bytes = $this->bytes.strval($arrayOfInteger[$i]);
 
         }
 
@@ -85,7 +85,7 @@ class Adress
     {
        $ipAdress = explode(".",$this->bytes);
 
-       return intval($ipAdress[index]);
+       return intval($ipAdress[$index]);
     }
 
     /**
