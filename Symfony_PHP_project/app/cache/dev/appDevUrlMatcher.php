@@ -141,11 +141,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
-        // giveMask
-        if (0 === strpos($pathinfo, '/giveMask') && preg_match('#^/giveMask/(?P<ip>[^/]++)/(?P<nbSubNet>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'giveMask')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::giveMaskAction',));
-        }
-
         if (0 === strpos($pathinfo, '/add')) {
             // addEleve
             if ($pathinfo === '/addEleve') {
@@ -172,14 +167,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // testAffichage
-        if ($pathinfo === '/testAffichage') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::testAffichageAction',  '_route' => 'testAffichage',);
+        // newEleve
+        if ($pathinfo === '/newEleve') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newEleveAction',  '_route' => 'newEleve',);
         }
 
-        // exoMask
-        if ($pathinfo === '/exoMask') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoMaskAction',  '_route' => 'exoMask',);
+        if (0 === strpos($pathinfo, '/exo')) {
+            // exoMask
+            if ($pathinfo === '/exoMask') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoMaskAction',  '_route' => 'exoMask',);
+            }
+
+            // exoClass
+            if ($pathinfo === '/exoClass') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoClassAction',  '_route' => 'exoClass',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

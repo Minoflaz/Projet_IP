@@ -6,10 +6,6 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-giveMask:
-    path: /giveMask/{ip}/{nbSubNet}
-    defaults: {_controller : IPBundle:Default:giveMask}
-
 addEleve:
     path: /addEleve
     defaults: {_controller : IPBundle:Database:addEleve}
@@ -33,3 +29,7 @@ newEleve:
 exoMask:
     path: /exoMask
     defaults: {_controller : IPBundle:Default:exoMask}
+
+exoClass:
+    path: /exoClass
+    defaults: {_controller : IPBundle:Default:exoClass}

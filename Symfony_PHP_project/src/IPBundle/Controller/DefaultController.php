@@ -9,9 +9,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use IPBundle\Entity\Eleve;
 use IPBundle\Entity\Note;
-use IPBundle\Entity\Exercice;
-use IPBundle\Entity\Mask;
-use IPBundle\Entity\IPAdress;
+use IPBundle\Model\Adress;
+use IPBundle\Model\IPAdress;
+use IPBundle\Model\Mask;
 
 
 class DefaultController extends Controller
@@ -21,18 +21,42 @@ class DefaultController extends Controller
         return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
     }
 
-   
 
-    public function exoMaskAction($givenMask) {
+    public function exoMaskAction(Request $request) {
 
-        $ipAdress = new IPAdress("192.168.1.1");
-        $rightMask = $ipAdress->giveMask("192.168.1.1",20));
-                  
-            if($givenMask->isSame($rightMask))  // Si le masque donné est égale au bon masque calculé                
-                return true;
+        $givenMask = new Mask();
+        $rightMask = new Mask();
+        $rightMask->setOctets($givenMask->giveMask("192.168.1.1",20));
+        $nbSubNet = 20;
+
+        $form = $this->createFormBuilder($givenMask)
+            ->add('octets','text')
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) { //code en cours d'édition avec l'entity mask
+
             
-            else 
-                return false;
+
+            if($givenMask->isSame()) {  // Si le masque donné est égale au bon masque calculé
+                
+                return $this->render('IPBundle:Default:maskSuccess.html.twig');
+
+            }
+
+            else {
+
+                return $this->render('IPBundle:Default:maskFailed.html.twig');
+
+            }
+        }
+
+        return $this->render('IPBundle:Default:exoMask.html.twig',array(
+                'form' => $form->createView(),
+            ));
+
     }
 
 
@@ -70,18 +94,32 @@ class DefaultController extends Controller
                 'form' => $form->createView(),
             ));
     }
-    
-   
-    public function exoClasseAction($classe) {
 
-        $ipAdress = new IPAdress();  
+    public function exoClassAction(Request $request) {
+
+        $ipAdress = new IPAdress();
+
+        $ipAdress->setAlea();
 
         $form = $this->createFormBuilder($ipAdress)
-            ->add()
-        
+            ->add('class','text')
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+
+            if( strcmp( strtoupper( $ipAdress->getClass() ),( $ipAdress->giveClass() ) ) == 0 ) // strtoupper allows to compare properly
+                return $this->render('IPBundle:Default:taskSuccess.html.twig');
+            else
+                return $this->render('IPBundle:Default:maskFailed.html.twig');
+       
+        }
+
+        return $this->render('IPBundle:Default:exoClass.html.twig',array(
+                'form' => $form->createView(),
+            ));
+
     }
-
-
-
-
 }

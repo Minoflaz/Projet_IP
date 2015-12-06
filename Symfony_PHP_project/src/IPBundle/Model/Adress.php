@@ -6,22 +6,9 @@ class Adress
 {
 
     /**
-     * @var integer
-     */
-    private $id;
-
-    /**
      * @var string
      */
     private $bytes;
-
-  
-    public function __construct($str) {
-
-        $this->bytes = $str;
-
-    }
-
 
     /**
      * Get id
@@ -81,9 +68,9 @@ class Adress
         for($i=0;$i<4;$i++) {
 
             if($i<3)
-                $this->bytes.strval($arrayOfInteger[i]).".";
+                $this->bytes.strval($arrayOfInteger[$i]).".";
             else
-                $this->bytes.strval($arrayOfInteger[i]);
+                $this->bytes.strval($arrayOfInteger[$i]);
 
         }
 
@@ -139,11 +126,11 @@ class Adress
 
         $strBin = "";
 
-        for($i=0:$i<4;$i++) {
+        for($i=0;$i<4;$i++) {
             if($i<3)
                 $strBin.$this->getByteBin($i).".";
             else
-                $strBin.$this->getByteBin($i)
+                $strBin.$this->getByteBin($i);
         }
 
     }
@@ -190,37 +177,6 @@ class Adress
         return true;
 
     }
-
-    /**
-    * IPAdress class
-    *
-    * @return string 
-    *
-    * Get the class of the IP Adress depending on its first Byte
-    */
-    public function getClasse() {
-
-        $octet1 = $this->getByteInt(0);
-
-        if($this->checkValable()) {
-
-            if($octet1>=1 && $octet1<=127)
-                return "A";
-
-            if($octet1>=128 && $octet1<=191) 
-                return "B";
-
-            if($octet1>=192 && $octet1<=223)
-                return "C";
-            
-            if($octet1>=224 && $octet1<=255)
-                return "D";
-        }
-
-        return 0;
-
-   }
-
    
 }
 

@@ -30,10 +30,6 @@ class Note
      */
     private $eleve;
 
-    /**
-     * @var Exercice
-     */
-    private $exercice;
 
     public function __construct($valeur)
     {
