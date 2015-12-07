@@ -110,10 +110,12 @@ class DefaultController extends Controller
 
         if($form->isValid()) {
 
-            if( strcmp( strtoupper( $ipAdress->getClass() ),( $ipAdress->giveClass() ) ) == 0 ) // strtoupper allows to compare properly
+            /*if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) // strtoupper allows to compare properly
                 return $this->render('IPBundle:Default:taskSuccess.html.twig');
             else
-                return $this->render('IPBundle:Default:taskFailed.html.twig');
+                return $this->render('IPBundle:Default:taskFailed.html.twig');*/
+
+            return new Response("Classe entrée : ".strtoupper($ipAdress->getClass())."   | Classe réelle : ".$ipAdress->giveClass()."  | Bytes : ".$ipAdress->getBytes());
        
         }
 
@@ -124,7 +126,7 @@ class DefaultController extends Controller
 
     }
 
-    public function exoMask
+    //public function exoMask
 
 
 }

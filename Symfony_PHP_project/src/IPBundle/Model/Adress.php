@@ -81,11 +81,17 @@ abstract class Adress
      *
      * @return int
      */
-    public function getByteInt($index)
+    public function getByteInt()
     {
        $ipAdress = explode(".",$this->bytes);
 
-       return intval($ipAdress[$index]);
+       $str = "";
+
+       for($i=0;$i<4;$i++) {
+            $str = $str.$ipAdress[$i];
+       }
+
+       return $str;
     }
 
     /**
@@ -93,10 +99,10 @@ abstract class Adress
      *
      * @return array
      */
-    public function getBytesInt($index)
+    public function getBytesInt()
     {
        
-       $ipAdressInt = $array();
+       $ipAdressInt = array();
 
        for($i=0;$i<4;$i++) {
 

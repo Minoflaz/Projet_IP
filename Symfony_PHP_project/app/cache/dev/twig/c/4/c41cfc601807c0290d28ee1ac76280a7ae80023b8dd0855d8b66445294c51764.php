@@ -15,19 +15,23 @@ class __TwigTemplate_ce49e8687a2c328575373b6b517207f4de033ec7e665be019f729d45d70
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8a583cea3291919397ef73ffe1a4f9af717b13d4603393be814c44e9d4eeec9e = $this->env->getExtension("native_profiler");
-        $__internal_8a583cea3291919397ef73ffe1a4f9af717b13d4603393be814c44e9d4eeec9e->enter($__internal_8a583cea3291919397ef73ffe1a4f9af717b13d4603393be814c44e9d4eeec9e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:exoClass.html.twig"));
+        $__internal_60189f67a925377f9b70ad1622aa6852377e10764c29c7a96e587e047eef07c0 = $this->env->getExtension("native_profiler");
+        $__internal_60189f67a925377f9b70ad1622aa6852377e10764c29c7a96e587e047eef07c0->enter($__internal_60189f67a925377f9b70ad1622aa6852377e10764c29c7a96e587e047eef07c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:exoClass.html.twig"));
 
         // line 1
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "bytes", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "getBytes", array(), "method"), "html", null, true);
         echo "
 ";
         // line 2
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "giveClass", array(), "method"), "html", null, true);
+        echo "
+";
+        // line 3
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 ";
         
-        $__internal_8a583cea3291919397ef73ffe1a4f9af717b13d4603393be814c44e9d4eeec9e->leave($__internal_8a583cea3291919397ef73ffe1a4f9af717b13d4603393be814c44e9d4eeec9e_prof);
+        $__internal_60189f67a925377f9b70ad1622aa6852377e10764c29c7a96e587e047eef07c0->leave($__internal_60189f67a925377f9b70ad1622aa6852377e10764c29c7a96e587e047eef07c0_prof);
 
     }
 
@@ -43,9 +47,10 @@ class __TwigTemplate_ce49e8687a2c328575373b6b517207f4de033ec7e665be019f729d45d70
 
     public function getDebugInfo()
     {
-        return array (  26 => 2,  22 => 1,);
+        return array (  30 => 3,  26 => 2,  22 => 1,);
     }
 }
-/* {{ip.bytes}}*/
+/* {{ip.getBytes()}}*/
+/* {{ip.giveClass()}}*/
 /* {{form(form)}}*/
 /* */
