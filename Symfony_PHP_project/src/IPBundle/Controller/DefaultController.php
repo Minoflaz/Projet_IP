@@ -3,6 +3,7 @@
 namespace IPBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -97,9 +98,27 @@ class DefaultController extends Controller
 
     public function exoClassAction(Request $request) {
 
+        $request = $this->get('request');
+        $cookies = $request->cookies;
         $ipAdress = new IPAdress();
 
-        $ipAdress->setAlea();
+
+        if($cookies->has('ip')) 
+            $ipAdress->setBytes($cookies->get('ip'));
+
+        else {
+
+            $ipAdress->setAlea();
+
+            $cookie = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
+
+            $reponse = new Response();
+
+            $reponse->headers->setCookie($cookie);     
+
+            $reponse->send(); 
+
+        }  
 
         $form = $this->createFormBuilder($ipAdress)
             ->add('class','text')
@@ -115,7 +134,11 @@ class DefaultController extends Controller
             else
                 return $this->render('IPBundle:Default:taskFailed.html.twig');*/
 
-            return new Response("Classe entrée : ".strtoupper($ipAdress->getClass())."   | Classe réelle : ".$ipAdress->giveClass()."  | Bytes : ".$ipAdress->getBytes());
+            $reponse = new Response();
+            $reponse->headers->clearCookie('ip'); 
+            $reponse->send();
+
+            return new Response("| Bytes : ".$ipAdress->getBytes());
        
         }
 
