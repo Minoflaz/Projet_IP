@@ -165,7 +165,7 @@ class DefaultController extends Controller
             $reponse->headers->clearCookie('nbSubNet');
             $reponse->send();
 
-            if($mask->isSame($ipAdress->giveMask($ipAdress,$nbSubNet)))
+            if($mask->isSame($ipAdress->giveMask(   $nbSubNet)))
                 return $this->render('IPBundle:Default:maskSuccess.html.twig');
             else
                 return $this->render('IPBundle:Default:maskFailed.html.twig');
@@ -188,7 +188,9 @@ class DefaultController extends Controller
 
         $ip->setBytes($ipBytes);
 
-        $mask = $ip->giveMask(intval($nbSubNet));
+        $nbSubNet = intval($nbSubNet);
+
+        $mask = $ip->giveMask($nbSubNet);
 
         return new Response($mask->getBytes());
 

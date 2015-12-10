@@ -58,10 +58,10 @@ class IPAdress extends Adress
 
    /**
     * Give a mask for an IP depending on a given number of subnet    
-    * @param  int $nbSubNet 
+    * @param  int $nb 
     * @return Mask       
     */
-   public function giveMask($nbSubNet) {
+   public function giveMask($nb) {
 
         $nbrBit = 0;  // Nombre de bit a utiliser pour le masque
         $Mbyte1 = 0; 
@@ -78,8 +78,8 @@ class IPAdress extends Adress
 
         if($this->giveClass() == "A") {  // Pour une IP de classe A
 
-            if($nbSubNet>2)
-                $nbrBit = ((int)log($nbSubNet,2)) +1;  //Le nombre de bit utilisé est log2 du nombre de sous reseau +1 pour avoir lentier superieur
+            if($nb>2)
+                $nbrBit = ((int)log($nb,2)) +1;  //Le nombre de bit utilisé est log2 du nombre de sous reseau +1 pour avoir lentier superieur
             else
                 $nbrBit = 1;
 
@@ -119,8 +119,8 @@ class IPAdress extends Adress
 
             $classe = 'B';
 
-            if($nbSubNet>2)
-                $nbrBit = ((int)log($nbSubNet,2)) +1;
+            if($nb>2)
+                $nbrBit = ((int)log($nb,2)) +1;
             else
                 $nbrBit = 1;
 
@@ -153,8 +153,8 @@ class IPAdress extends Adress
 
             $classe = 'C';
 
-            if($nbSubNet>2)
-                $nbrBit = ((int)log($nbSubNet,2)) +1;
+            if($nb>2)
+                $nbrBit = ((int)log($nb,2)) +1;
             else
                 $nbrBit = 1;
 
