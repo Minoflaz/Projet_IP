@@ -21,45 +21,7 @@ class DefaultController extends Controller
     {
         return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
     }
-
-
-    public function exoMaskAction(Request $request) {
-
-        $givenMask = new Mask();
-        $rightMask = new Mask();
-        $rightMask->setOctets($givenMask->giveMask("192.168.1.1",20));
-        $nbSubNet = 20;
-
-        $form = $this->createFormBuilder($givenMask)
-            ->add('octets','text')
-            ->add('save','submit')
-            ->getForm();
-
-        $form->handleRequest($request);
-
-        if($form->isValid()) { //code en cours d'édition avec l'entity mask
-
-            
-
-            if($givenMask->isSame()) {  // Si le masque donné est égale au bon masque calculé
-                
-                return $this->render('IPBundle:Default:maskSuccess.html.twig');
-
-            }
-
-            else {
-
-                return $this->render('IPBundle:Default:maskFailed.html.twig');
-
-            }
-        }
-
-        return $this->render('IPBundle:Default:exoMask.html.twig',array(
-                'form' => $form->createView(),
-            ));
-
-    }
-
+    
 
     public function newEleveAction(Request $request) {
 
@@ -110,11 +72,11 @@ class DefaultController extends Controller
 
             $ipAdress->setAlea();
 
-            $cookie = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
+            $cookieIp = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
 
             $reponse = new Response();
 
-            $reponse->headers->setCookie($cookie);     
+            $reponse->headers->setCookie($cookieIp);     
 
             $reponse->send(); 
 
@@ -129,17 +91,15 @@ class DefaultController extends Controller
 
         if($form->isValid()) {
 
-            /*if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) // strtoupper allows to compare properly
-                return $this->render('IPBundle:Default:taskSuccess.html.twig');
-            else
-                return $this->render('IPBundle:Default:taskFailed.html.twig');*/
-
             $reponse = new Response();
             $reponse->headers->clearCookie('ip'); 
             $reponse->send();
 
-            return new Response("| Bytes : ".$ipAdress->getBytes());
-       
+            if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) // strtoupper allows to compare properly
+                return $this->render('IPBundle:Default:taskSuccess.html.twig');
+            else
+                return $this->render('IPBundle:Default:taskFailed.html.twig');
+      
         }
 
         return $this->render('IPBundle:Default:exoClass.html.twig',array(
@@ -149,7 +109,92 @@ class DefaultController extends Controller
 
     }
 
-    //public function exoMask
+    public function exoMaskAction(Request $request) {
+
+        $request = $this->get('request');
+        $cookies = $request->cookies;
+        $ipAdress = new IPAdress();
+        $mask = new Mask();
+        $nbSubNet = "";
+
+
+        if($cookies->has('ip')) 
+            $ipAdress->setBytes($cookies->get('ip'));
+        if($cookies->has('mask'))
+            $mask->setBytes($cookies->get('mask'));
+        if($cookies->has('nbSubNet'))
+            $nbSubNet = $cookies->get('nbSubNet');
+
+
+        else {
+
+            $ipAdress->setAlea();
+
+            $nbSubNet = strval(rand(2,255));
+
+            $cookieIp = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
+
+            $cookieMask = new Cookie('mask',$mask->getBytes(),(time() + 3600 * 48));
+
+            $cookieNbSubNet = new Cookie('nbSubNet',$nbSubNet,(time() + 3600 * 48));
+
+            $reponse = new Response();
+
+            $reponse->headers->setCookie($cookieIp);
+
+            $reponse->headers->setCookie($cookieMask);
+
+            $reponse->headers->setCookie($cookieNbSubNet);
+
+            $reponse->send(); 
+
+        }
+
+        $form = $this->createFormBuilder($mask)
+            ->add('bytes','text')
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+
+            $reponse = new Response();
+            $reponse->headers->clearCookie('ip');
+            $reponse->headers->clearCookie('mask'); 
+            $reponse->headers->clearCookie('nbSubNet');
+            $reponse->send();
+
+            if($mask->isSame($ipAdress->giveMask($ipAdress,$nbSubNet)))
+                return $this->render('IPBundle:Default:maskSuccess.html.twig');
+            else
+                return $this->render('IPBundle:Default:maskFailed.html.twig');
+
+        }
+
+
+        return $this->render('IPBundle:Default:exoMask.html.twig',array(
+                'form' => $form->createView(),
+                'ip' => $ipAdress,
+                'mask' => $mask,
+                'nbSubNet' => $nbSubNet,
+            ));
+
+    }
+    
+    public function giveMaskAction($ipBytes,$nbSubNet) {
+
+        $ip = new IPAdress();
+
+        $ip->setBytes($ipBytes);
+
+        $mask = $ip->giveMask(intval($nbSubNet));
+
+        return new Response($mask->getBytes());
+
+
+    }
+
 
 
 }

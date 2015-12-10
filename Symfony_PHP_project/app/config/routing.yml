@@ -33,3 +33,7 @@ exoMask:
 exoClass:
     path: /exoClass
     defaults: {_controller : IPBundle:Default:exoClass}
+
+giveMask:
+    path: /giveMask/{ipBytes}/{nbSubNet}
+    defaults: {_controller : IPBundle:Default:giveMask}

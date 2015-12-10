@@ -79,19 +79,15 @@ abstract class Adress
     /**
      * Get byte Int
      *
+     * @param  int $index 
+     *
      * @return int
      */
-    public function getByteInt()
+    public function getByteInt($index)
     {
        $ipAdress = explode(".",$this->bytes);
 
-       $str = "";
-
-       for($i=0;$i<4;$i++) {
-            $str = $str.$ipAdress[$i];
-       }
-
-       return $str;
+       return $ipAdress[$index];
     }
 
     /**
@@ -150,17 +146,17 @@ abstract class Adress
     {
        $ipAdress = explode(".",$this->bytes);
 
-       return $ipAdress[index];
+       return $ipAdress[$index];
     }
 
     /**
-     * Compare two ip adresses
-     * @param  IPAdress  $ipAdress 
+     * Compare two adresses
+     * @param  Adress  $adress 
      * @return boolean
      */
-    public function isSame($ipAdress) 
+    public function isSame($adress) 
     {
-        if(strcmp($ipAdress->getBytes(),$this->getBytes()) == 0)
+        if(strcmp($adress->getBytes(),$this->getBytes()) == 0)
             return true;
         else
             return false;

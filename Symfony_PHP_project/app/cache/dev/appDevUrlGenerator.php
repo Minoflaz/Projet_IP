@@ -38,6 +38,7 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'newEleve' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'IPBundle\\Controller\\DefaultController::newEleveAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/newEleve',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'exoMask' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'IPBundle\\Controller\\DefaultController::exoMaskAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/exoMask',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'exoClass' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'IPBundle\\Controller\\DefaultController::exoClassAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/exoClass',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'giveMask' => array (  0 =>   array (    0 => 'ipBytes',    1 => 'nbSubNet',  ),  1 =>   array (    '_controller' => 'IPBundle\\Controller\\DefaultController::giveMaskAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'nbSubNet',    ),    1 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'ipBytes',    ),    2 =>     array (      0 => 'text',      1 => '/giveMask',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
 
     /**
