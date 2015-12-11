@@ -1,0 +1,9 @@
+Oublier le CIDR pour l'instant et rester sur les coinnaissances actuelles du masque avec les classes A B C D
+
+Exo table de routage (PRIO) difrerenciation Classe avec les reseaux
+
+
+Exo FRag( CE SERAIT PAS MAL ) et abalyse de trame a faire aussi
+
+
+Exo tram : piocher dans une liste de trame deja analysées
