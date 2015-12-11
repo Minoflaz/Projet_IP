@@ -198,5 +198,12 @@ class DefaultController extends Controller
     }
 
 
+    public function routingTableAction(Request $request) {
+
+
+        
+    }
+
+
 
 }
