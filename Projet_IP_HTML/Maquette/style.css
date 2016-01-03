@@ -1,0 +1,130 @@
+body
+{
+	font-family: "Courier New", Courier, monospace;
+	color: black;
+	background-image: url(img/Fond_blanc_casse.jpg);
+	background-size: cover;
+}
+
+#account
+{
+	float: right;
+}
+
+#container
+{
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 60px;
+}
+
+#top span
+{
+	font-size: 50px;
+	position: absolute;
+	margin-left: 10px;
+	border-bottom: 3px solid lightgreen;
+}
+
+#menu
+{
+	float: right;
+	font-size: 30px;
+}
+
+#menu li
+{
+	display: inline;
+	list-style: none;
+	padding-left: 1em;
+}
+
+#menu li a:hover
+{
+	background-color: lightgreen;
+	color: white;
+	text-decoration: underline;
+}
+
+#menu li a
+{
+	text-decoration: none;
+	color: black;
+	padding: 8px;
+}
+
+h1
+{
+	display: inline-block;
+	color: white;
+	background-color: lightgreen;
+	font-size: 26px;
+	padding: 3px;
+	text-align: center;
+}
+
+#welcome h1
+{
+	padding-left: 305px;
+	padding-right: 305px;
+	margin: 0;
+}
+
+#welcome p
+{
+	background-color: white;
+	height: 100px;
+	margin: 0;
+	padding-top: 3%;
+	text-align: center;
+}
+
+#chapters_menu h1
+{
+	margin-bottom: 0;
+	margin-top: 30px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+#chapters_menu ul
+{
+	margin: 0;
+	padding: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: white;
+	width: 10%;
+	text-align: center;
+}
+
+#chapters_menu li
+{
+	list-style: none;
+}
+
+#chapters_menu li a:hover
+{
+	background-color: lightgreen;
+	color: white;
+	text-decoration: underline;
+}
+
+#chapters_menu li a
+{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
