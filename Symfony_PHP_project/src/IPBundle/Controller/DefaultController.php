@@ -13,6 +13,8 @@ use IPBundle\Entity\Note;
 use IPBundle\Model\Adress;
 use IPBundle\Model\IPAdress;
 use IPBundle\Model\Mask;
+use IPBundle\Model\RoutingTable;
+use IPBundle\Model\RoutingTableLine;
 
 
 class DefaultController extends Controller
@@ -22,7 +24,10 @@ class DefaultController extends Controller
         return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
     }
     
-
+    /**
+     * Create a new eleve and persist it into the database
+     * @param  Request $request 
+     */
     public function newEleveAction(Request $request) {
 
         $eleve = new Eleve();
@@ -58,6 +63,10 @@ class DefaultController extends Controller
             ));
     }
 
+    /**
+     * Exercice dealing with giving the right class to the right IPAdress
+     * @param  Request $request 
+     */
     public function exoClassAction(Request $request) {
 
         $request = $this->get('request');
@@ -109,6 +118,10 @@ class DefaultController extends Controller
 
     }
 
+    /**
+     * Exercice dealing with giving the right mask depending on an Adress and a number of sub network wanted
+     * @param  Request $request
+     */
     public function exoMaskAction(Request $request) {
 
         $request = $this->get('request');
@@ -182,6 +195,11 @@ class DefaultController extends Controller
 
     }
     
+    /**
+     * Function returning the good mask with a given ip and a given number of sub net
+     * @param  string $ipBytes  
+     * @param  int $nbSubNet           
+     */
     public function giveMaskAction($ipBytes,$nbSubNet) {
 
         $ip = new IPAdress();
@@ -200,7 +218,33 @@ class DefaultController extends Controller
 
     public function routingTableAction(Request $request) {
 
+        $routingTableGiven = new RoutingTable();
+        $routingTablePending = new RoutingTable();
 
+        $ip1 = new IPAdress();
+        $ip2 = new IPAdress();
+        $ip3 = new IPAdress();
+        $ip4 = new IPAdress();
+
+        $mask = new Mask();
+
+        $mask->init("0.0.0.0");
+
+        $ip1->initString("192.168.0.1");
+        $ip2->initString("192.168.0.2");
+        $ip3->initString("192.168.0.3");
+        $ip4->initString("192.168.0.4");
+
+        $routingTableLine1 = new RoutingTableLine($ip1,$ip2,$mask,"UH","eth1");
+        $routingTableLine2 = new RoutingTableLine($ip2,$ip2,$mask,new Mask("0.0.0.0"),"UH","eth1");
+
+        $routingTableGiven->addLine($routingTableLine1);
+        $routingTableGiven->addLine($routingTableLine2);
+
+        $routingTablePending->addLine($routingTableLine1);
+        $routingTablePending->addLine($routingTableLine2);
+
+        return new Response($routingTableGiven->toString());
             
     }
 
