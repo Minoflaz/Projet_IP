@@ -37,8 +37,8 @@ class DefaultController extends Controller
             ->add('prenom','text')
             ->add('login','text')
             ->add('password','text')
-            ->add('dateNaissance','date')
-            ->add('sexe','text')
+            ->add('dateNaissance','date',array('years' => range(1950,2015)))
+            ->add('sexe','choice',array('choices' => array('male' => 'male', 'female' => 'female')))
             ->add('save','submit')
             ->getForm();
 
@@ -218,6 +218,8 @@ class DefaultController extends Controller
 
     public function routingTableAction(Request $request) {
 
+        $bool = "";
+
         $routingTableGiven = new RoutingTable();
         $routingTablePending = new RoutingTable();
 
@@ -236,15 +238,21 @@ class DefaultController extends Controller
         $ip4->initString("192.168.0.4");
 
         $routingTableLine1 = new RoutingTableLine($ip1,$ip2,$mask,"UH","eth1");
-        $routingTableLine2 = new RoutingTableLine($ip2,$ip2,$mask,new Mask("0.0.0.0"),"UH","eth1");
+        $routingTableLine2 = new RoutingTableLine($ip1,$ip2,$mask,"UH","eth1");
+        $routingTableLine3 = new RoutingTableLine($ip3,$ip2,$mask,"UH","eth1");
 
         $routingTableGiven->addLine($routingTableLine1);
-        $routingTableGiven->addLine($routingTableLine2);
+        $routingTableGiven->addLine($routingTableLine3);
 
         $routingTablePending->addLine($routingTableLine1);
         $routingTablePending->addLine($routingTableLine2);
 
-        return new Response($routingTableGiven->toString());
+        if($routingTableGiven->isSame($routingTablePending))
+            $bool = "Les tables sont pareilles";
+        else
+            $bool = "Les tables sont differentes";
+
+        return new Response($routingTableGiven->toString()."<br /><br />".$routingTablePending->toString()."<br /><br />".$bool);
             
     }
 

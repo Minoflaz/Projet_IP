@@ -190,6 +190,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'giveMask')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::giveMaskAction',));
         }
 
+        // routingTable
+        if ($pathinfo === '/routingTable') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::routingTableAction',  '_route' => 'routingTable',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

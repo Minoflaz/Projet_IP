@@ -13,7 +13,7 @@ class RoutingTable {
 
 	public function __construct() {
 
-		$lines = array();
+		$lines = [];
 	}
 
 	public function getLines() {
@@ -28,7 +28,7 @@ class RoutingTable {
 	 */
 	public function addLine($routingTableLine) {
 
-		$this->lines = $routingTableLine;
+		$this->lines[] = $routingTableLine;
 
 		return $this;
 	}
@@ -39,7 +39,7 @@ class RoutingTable {
 	 */
 	public function removeLastLine() {
 
-		$this->lines[$this->lines->count()-1] = null;
+		$this->lines[count($this->lines)-1] = null;
 
 		return $this;
 	}
@@ -53,21 +53,21 @@ class RoutingTable {
 
 		$bool = true;
 
-		if($this->lines->count()>0) {
+		if(count($this->lines)>0) {
 			
-			if($this->lines->count() == $routingTable->getLines()->count()) {
+			if(count($this->lines) == count($routingTable->getLines())) {
 				
-				for($i=0;$i < $this->lines->count() && $bool!=false;$i++) {
+				for($i=0;$i < count($this->lines) && $bool!=false;$i++) {
 
 					$bool = $bool && $this->lines[$i]->getIp()->isSame($routingTable->getLines()[$i]->getIp())
 								  && $this->lines[$i]->getGateway()->isSame($routingTable->getLines()[$i]->getGateway())
 								  && $this->lines[$i]->getMask()->isSame($routingTable->getLines()[$i]->getMask())
-								  && (strcmp($this->lines[$i]->getFlag(),$routingTable->getLines()[$i]->getFlag())) == 0
-								  && (strcmp($this->lines[$i]->getInterface(),$routingTable->getLines()[$i]->getInterface())) == 0;
+								  && strcmp($this->lines[$i]->getFlag(),$routingTable->getLines()[$i]->getFlag()) == 0
+								  && strcmp($this->lines[$i]->getInterface(),$routingTable->getLines()[$i]->getInterface()) == 0;
 
 				}
 
-				return true;
+				return $bool;
 			}
 		}	
 
@@ -81,21 +81,22 @@ class RoutingTable {
 	 */
 	public function toString() {
 
-		$str = "Routing Table : \n\n".
-						"IP              | "."Gateway          | "."Mask            | "."Flag | "."Interface\n";
+		$str = "Routing Table : <br />".
+						"IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| "."Gateway&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| "."Mask&nbsp;| "."Flag | "."Interface<br />";
 
-		if($this->lines->count()>0) {
+		if(count($this->lines)>0) {
 
-			for($i=0;$i < $this->lines->count();$i++) {
+			for($i=0;$i < count($this->lines) ;$i++) {
 
 				$str = $str.
 						$this->lines[$i]->getIp()->getBytes()." | ".
 						$this->lines[$i]->getGateway()->getBytes()." | ".
 						$this->lines[$i]->getMask()->getBytes()." | ".
 						$this->lines[$i]->getFlag()." | ".
-						$this->lines[$i]->getInterface()."\n";
+						$this->lines[$i]->getInterface()."<br />";
 			}	
 		}
 
-		return $str;	
+		return $str;
+	}	
 }
