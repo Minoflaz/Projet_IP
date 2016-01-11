@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Letter_G_std';
-    src: url('font/LetterGothicStd.otf') format('truetype');
+    src: url('Font/LetterGothicStd.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Basic_title';
-    src: url('font/BasicTitle.ttf') format('truetype');
+    src: url('Font/BasicTitle.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lucid';
-    src: url('font/lucon.ttf') format('truetype');
+    src: url('Font/lucon.ttf') format('truetype');
 }
 
 body
@@ -147,12 +147,13 @@ h1
 	padding: 3% 2em 0;
 }
 
-#chapters_menu h1
+/*#chapters_menu h1
 {
 	margin-bottom: 0;
 	margin-top: 30px;
 	padding-left: 18px;
 	padding-right: 18px;
+	font-family: 'Letter_G_std';
 }
 
 #chapters_menu ul
@@ -182,4 +183,41 @@ h1
 {
 	text-decoration: none;
 	color: black;
+}*/
+
+aside
+{
+	float : left;
+	margin-top: 1em;
+	width: 12em;
+	background-color: white;
+}
+
+#chapter
+{
+	border: 1px solid;
+}
+
+aside h1 
+{
+	font-family: 'Letter_G_std';
+	background-color: rgb(0,217,143);
+	margin-top: 0;
+	padding: 0.25em 0 ;
+	width: 100%;
+}
+
+aside ul
+{
+
+}
+
+aside li
+{
+
+}
+
+aside li a
+{
+
 }
