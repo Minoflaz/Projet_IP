@@ -1,4 +1,4 @@
-@font-face {
+	@font-face {
     font-family: 'Letter_G_std';
     src: url('Font/LetterGothicStd.ttf') format('truetype');
 }
@@ -32,7 +32,8 @@ body
 #account a
 {
 	text-decoration: none;
-	color : rgb(97,97,97);	
+	color : rgb(97,97,97);
+	font-weight: bolder;	
 }
 
 #account a:hover
@@ -51,8 +52,9 @@ body
 
 header
 {
-	display: block;
-	margin-top: 1.22em;	
+	display: inline-block;
+	margin-top: 0em;	
+	margin-bottom: 1em;
 }
 
 header img
@@ -83,6 +85,7 @@ nav
 	float: left;
 	font-size: 30px;
 	font-family: 'Letter_G_std';
+	vertical-align: middle;
 }
 
 #menu li
@@ -94,6 +97,7 @@ nav
 #menu li a:hover
 {
 	color: white;
+	font-weight: bold;
 	background-color: rgb(0,217,143);
 }
 
@@ -147,46 +151,9 @@ h1
 	padding: 3% 2em 0;
 }
 
-/*#chapters_menu h1
-{
-	margin-bottom: 0;
-	margin-top: 30px;
-	padding-left: 18px;
-	padding-right: 18px;
-	font-family: 'Letter_G_std';
-}
-
-#chapters_menu ul
-{
-	margin: 0;
-	padding: 20px;
-	padding-left: 25px;
-	padding-right: 25px;
-	background-color: white;
-	width: 10%;
-	text-align: center;
-}
-
-#chapters_menu li
-{
-	list-style: none;
-}
-
-#chapters_menu li a:hover
-{
-	background-color: rgb(0,217,143);
-	color: white;
-	text-decoration: underline;
-}
-
-#chapters_menu li a
-{
-	text-decoration: none;
-	color: black;
-}*/
-
 aside
-{
+{	
+	display: inline-block;
 	float : left;
 	margin-top: 1em;
 	width: 12em;
@@ -195,29 +162,111 @@ aside
 
 #chapter
 {
-	border: 1px solid;
 }
 
 aside h1 
 {
-	font-family: 'Letter_G_std';
+	font-family: 'Basic_Title';
 	background-color: rgb(0,217,143);
 	margin-top: 0;
-	padding: 0.25em 0 ;
+	padding-top: 0.50em;
+	padding-bottom: 0.25em;
 	width: 100%;
+	margin-bottom: 0;
+	vertical-align: middle;
 }
 
 aside ul
 {
-
+	text-align: center;
+	padding-left: 0;
 }
 
 aside li
 {
-
+	list-style: none;
+	padding: 0.25em;
 }
 
 aside li a
 {
+	text-decoration: none;
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+}
 
+aside li a:hover
+{
+	font-weight: bold;
+}
+
+section
+{
+	display: inline-block;
+	float: left;
+	width: 43em;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+
+section article
+{
+	background-color: white;
+	padding-bottom: 0.25em;
+	margin-bottom: 1.5em;
+}
+
+section article header
+{
+	width: 100%;
+	margin-bottom: 0;
+}
+
+section article header h1
+{
+	background-color: white;
+	color: rgb(0,217,143);
+	/*color: rgb(97,97,97);*/
+	margin-top: 0;
+	padding-top: 0.50em;
+	padding-bottom: 0.25em;
+	font-family: 'Basic_Title';
+	vertical-align: middle;
+	margin-bottom: 0;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 1em;
+}	
+
+section article header hr
+{	
+	margin: 0 1em;
+}
+
+section article p
+{
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+	text-indent:1em;
+	padding-left: 1em;
+}
+
+section article footer
+{
+	font-size: 18px;
+
+}
+
+section article footer a
+{
+	text-decoration: none;
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+}
+
+section article footer a:hover
+{
+	border-bottom: solid 2px;
+	border-color: rgb(0,217,143);
+	/*font-weight: bold;*/
 }
