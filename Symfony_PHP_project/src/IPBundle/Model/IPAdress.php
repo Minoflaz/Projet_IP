@@ -9,6 +9,16 @@ class IPAdress extends Adress
 
      private $class;
 
+     /**
+      * Initialisator
+      * @param string $ip 
+      */
+     public function initString($ip) {
+
+        $this->setBytes($ip);
+        $this->class = $this->giveClass();
+     }
+
 
     /**
      * Set the class

@@ -4,15 +4,48 @@ namespace IPBundle\Model;
 
 class RoutingTableLine {
 
+	/**
+	 * @var IPAdress
+	 */
 	private $ip;
 
+	/**
+	 * @var IPAdress
+	 */
 	private $gateway; 
 
+	/**
+	 * @var Mask
+	 */
 	private $mask;
 
+	/**
+	 * @var string
+	 */
 	private $flag;
 
+	/**
+	 * @var string
+	 */
 	private $interface;
+
+	/**
+	 * Constructor
+	 * @param IPAdress $ip        
+	 * @param IPAdress $gateway   
+	 * @param Mask $mask      
+	 * @param string $flag      
+	 * @param string $interface 
+	 */
+	public function __construct($ip,$gateway,$mask,$flag,$interface) {
+
+		$this->ip = $ip;
+		$this->gateway = $gateway; 
+		$this->mask = $mask;
+		$this->flag = $flag;
+		$this->interface = $interface;
+
+	}
 
 	/**
 	 * Set the Ip
