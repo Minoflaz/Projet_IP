@@ -3,6 +3,7 @@
 namespace IPBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,7 +37,7 @@ class DefaultController extends Controller
             ->add('nom','text')
             ->add('prenom','text')
             ->add('login','text')
-            ->add('password','text')
+            ->add('password','password')
             ->add('dateNaissance','date',array('years' => range(1950,2015)))
             ->add('sexe','choice',array('choices' => array('male' => 'male', 'female' => 'female')))
             ->add('save','submit')

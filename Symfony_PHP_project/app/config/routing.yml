@@ -41,3 +41,12 @@ giveMask:
 routingTable:
     path: /routingTable
     defaults: {_controller : IPBundle:Default:routingTable}
+
+login_route:
+    path:     /login
+    defaults: { _controller: IPBundle:Security:login}
+
+login_check:
+    path: /login_check
+    # no controller is bound to this route
+    # as it's handled by the Security system

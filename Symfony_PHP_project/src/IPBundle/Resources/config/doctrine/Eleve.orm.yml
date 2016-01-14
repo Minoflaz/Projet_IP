@@ -13,7 +13,7 @@ IPBundle\Entity\Eleve:
             generator:
                 strategy: AUTO
     fields:
-        login:
+        Username:
             type: string
             length: 255
         password:

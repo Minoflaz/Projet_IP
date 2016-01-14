@@ -3,11 +3,12 @@
 namespace IPBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * eleve
  */
-class Eleve
+class Eleve implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -17,7 +18,7 @@ class Eleve
     /**
      * @var string
      */
-    private $login;
+    private $Username;
 
     /**
      * @var string
@@ -136,27 +137,27 @@ class Eleve
     }
 
     /**
-     * Set login
+     * Set Username
      *
-     * @param string $login
+     * @param string $Username
      *
      * @return eleve
      */
-    public function setLogin($login)
+    public function setUsername($Username)
     {
-        $this->login = $login;
+        $this->Username = $Username;
 
         return $this;
     }
 
     /**
-     * Get login
+     * Get Username
      *
      * @return string
      */
-    public function getLogin()
+    public function getUsername()
     {
-        return $this->login;
+        return $this->Username;
     }
 
     /**
@@ -302,4 +303,45 @@ class Eleve
     {
         return $this->sexe;
     }
+
+
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    public function getSalt()
+    {
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+        ) = unserialize($serialized);
+    }
+
 }
