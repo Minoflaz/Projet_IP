@@ -18,7 +18,7 @@ class Eleve implements UserInterface, \Serializable
     /**
      * @var string
      */
-    private $Username;
+    private $username;
 
     /**
      * @var string
@@ -58,7 +58,7 @@ class Eleve implements UserInterface, \Serializable
 
     public function __construct(){
 
-        $this->login = "";
+        $this->username = "";
         $this->password = "";
         $this->nom = "";
         $this->prenom = "";
@@ -143,9 +143,9 @@ class Eleve implements UserInterface, \Serializable
      *
      * @return eleve
      */
-    public function setUsername($Username)
+    public function setUsername($username)
     {
-        $this->Username = $Username;
+        $this->username = $username;
 
         return $this;
     }
@@ -157,7 +157,7 @@ class Eleve implements UserInterface, \Serializable
      */
     public function getUsername()
     {
-        return $this->Username;
+        return $this->username;
     }
 
     /**

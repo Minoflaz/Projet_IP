@@ -1,13 +1,23 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    encoders:
+        IPBundle\Entity\Eleve:
+            algorithm: bcrypt
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
         in_memory:
             memory: ~
 
+        our_db_provider:
+            entity:
+                class: IPBundle:Eleve
+                property: username
+
+
     firewalls:
+
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -24,3 +34,9 @@ security:
                 login_path: /login
                 check_path: /login_check
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+            provider: our_db_provider
+
+            logout:
+                path:   /logout
+                target: /

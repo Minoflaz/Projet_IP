@@ -61,7 +61,7 @@ class DatabaseController extends Controller
 		$affichage = "Nom des eleves : ";
 
 		foreach ($eleves as $eleve) {
-			$affichage .= $eleve->getPrenom()." | ";
+			$affichage .= $eleve->getUsername()." mdp : ".$eleve->getPassword()." | ";
 		}
 
 		return new Response($affichage);
