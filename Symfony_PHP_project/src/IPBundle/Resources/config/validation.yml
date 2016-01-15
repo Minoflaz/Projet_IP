@@ -11,3 +11,8 @@ IPBundle\Model\IPAdress:
             - Choice:
                 choices: [a,A,b,B,c,C,d,D]
                 message: Choose an existing class. 
+
+IPBundle\Entity\Cours:
+    properties:
+        nom:
+            - NotBlank: ~

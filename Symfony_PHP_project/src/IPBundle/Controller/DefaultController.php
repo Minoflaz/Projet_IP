@@ -11,6 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use IPBundle\Entity\Eleve;
 use IPBundle\Entity\Note;
+use IPBundle\Entity\Article;
 use IPBundle\Model\Adress;
 use IPBundle\Model\IPAdress;
 use IPBundle\Model\Mask;
@@ -23,6 +24,31 @@ class DefaultController extends Controller
     public function indexAction($name)
     {
         return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
+    }
+
+    public function newCoursAction(Request $request) {
+
+        $cours = new Cours();
+
+        $form = $this->createFormBuilder($cours)
+            ->add('nom','text')
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($cours);
+            $em->flush();
+
+            return $this->render('IPBundle:Default:LessonSubscriptionSuccess.html.twig');
+        }
+
+        return $this->render('IPBundle:Default:testCours.html.twig',array(
+                'form' => $form->createView(),
+            ));
     }
     
     /**

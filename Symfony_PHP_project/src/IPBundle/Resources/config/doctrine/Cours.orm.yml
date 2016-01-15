@@ -1,0 +1,19 @@
+IPBundle\Entity\Cours:
+    type: entity
+    oneToMany: 
+        chapitres:
+            targetEntity: IPBundle\Entity\Chapitre
+            mappedBy: cours
+            cascade: [persist]
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,22 @@
+IPBundle\Entity\Chapitre:
+    type: entity
+    manyToOne:
+        cours:
+            targetEntity: IPBundle\Entity\Cours
+            inversedBy: chapitres
+            joinColumn:
+                nullable: false
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        text:
+            type: text
+    lifecycleCallbacks: {  }
