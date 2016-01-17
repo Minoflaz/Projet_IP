@@ -195,18 +195,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::routingTableAction',  '_route' => 'routingTable',);
         }
 
+        // login_route
+        if ($pathinfo === '/login') {
+            return array (  '_controller' => 'IPBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login_route',);
+        }
+
+        // newCours
+        if ($pathinfo === '/newCours') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newCoursAction',  '_route' => 'newCours',);
+        }
+
         if (0 === strpos($pathinfo, '/log')) {
-            if (0 === strpos($pathinfo, '/login')) {
-                // login_route
-                if ($pathinfo === '/login') {
-                    return array (  '_controller' => 'IPBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login_route',);
-                }
-
-                // login_check
-                if ($pathinfo === '/login_check') {
-                    return array('_route' => 'login_check');
-                }
-
+            // login_check
+            if ($pathinfo === '/login_check') {
+                return array('_route' => 'login_check');
             }
 
             // logout

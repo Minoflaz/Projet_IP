@@ -1,6 +1,7 @@
 <?php
 
 namespace IPBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Cours

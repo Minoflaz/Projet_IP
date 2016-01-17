@@ -46,9 +46,9 @@ login_route:
     path:     /login
     defaults: { _controller: IPBundle:Security:login}
 
-newArticle:
-    path: /newArticle
-    defaults: {_controller: IPBundle:Default:newArticle}
+newCours:
+    path: /newCours
+    defaults: {_controller: IPBundle:Default:newCours}
 
 login_check:
     path: /login_check
