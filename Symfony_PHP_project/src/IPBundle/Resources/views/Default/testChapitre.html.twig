@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+
+	{{ form_errors(form) }}
+
+    {{ form_row(form.nom, { 'label': 'Nom du Chapitre' }) }}
+    {{ form_row(form.text)}}
+
+    {{ form_row(form.save, { 'label': 'Submit chapter' }) }}
+
+
+{{ form_end(form) }}
+

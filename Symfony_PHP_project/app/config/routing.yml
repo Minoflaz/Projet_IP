@@ -50,6 +50,10 @@ newCours:
     path: /newCours
     defaults: {_controller: IPBundle:Default:newCours}
 
+newChapitre:
+    path: /newChapitre/{nomCours}
+    defaults: {_controller: IPBundle:Default:newChapitre}
+
 login_check:
     path: /login_check
     # no controller is bound to this route

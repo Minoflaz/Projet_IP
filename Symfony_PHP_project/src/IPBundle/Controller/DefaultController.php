@@ -51,6 +51,39 @@ class DefaultController extends Controller
                 'form' => $form->createView(),
             ));
     }
+
+    public function newChapitreAction(Request $request,$nomCours) {
+
+        $chapitre = new Chapitre();
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $nomCours));
+
+        $chapitre->setCours($cours);
+
+        $cours->addChapitre($chapitre);
+
+        $form = $this->createFormBuilder($chapitre)
+            ->add('nom','text')
+            ->add('text','textarea', array('attr' => array('cols' => '50', 'rows' => '25')))
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($chapitre);
+            $em->flush();
+
+            return $this->render('IPBundle:Default:ChapterAddSuccess.html.twig');
+        }
+
+        return $this->render('IPBundle:Default:testChapitre.html.twig',array(
+                'form' => $form->createView(),
+            ));
+
+    }
     
     /**
      * Create a new eleve and persist it into the database

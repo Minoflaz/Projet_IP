@@ -200,9 +200,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IPBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login_route',);
         }
 
-        // newCours
-        if ($pathinfo === '/newCours') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newCoursAction',  '_route' => 'newCours',);
+        if (0 === strpos($pathinfo, '/newC')) {
+            // newCours
+            if ($pathinfo === '/newCours') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newCoursAction',  '_route' => 'newCours',);
+            }
+
+            // newChapitre
+            if (0 === strpos($pathinfo, '/newChapitre') && preg_match('#^/newChapitre/(?P<nomCours>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'newChapitre')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newChapitreAction',));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/log')) {

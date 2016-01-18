@@ -17,6 +17,7 @@ IPBundle\Entity\Chapitre:
         nom:
             type: string
             length: 255
+            unique: true
         text:
             type: text
     lifecycleCallbacks: {  }

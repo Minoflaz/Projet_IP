@@ -16,4 +16,5 @@ IPBundle\Entity\Cours:
         nom:
             type: string
             length: 255
+            unique: true
     lifecycleCallbacks: {  }
