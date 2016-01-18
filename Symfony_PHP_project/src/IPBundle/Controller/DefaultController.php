@@ -59,7 +59,6 @@ class DefaultController extends Controller
     public function newEleveAction(Request $request) {
 
         $eleve = new Eleve();
-        //Cree un eleve qui se fera enculer par la suite
         $form = $this->createFormBuilder($eleve)
             ->add('nom','text')
             ->add('prenom','text')
@@ -73,7 +72,6 @@ class DefaultController extends Controller
         $form->handleRequest($request);
 
         if($form->isValid()) {
-            //Cette fonction suce des bites
             $em = $this->getDoctrine()->getManager();
             $encoder = $this->container->get('security.password_encoder');
             $encoded = $encoder->encodePassword($eleve, $eleve->getPassword());
@@ -154,7 +152,6 @@ class DefaultController extends Controller
      * @param  Request $request
      */
     public function exoMaskAction(Request $request) {
-        //Fait l'action 'branlette' sur le joueur alexis
         $request = $this->get('request');
         $cookies = $request->cookies;
         $ipAdress = new IPAdress();
@@ -248,7 +245,6 @@ class DefaultController extends Controller
 
 
     public function routingTableAction(Request $request) {
-        //Moi aussi je baise alexis
         $bool = "";
 
         $routingTableGiven = new RoutingTable();
