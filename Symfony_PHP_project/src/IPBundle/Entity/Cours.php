@@ -23,12 +23,36 @@ class Cours
      */
     private $chapitres;
 
+    /**
+     * @var array
+     */
+    private $notes;
+
+
+
     public function __construct() {
 
         $this->chapitres = new ArrayCollection();
+        $this->notes = new ArrayCollection();
+
 
     }
 
+    /**
+     * @return array
+     */
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+    /**
+     * @param array $notes
+     */
+    public function setNotes($notes)
+    {
+        $this->notes = $notes;
+    }
 
     /**
      * Get id
@@ -80,6 +104,14 @@ class Cours
 
         $chapitre->setCours($this);
         $this->chapitres[] = $chapitre;
+
+        return $this;
+    }
+
+    public function addNote($note) {
+
+        $note->setCours($this);
+        $this->notes[] = $note;
 
         return $this;
     }

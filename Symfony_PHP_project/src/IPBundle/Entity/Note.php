@@ -26,6 +26,11 @@ class Note
     private $date;
 
     /**
+     * @var Cours
+     */
+    private $cours;
+
+    /**
      * @var Eleve
      */
     private $eleve;

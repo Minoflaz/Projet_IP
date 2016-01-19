@@ -6,6 +6,11 @@ IPBundle\Entity\Note:
             inversedBy: notes
             joinColumn:
                 nullable: false
+        cours:
+            targetEntity: IPBundle\Entity\Cours
+            inversedBy: notes
+            joinColumn:
+                nullable: false
     table: null
     id:
         id:

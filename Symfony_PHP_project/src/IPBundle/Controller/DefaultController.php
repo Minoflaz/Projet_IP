@@ -84,6 +84,29 @@ class DefaultController extends Controller
             ));
 
     }
+
+    public function showCoursAction(Request $request) {
+
+        $listCours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+        $str = "";
+
+        foreach($listCours as $cours) {
+
+            $str .= $cours->getNom()."<br/>" ;
+
+            foreach ($cours->getChapitres() as $chapitre) {
+
+
+                $str .=$chapitre->getText()."<br/>";
+
+            }
+
+            $str.="<br/><br/>";
+        }
+
+        return new Response($str);
+    }
     
     /**
      * Create a new eleve and persist it into the database
@@ -130,28 +153,21 @@ class DefaultController extends Controller
      * @param  Request $request 
      */
     public function exoClassAction(Request $request) {
-        //Celle ci encule alexis
-        $request = $this->get('request');
-        $cookies = $request->cookies;
+
+        $session = $this->container->get('session');
+
         $ipAdress = new IPAdress();
 
-
-        if($cookies->has('ip')) 
-            $ipAdress->setBytes($cookies->get('ip'));
+        if($session->has('ip'))
+            $ipAdress->setbytes($session->get('ip'));
 
         else {
 
             $ipAdress->setAlea();
 
-            $cookieIp = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
+            $session->set('ip',$ipAdress->getBytes());
 
-            $reponse = new Response();
-
-            $reponse->headers->setCookie($cookieIp);     
-
-            $reponse->send(); 
-
-        }  
+        }
 
         $form = $this->createFormBuilder($ipAdress)
             ->add('class','text')
@@ -162,21 +178,23 @@ class DefaultController extends Controller
 
         if($form->isValid()) {
 
-            $reponse = new Response();
-            $reponse->headers->clearCookie('ip'); 
-            $reponse->send();
+            $session->remove('ip');
 
-            if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) // strtoupper allows to compare properly
+            if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) { // strtoupper allows to compare properly
+
+                $this->getUser()->addNote(20);
+
                 return $this->render('IPBundle:Default:taskSuccess.html.twig');
+            }
             else
                 return $this->render('IPBundle:Default:taskFailed.html.twig');
-      
         }
 
-        return $this->render('IPBundle:Default:exoClass.html.twig',array(
-                'form' => $form->createView(),
-                'ip' => $ipAdress,
-            ));
+        return $this->render('IPBundle:Default:exoClass2.html.twig',array(
+            'form' => $form->createView(),
+            'ip' => $ipAdress,
+        ));
+
 
     }
 

@@ -5,6 +5,10 @@ IPBundle\Entity\Cours:
             targetEntity: IPBundle\Entity\Chapitre
             mappedBy: cours
             cascade: [persist]
+        notes:
+            targetEntity: IPBundle\Entity\Note
+            mappedBy: cours
+            cascade: [persist]
     table: null
     id:
         id:
