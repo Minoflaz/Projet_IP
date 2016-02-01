@@ -1,0 +1,335 @@
+	@font-face {
+    font-family: 'Letter_G_std';
+    src: url('Font/LetterGothicStd.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Basic_title';
+    src: url('Font/BasicTitle.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lucid';
+    src: url('Font/lucon.ttf') format('truetype');
+}
+
+body
+{
+	font-family: "Courier New", Courier, monospace;
+	color: black;
+	background-image: url(img/Background.jpg);
+	background-repeat: repeat-xy;
+}
+
+#account
+{
+	display:block;
+	float: right;
+	font-family: 'Letter_G_std';
+	color : rgb(97,97,97);
+}
+
+#account a
+{
+	text-decoration: none;
+	color : rgb(97,97,97);
+	font-weight: bolder;	
+}
+
+#account a:hover
+{
+	text-decoration: none;
+	color : rgb(0,217, 143);
+}
+
+#container
+{
+	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 57em;
+}
+
+header
+{
+	display: inline-block;
+	margin-top: 0em;	
+	margin-bottom: 1em;
+}
+
+header img
+{
+	vertical-align: middle;
+	padding-left: 20px;
+}
+
+header span
+{
+	vertical-align: middle;
+	color : rgb(94,85,86);
+	font-family: 'Letter_G_std';
+	font-size: 50px;
+	font-weight: bold;
+	border-bottom: 3px solid rgb(0,217,143);
+}
+
+nav
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#menu
+{
+	display: inline-block;
+	float: left;
+	font-size: 30px;
+	font-family: 'Letter_G_std';
+	vertical-align: middle;
+}
+
+#menu li
+{
+	display: inline;
+	list-style: none;
+}
+
+#menu li a:hover
+{
+	color: white;
+	font-weight: bold;
+	background-color: rgb(0,217,143);
+}
+
+#menu li:hover
+{
+	color: white;
+}
+
+/*#menu li:hover > a
+{
+	color: white;
+}*/
+
+#menu li a
+{
+	color : rgb(97,97,97);
+	text-decoration: none;
+	padding: 8px;
+}
+
+h1
+{
+	display: inline-block;
+	color: white;
+	background-color: rgb(0,217,143);
+	font-size: 26px;
+	text-align: center;
+}
+
+#welcome
+{
+	width: 100%;
+}
+#welcome h1
+{
+	font-family: 'Basic_Title';
+	padding-top: 10px;
+	margin: 0;
+	display: block;
+}
+
+#welcome p
+{
+	font-family: 'Lucid';
+	color : rgb(97,97,97);
+	background-color: white;
+	height: 100px;
+	margin: 0;
+	padding-top: 3%;
+	text-align: center;
+	padding: 3% 2em 0;
+}
+
+aside
+{	
+	display: inline-block;
+	float : left;
+	margin-top: 1em;
+	width: 12em;
+	background-color: white;
+}
+
+#chapter
+{
+}
+
+aside h1 
+{
+	font-family: 'Basic_Title';
+	background-color: rgb(0,217,143);
+	margin-top: 0;
+	padding-top: 0.50em;
+	padding-bottom: 0.25em;
+	width: 100%;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+aside ul
+{
+	text-align: center;
+	padding-left: 0;
+}
+
+aside li
+{
+	list-style: none;
+	padding: 0.25em;
+}
+
+aside li a
+{
+	text-decoration: none;
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+}
+
+aside li a:hover
+{
+	font-weight: bold;
+}
+
+section
+{
+	display: inline-block;
+	float: left;
+	width: 43em;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+
+section article
+{
+	background-color: white;
+	padding-bottom: 0.25em;
+	margin-bottom: 1.5em;
+}
+
+section article header
+{
+	width: 100%;
+	margin-bottom: 0;
+}
+
+section article header h1
+{
+	background-color: transparent;
+	color: rgb(0,217,143);
+	/*color: rgb(97,97,97);*/
+	margin-top: 0;
+	padding-top: 0.50em;
+	padding-bottom: 0.25em;
+	font-family: 'Basic_Title';
+	vertical-align: middle;
+	margin-bottom: 0;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 1em;
+}	
+
+section article header hr
+{	
+	margin: 0 1em;
+}
+
+section article p
+{
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+	text-indent:1em;
+	padding-left: 1em;
+}
+
+section article footer
+{
+	font-size: 18px;
+
+}
+
+section article footer a
+{
+	text-decoration: none;
+	font-family: 'Lucid';
+	color: rgb(97,97,97);
+}
+
+section article footer a:hover
+{
+	border-bottom: solid 2px;
+	border-color: rgb(0,217,143);
+	/*font-weight: bold;*/
+}
+
+/* CONNEXION / INSCRIPTION */
+
+div.identification
+{
+	margin-top: 2em;
+}
+
+form#identification
+{
+	background-color: white;
+}
+
+form#identification td
+{
+	height: 35px;
+}
+
+form#identification table td.fields
+{
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+form#identification input#btnidentification
+{
+	margin-right: 50px;
+}
+
+form#identification p#btns
+{
+	padding-top: 3em;
+	padding-bottom: 2em;
+	height: 100%;
+}
+
+form#identification p#btns input
+{
+	background-color: rgb(0,217,143);
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+form#identification p#btns input:hover
+{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+form#identification table
+{
+	width: 25em;
+	margin: auto;
+	padding-top: 4em;
+}
