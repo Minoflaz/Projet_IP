@@ -158,6 +158,8 @@ class DefaultController extends Controller
 
         $ipAdress = new IPAdress();
 
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
         if($session->has('ip'))
             $ipAdress->setbytes($session->get('ip'));
 
@@ -182,15 +184,18 @@ class DefaultController extends Controller
 
             if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) { // strtoupper allows to compare properly
 
-                $this->getUser()->addNote(20);
+                $this->getUser()->addNote(new Note(20,$cours));
 
                 return $this->render('IPBundle:Default:taskSuccess.html.twig');
             }
-            else
+            else {
+                $this->getUser()->addNote(new Note(0,$cours));
                 return $this->render('IPBundle:Default:taskFailed.html.twig');
+
+            }
         }
 
-        return $this->render('IPBundle:Default:exoClass2.html.twig',array(
+        return $this->render('IPBundle:Default:exoClass.html.twig',array(
             'form' => $form->createView(),
             'ip' => $ipAdress,
         ));

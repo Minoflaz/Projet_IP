@@ -15,7 +15,7 @@ addEleve:
     defaults: {_controller : IPBundle:Database:addEleve}
 
 addNoteEleve:
-    path: /addNoteEleve/{valeur}/{idEleve}
+    path: /addNoteEleve/{valeur}/{cours}
     defaults: {_controller : IPBundle:Database:addNoteEleve}
 
 showAllEleve:
@@ -25,6 +25,10 @@ showAllEleve:
 showNotesEleve:
     path: /showNotesEleve/{idEleve}
     defaults: {_controller : IPBundle:Database:showNotesEleve}
+
+showNotesCours:
+    path: /showNotesCours/{cours}
+    defaults: {_controller : IPBundle:Database:showNotesCours}
 
 newEleve:
     path: /newEleve

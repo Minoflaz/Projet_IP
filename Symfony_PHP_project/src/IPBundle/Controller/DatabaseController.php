@@ -32,7 +32,7 @@ class DatabaseController extends Controller
 
 		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($id);
 
-		if (!$product) {
+		if (!$eleve) {
 			throw $this->createNotFoundException('No product found for id '.$id);
 		}
 
@@ -44,7 +44,7 @@ class DatabaseController extends Controller
 
 		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($id);
 
-		if (!$product) {
+		if (!$eleve) {
 			throw $this->createNotFoundException('No product found for id '.$id);
 		}
 
@@ -61,23 +61,30 @@ class DatabaseController extends Controller
 		$affichage = "Nom des eleves : ";
 
 		foreach ($eleves as $eleve) {
-			$affichage .= $eleve->getUsername()." mdp : ".$eleve->getPassword()." | ";
+			$affichage .= $eleve->getUsername()."  id : ".$eleve->getId()." Notes : ";
+
+			foreach($eleve->getNotes() as $note) {
+
+                $affichage .= $note->getValeur()." "    ;
+            }
 		}
 
 		return new Response($affichage);
 
 	}
 
-	public function addNoteEleveAction($valeur,$idEleve) {  // A terme le paramètre "valeur" deviendra une note
+	public function addNoteEleveAction($valeur,$cours) {  // A terme le paramètre "valeur" deviendra une note
 
-		$note = new Note($valeur);
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $cours));
+
+        $note = new Note($valeur,$cours);
 
 		$em = $this->getDoctrine()->getManager();
 
-		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($idEleve);
+		$eleve = $this->getUser();
 		$eleve->addNote($note);  // Ajoute a ses notes la note passée en paramètrea l'indice "nombre de notes"
 
-		$em->persist($eleve);
+		$em->persist($note);
 		$em->flush();
 
 		return new Response("Note de ".$valeur." ajoutée à ".$eleve->getPrenom());
@@ -100,6 +107,20 @@ class DatabaseController extends Controller
 		return new Response($affichage);
 
 	}
+
+    public function showNotesCoursAction($cours) {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $cours));
+
+        $affichage = "Notes pour le cours de ".$cours->getNom()." : ";
+
+        foreach($cours->getNotes() as $notes) {
+
+            $affichage .= $notes->getValeur()." ";
+        }
+
+        return new Response($affichage);
+    }
 
 
 

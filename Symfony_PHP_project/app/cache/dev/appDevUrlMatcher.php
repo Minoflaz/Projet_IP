@@ -153,7 +153,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // addNoteEleve
-            if (0 === strpos($pathinfo, '/addNoteEleve') && preg_match('#^/addNoteEleve/(?P<valeur>[^/]++)/(?P<idEleve>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/addNoteEleve') && preg_match('#^/addNoteEleve/(?P<valeur>[^/]++)/(?P<cours>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'addNoteEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::addNoteEleveAction',));
             }
 
@@ -165,9 +165,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showAllEleveAction',  '_route' => 'showAllEleve',);
             }
 
-            // showNotesEleve
-            if (0 === strpos($pathinfo, '/showNotesEleve') && preg_match('#^/showNotesEleve/(?P<idEleve>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'showNotesEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showNotesEleveAction',));
+            if (0 === strpos($pathinfo, '/showNotes')) {
+                // showNotesEleve
+                if (0 === strpos($pathinfo, '/showNotesEleve') && preg_match('#^/showNotesEleve/(?P<idEleve>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'showNotesEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showNotesEleveAction',));
+                }
+
+                // showNotesCours
+                if (0 === strpos($pathinfo, '/showNotesCours') && preg_match('#^/showNotesCours/(?P<cours>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'showNotesCours')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showNotesCoursAction',));
+                }
+
             }
 
         }

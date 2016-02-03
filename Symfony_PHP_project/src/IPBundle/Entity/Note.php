@@ -36,9 +36,11 @@ class Note
     private $eleve;
 
 
-    public function __construct($valeur)
+    public function __construct($valeur,Cours $cours)
     {
         $this->valeur = $valeur;
+        $this->cours = $cours;
+        $cours->addNote($this);
         $this->date = new \DateTime();
     }
 
@@ -108,5 +110,15 @@ class Note
     public function getEleve() {
 
         return $this->eleve;
+    }
+
+    public function getCours() {
+
+        return $this->cours;
+    }
+
+    public function setCours($cours) {
+
+        $this->cours = $cours;
     }
 }
