@@ -22,9 +22,9 @@ use IPBundle\Model\RoutingTableLine;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('IPBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('IPBundle:Default:index.html.twig');
     }
 
     public function newCoursAction(Request $request) {

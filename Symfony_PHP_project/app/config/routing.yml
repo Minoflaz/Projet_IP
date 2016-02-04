@@ -6,6 +6,10 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+index:
+    path: /index
+    defaults: {_controller : IPBundle:Default:index}
+
 addEleve:
     path: /addEleve
     defaults: {_controller : IPBundle:Database:addEleve}

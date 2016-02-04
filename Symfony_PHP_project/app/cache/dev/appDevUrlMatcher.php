@@ -141,6 +141,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // index
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
+        }
+
         if (0 === strpos($pathinfo, '/add')) {
             // addEleve
             if ($pathinfo === '/addEleve') {
@@ -216,11 +221,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // showCours
         if ($pathinfo === '/showCours') {
             return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showCoursAction',  '_route' => 'showCours',);
-        }
-
-        // exoClass2
-        if ($pathinfo === '/exoClass2') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoClass2Action',  '_route' => 'exoClass2',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {
