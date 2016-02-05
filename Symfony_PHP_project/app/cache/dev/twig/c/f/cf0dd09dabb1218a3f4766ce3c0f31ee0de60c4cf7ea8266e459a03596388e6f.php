@@ -16,8 +16,8 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9443b6dedbd58616ef67e921f1ca505057ce96ab30a0a76173b2ece767468c42 = $this->env->getExtension("native_profiler");
-        $__internal_9443b6dedbd58616ef67e921f1ca505057ce96ab30a0a76173b2ece767468c42->enter($__internal_9443b6dedbd58616ef67e921f1ca505057ce96ab30a0a76173b2ece767468c42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:index.html.twig"));
+        $__internal_a0dd269f9500e88037d1b85859971e1df520632fb685db0f8f2d3414dbd0b978 = $this->env->getExtension("native_profiler");
+        $__internal_a0dd269f9500e88037d1b85859971e1df520632fb685db0f8f2d3414dbd0b978->enter($__internal_a0dd269f9500e88037d1b85859971e1df520632fb685db0f8f2d3414dbd0b978_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -36,10 +36,10 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 \t\t<div id=\"container\">
 \t\t\t
 \t\t\t<div id=\"account\">
-\t\t\t\t<a href=\"login\">Connexion</a> | <a href=\"inscription.html\">Inscription</a>
+\t\t\t\t<a href=\"login\">Connexion</a> | <a href=\"newEleve\">Inscription</a>
 \t\t\t</div>
 \t\t\t<header>
-\t\t\t\t<a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"><span>IP13</span></a>
+\t\t\t\t<a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
 \t\t\t\t<nav>
 \t\t\t\t\t<ul id=\"menu\">
 \t\t\t\t\t\t<li><a href=\"newChapitre\">Cours</a></li>
@@ -127,15 +127,15 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 </html> 
 ";
         
-        $__internal_9443b6dedbd58616ef67e921f1ca505057ce96ab30a0a76173b2ece767468c42->leave($__internal_9443b6dedbd58616ef67e921f1ca505057ce96ab30a0a76173b2ece767468c42_prof);
+        $__internal_a0dd269f9500e88037d1b85859971e1df520632fb685db0f8f2d3414dbd0b978->leave($__internal_a0dd269f9500e88037d1b85859971e1df520632fb685db0f8f2d3414dbd0b978_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_4c949874d46161acbad41f0e124fc169c1e165febd82a44db4c31c6e1e8dabac = $this->env->getExtension("native_profiler");
-        $__internal_4c949874d46161acbad41f0e124fc169c1e165febd82a44db4c31c6e1e8dabac->enter($__internal_4c949874d46161acbad41f0e124fc169c1e165febd82a44db4c31c6e1e8dabac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_2f946ee7a9db79703c67d203edcbbd85c944ab3657b8d8a2c164bfbb646b6b8f = $this->env->getExtension("native_profiler");
+        $__internal_2f946ee7a9db79703c67d203edcbbd85c944ab3657b8d8a2c164bfbb646b6b8f->enter($__internal_2f946ee7a9db79703c67d203edcbbd85c944ab3657b8d8a2c164bfbb646b6b8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "\t\t<link rel=\"stylesheet\" href=\"";
@@ -143,7 +143,7 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
         echo "\" type=\"text/css\" media=\"all\">
 \t\t";
         
-        $__internal_4c949874d46161acbad41f0e124fc169c1e165febd82a44db4c31c6e1e8dabac->leave($__internal_4c949874d46161acbad41f0e124fc169c1e165febd82a44db4c31c6e1e8dabac_prof);
+        $__internal_2f946ee7a9db79703c67d203edcbbd85c944ab3657b8d8a2c164bfbb646b6b8f->leave($__internal_2f946ee7a9db79703c67d203edcbbd85c944ab3657b8d8a2c164bfbb646b6b8f_prof);
 
     }
 
@@ -172,10 +172,10 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 /* 		<div id="container">*/
 /* 			*/
 /* 			<div id="account">*/
-/* 				<a href="login">Connexion</a> | <a href="inscription.html">Inscription</a>*/
+/* 				<a href="login">Connexion</a> | <a href="newEleve">Inscription</a>*/
 /* 			</div>*/
 /* 			<header>*/
-/* 				<a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span></a>*/
+/* 				<a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /* 				<nav>*/
 /* 					<ul id="menu">*/
 /* 						<li><a href="newChapitre">Cours</a></li>*/

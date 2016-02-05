@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+		{% endblock %}
 		<title>IP13</title>
 	</head>
 
@@ -11,7 +13,7 @@
 		<div id="container">
 			
 			<header>
-				<img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>
+                <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
 			</header>
 			
 			<div id="content">
@@ -23,39 +25,57 @@
 						<table>
 							<tr>
 							<td id="nom">
-								<label for="nom">Login : </label>
+                                {{ form_start(form) }}
+                                {{ form_errors(form) }}
+								{{ form_label(form.nom) }} :
 							</td>
 							<td class="fields">
-								<input type="text" id="nom" name="nom"/>
+								{{ form_widget(form.nom) }}
 							</td>
 							<tr>
-							<td id="mdp">
-								<label for="mdp">Mot de passe : </label>
+							<td id="prenom">
+								{{ form_label(form.prenom) }} :
 							</td>
 							<td class="fields">
-								<input type="password" id="mdp" name="mdp"/>
+								{{ form_widget(form.prenom) }}
 							</td>
 							</tr>
 							<tr>
-							<td id="classe">
-								<label for="classe">Classe : </label>
+							<td id="username">
+								{{ form_label(form.username) }} :
 							</td>
 							<td class="fields">
-								<input type="text" id="classe" name="classe"/>
+								{{ form_widget(form.username) }}
 							</td>
 							</tr>
 							<tr>
-							<td id="prof">
-								<label for="prof">Professeur : </label>
+							<td id="password">
+								{{ form_label(form.password) }} :
 							</td>
 							<td class="fields">
-								<input type="password" id="prof" name="prof"/>
+								{{ form_widget(form.password) }}
 							</td>
-							</tr>						
+							</tr>
+							<td id="dateNaissance">
+								{{ form_label(form.dateNaissance) }} :
+							</td>
+							<td class="fields">
+								{{ form_widget(form.dateNaissance) }}
+							</td>
+							<tr>
+								<td id="sexe">
+									{{ form_label(form.sexe) }} :
+								</td>
+								<td class="fields">
+									{{ form_widget(form.sexe) }}
+								</td>
+							<tr>
 						</table>
 						
 						<p id="btns">
-							<input id="btnInscription" type="submit" value="Inscription"/>
+                            <input type="submit" id="form_save" name="form[save]" value="Inscription" />
+                            {% do form.save.setRendered %}
+                            {{ form_end(form) }}
 						</p>
 					</form>
 

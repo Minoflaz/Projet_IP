@@ -13,13 +13,13 @@
 <div id="container">
 
     <div id="account">
-        <a href="../../../../../../Projet_IP_HTML/Maquette/connexion.html">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>
+        <a href="login">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>
     </div>
     <header>
-        <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>
+        <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
         <nav>
             <ul id="menu">
-                <li><a href="#">Cours</a></li>
+                <li><a href="newChapitre">Cours</a></li>
                 <li><a href="#">Exercices</a></li>
                 <li><a href="#">Progression</a></li>
                 <li><a href="#">Forum</a></li>
@@ -40,9 +40,7 @@
             <aside>
                 <h4> Nom du Cours ? </h4>
                 <select name="select">
-                    <option value="1" selected>Cours 1</option>
-                    <option value="2">Cours 2</option>
-                    <option value="3">Cours 3</option>
+                    <option value="1" selected>{{ cours.nom }}</option>
                 </select>
             </aside>
 

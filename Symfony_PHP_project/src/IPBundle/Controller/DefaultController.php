@@ -85,6 +85,7 @@ class DefaultController extends Controller
         return $this->render('IPBundle:Default:AjoutChapitre.html.twig',array(
                 'form' => $form->createView(),
                 'user'=> $this->getUser(),
+                'cours' => $cours,
             ));
 
     }
@@ -147,7 +148,7 @@ class DefaultController extends Controller
         }
 
 
-        return $this->render('IPBundle:Default:testAffichage.html.twig',array(
+        return $this->render('IPBundle:Default:inscription.html.twig',array(
                 'form' => $form->createView(),
             ));
     }

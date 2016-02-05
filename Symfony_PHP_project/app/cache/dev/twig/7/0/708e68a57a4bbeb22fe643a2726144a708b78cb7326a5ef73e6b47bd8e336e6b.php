@@ -16,8 +16,8 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d8ed555940381293d1b22286d9e2baea6fe80c521b00a23f74f23ea299f5c86a = $this->env->getExtension("native_profiler");
-        $__internal_d8ed555940381293d1b22286d9e2baea6fe80c521b00a23f74f23ea299f5c86a->enter($__internal_d8ed555940381293d1b22286d9e2baea6fe80c521b00a23f74f23ea299f5c86a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:AjoutChapitre.html.twig"));
+        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa = $this->env->getExtension("native_profiler");
+        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa->enter($__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:AjoutChapitre.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -63,26 +63,27 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
             <aside>
                 <h4> Nom du Cours ? </h4>
                 <select name=\"select\">
-                    <option value=\"1\" selected>Cours 1</option>
-                    <option value=\"2\">Cours 2</option>
-                    <option value=\"3\">Cours 3</option>
+                    <option value=\"1\" selected>";
+        // line 43
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "nom", array()), "html", null, true);
+        echo "</option>
                 </select>
             </aside>
 
             <section>
                 <article>
                     ";
-        // line 51
+        // line 49
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
                     ";
-        // line 52
+        // line 50
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
                     <header>
                         <h1><label for=\"texte\">Nom du chapitre : </label></h1>
                             ";
-        // line 55
+        // line 53
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'widget');
         echo "
                         <hr>
@@ -90,18 +91,18 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 
                     <p>
                         ";
-        // line 60
+        // line 58
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "text", array()), 'widget');
         echo "
                     </p>
 
                     <footer>
                         ";
-        // line 64
+        // line 62
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'row', array("label" => "Submit chapter"));
         echo "
                         ";
-        // line 65
+        // line 63
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
                     </footer>
@@ -113,15 +114,15 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 </body>
 </html>";
         
-        $__internal_d8ed555940381293d1b22286d9e2baea6fe80c521b00a23f74f23ea299f5c86a->leave($__internal_d8ed555940381293d1b22286d9e2baea6fe80c521b00a23f74f23ea299f5c86a_prof);
+        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa->leave($__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_70bc2ab61f5918d456ad871c38198d2f044cb258cecd14a10da3b37011b64aa3 = $this->env->getExtension("native_profiler");
-        $__internal_70bc2ab61f5918d456ad871c38198d2f044cb258cecd14a10da3b37011b64aa3->enter($__internal_70bc2ab61f5918d456ad871c38198d2f044cb258cecd14a10da3b37011b64aa3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880 = $this->env->getExtension("native_profiler");
+        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880->enter($__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -129,7 +130,7 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_70bc2ab61f5918d456ad871c38198d2f044cb258cecd14a10da3b37011b64aa3->leave($__internal_70bc2ab61f5918d456ad871c38198d2f044cb258cecd14a10da3b37011b64aa3_prof);
+        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880->leave($__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880_prof);
 
     }
 
@@ -145,7 +146,7 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 
     public function getDebugInfo()
     {
-        return array (  127 => 6,  121 => 5,  105 => 65,  101 => 64,  94 => 60,  86 => 55,  80 => 52,  76 => 51,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  128 => 6,  122 => 5,  106 => 63,  102 => 62,  95 => 58,  87 => 53,  81 => 50,  77 => 49,  68 => 43,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -190,9 +191,7 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 /*             <aside>*/
 /*                 <h4> Nom du Cours ? </h4>*/
 /*                 <select name="select">*/
-/*                     <option value="1" selected>Cours 1</option>*/
-/*                     <option value="2">Cours 2</option>*/
-/*                     <option value="3">Cours 3</option>*/
+/*                     <option value="1" selected>{{ cours.nom }}</option>*/
 /*                 </select>*/
 /*             </aside>*/
 /* */
