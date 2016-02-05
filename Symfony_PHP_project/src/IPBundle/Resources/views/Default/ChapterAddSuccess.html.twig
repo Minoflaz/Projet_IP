@@ -1,1 +1,39 @@
-Ajout du chapitre reussi
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+    {% endblock %}
+    <title>IP13</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="account">
+        <a href="../../../../../../Projet_IP_HTML/Maquette/connexion.html">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>
+    </div>
+    <header>
+        <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Cours</a></li>
+                <li><a href="#">Exercices</a></li>
+                <li><a href="#">Progression</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+
+        <div id="welcome">
+            <h1>Enregistrer un nouveau chapitre</h1>
+            <p>Chapitre enregistré avec succès</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
