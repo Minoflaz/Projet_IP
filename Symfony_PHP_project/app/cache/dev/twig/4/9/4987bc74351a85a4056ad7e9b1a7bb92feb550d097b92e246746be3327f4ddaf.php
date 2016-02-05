@@ -16,8 +16,8 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e093d9d477daaf6ce5a352e0bae49d22b46b8d00b65f75da82d793a7b5877569 = $this->env->getExtension("native_profiler");
-        $__internal_e093d9d477daaf6ce5a352e0bae49d22b46b8d00b65f75da82d793a7b5877569->enter($__internal_e093d9d477daaf6ce5a352e0bae49d22b46b8d00b65f75da82d793a7b5877569_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
+        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4 = $this->env->getExtension("native_profiler");
+        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4->enter($__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -78,8 +78,10 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
                                     <input type=\"password\" id=\"password\" name=\"_password\" />
                                 </td>
                                 ";
-        // line 48
-        echo "                            </tr>
+        // line 47
+        echo "                                    <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+
+                            </tr>
                         </table>
 
                         <p id=\"btns\">
@@ -93,15 +95,15 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
     </body>
 </html>";
         
-        $__internal_e093d9d477daaf6ce5a352e0bae49d22b46b8d00b65f75da82d793a7b5877569->leave($__internal_e093d9d477daaf6ce5a352e0bae49d22b46b8d00b65f75da82d793a7b5877569_prof);
+        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4->leave($__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_0f6f94cfd3fd709b001874e75a07120e86ce4ec38d70142ca27458e0bfa297ab = $this->env->getExtension("native_profiler");
-        $__internal_0f6f94cfd3fd709b001874e75a07120e86ce4ec38d70142ca27458e0bfa297ab->enter($__internal_0f6f94cfd3fd709b001874e75a07120e86ce4ec38d70142ca27458e0bfa297ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3 = $this->env->getExtension("native_profiler");
+        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3->enter($__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -109,7 +111,7 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
         echo "\" type=\"text/css\" media=\"all\">
         ";
         
-        $__internal_0f6f94cfd3fd709b001874e75a07120e86ce4ec38d70142ca27458e0bfa297ab->leave($__internal_0f6f94cfd3fd709b001874e75a07120e86ce4ec38d70142ca27458e0bfa297ab_prof);
+        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3->leave($__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3_prof);
 
     }
 
@@ -125,7 +127,7 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
 
     public function getDebugInfo()
     {
-        return array (  107 => 6,  101 => 5,  82 => 48,  70 => 34,  59 => 26,  44 => 13,  38 => 12,  36 => 11,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  109 => 6,  103 => 5,  82 => 47,  70 => 34,  59 => 26,  44 => 13,  38 => 12,  36 => 11,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -173,8 +175,9 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
 /*                                 {#*/
 /*                                     If you want to control the URL the user*/
 /*                                     is redirected to on success (more details below)*/
-/*                                     <input type="hidden" name="_target_path" value="/account" />*/
 /*                                 #}*/
+/*                                     <input type="hidden" name="_target_path" value="/index" />*/
+/* */
 /*                             </tr>*/
 /*                         </table>*/
 /* */

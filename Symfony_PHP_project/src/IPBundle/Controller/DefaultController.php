@@ -24,7 +24,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('IPBundle:Default:index.html.twig');
+        return $this->render('IPBundle:Default:index.html.twig',array(
+            'user'=> $this->getUser(),
+        ));
     }
 
     public function newCoursAction(Request $request) {
@@ -49,6 +51,7 @@ class DefaultController extends Controller
 
         return $this->render('IPBundle:Default:testCours.html.twig',array(
                 'form' => $form->createView(),
+                'user'=> $this->getUser(),
             ));
     }
 
@@ -81,6 +84,7 @@ class DefaultController extends Controller
 
         return $this->render('IPBundle:Default:AjoutChapitre.html.twig',array(
                 'form' => $form->createView(),
+                'user'=> $this->getUser(),
             ));
 
     }
