@@ -231,6 +231,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showCoursAction',  '_route' => 'showCours',);
         }
 
+        // exercises
+        if ($pathinfo === '/exercises') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exercisesAction',  '_route' => 'exercises',);
+        }
+
         if (0 === strpos($pathinfo, '/log')) {
             // login_check
             if ($pathinfo === '/login_check') {

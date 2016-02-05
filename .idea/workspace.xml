@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f5451e-71a4-4d11-83ae-5beaaf9df3a4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classFailed.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/taskFailed.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/taskSuccess.html.twig" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/9/4987bc74351a85a4056ad7e9b1a7bb92feb550d097b92e246746be3327f4ddaf.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/9/4987bc74351a85a4056ad7e9b1a7bb92feb550d097b92e246746be3327f4ddaf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/2/02ee729d15cf713d9cdf8188a0047be41da5e8df8171b751941cb53eb898cf09.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/2/02ee729d15cf713d9cdf8188a0047be41da5e8df8171b751941cb53eb898cf09.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/7/0/708e68a57a4bbeb22fe643a2726144a708b78cb7326a5ef73e6b47bd8e336e6b.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/7/0/708e68a57a4bbeb22fe643a2726144a708b78cb7326a5ef73e6b47bd8e336e6b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/7/87ea19fd1af63bca635dfcd81018321ff8c67ae2d94be9c3613e91cfd757138a.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/7/87ea19fd1af63bca635dfcd81018321ff8c67ae2d94be9c3613e91cfd757138a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/9/6/96f60d4df2ae5b324d5da6ce606b6c4ce4a82455a36222329d79094781a5c68e.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/9/6/96f60d4df2ae5b324d5da6ce606b6c4ce4a82455a36222329d79094781a5c68e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/f/cf0dd09dabb1218a3f4766ce3c0f31ee0de60c4cf7ea8266e459a03596388e6f.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/f/cf0dd09dabb1218a3f4766ce3c0f31ee0de60c4cf7ea8266e459a03596388e6f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/logs/dev.log" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/login.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig" />
     </list>
     <ignored path="Projet_IP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,20 +50,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testChapitre.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/testChapitre.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/inscription.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45053002">
+            <state vertical-scroll-proportion="-7.8461537">
               <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="121" />
               <folding />
             </state>
@@ -52,8 +63,8 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="129" column="34" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="34" />
+            <state vertical-scroll-proportion="-93.03846">
+              <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding>
                 <element signature="e#39#96#0#PHP" expanded="true" />
               </folding>
@@ -61,42 +72,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AjoutChapitre.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="18" column="113" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/login.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="121" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="121" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/SecurityController.php">
+      <file leaf-file-name="AjoutChapitre.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.076923">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercises.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6519434">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="59" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classSuccess.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.884615">
+              <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding>
+                <marker date="1454688540624" expanded="true" signature="113:1223" placeholder="security:" />
+                <marker date="1454688540624" expanded="true" signature="476:1223" placeholder="firewalls:" />
+                <marker date="1454688540624" expanded="true" signature="690:1223" placeholder="main:" />
+                <marker date="1454688540624" expanded="true" signature="1153:1223" placeholder="logout:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -125,14 +151,24 @@
         <option value="$PROJECT_DIR$/Projet_IP_HTML/Maquette/AjoutCours.html" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutCours.html" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutCours.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/ChapterAddSuccess.html.twig" />
         <option value="$PROJECT_DIR$/Projet_IP_HTML/Maquette/inscription.html" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/inscription.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/login.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/taskSuccess.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/taskFailed.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classFailed.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig" />
       </list>
     </option>
   </component>
@@ -307,20 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet_IP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet_IP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet_IP_HTML" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -537,34 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Entity/Cours.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Projet_IP_HTML/Maquette/inscription.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -585,34 +583,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Entity/Cours.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="121" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+        <state vertical-scroll-proportion="-0.9222615">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.653846">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69964665">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.923077">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68551236">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classFailed.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.961538">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.884615">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="18" column="113" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="113" />
+        <state vertical-scroll-proportion="-11.076923">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="129" column="34" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="34" />
+        <state vertical-scroll-proportion="-93.03846">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
           <folding>
             <element signature="e#39#96#0#PHP" expanded="true" />
           </folding>
@@ -621,8 +675,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/inscription.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45053002">
+        <state vertical-scroll-proportion="-7.8461537">
           <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding>
+            <marker date="1454688540624" expanded="true" signature="113:1223" placeholder="security:" />
+            <marker date="1454688540624" expanded="true" signature="476:1223" placeholder="firewalls:" />
+            <marker date="1454688540624" expanded="true" signature="690:1223" placeholder="main:" />
+            <marker date="1454688540624" expanded="true" signature="1153:1223" placeholder="logout:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6519434">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="59" selection-end-column="18" />
           <folding />
         </state>
       </provider>

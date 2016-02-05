@@ -66,6 +66,10 @@ showCours:
     path: /showCours
     defaults: {_controller: IPBundle:Default:showCours}
 
+exercises:
+    path: /exercises
+    defaults: {_controller: IPBundle:Default:exercises}
+
 
 login_check:
     path: /login_check
