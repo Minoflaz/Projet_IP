@@ -16,8 +16,8 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa = $this->env->getExtension("native_profiler");
-        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa->enter($__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:AjoutChapitre.html.twig"));
+        $__internal_f3bb23d45b0f0a7699ca48370a3bcae949a032137ce7c6a7bf24b20f386ebeec = $this->env->getExtension("native_profiler");
+        $__internal_f3bb23d45b0f0a7699ca48370a3bcae949a032137ce7c6a7bf24b20f386ebeec->enter($__internal_f3bb23d45b0f0a7699ca48370a3bcae949a032137ce7c6a7bf24b20f386ebeec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:AjoutChapitre.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -36,13 +36,13 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 <div id=\"container\">
 
     <div id=\"account\">
-        <a href=\"../../../../../../Projet_IP_HTML/Maquette/connexion.html\">Connexion</a> | <a href=\"../../../../../../Projet_IP_HTML/Maquette/inscription.html\">Inscription</a>
+        <a href=\"login\">Connexion</a> | <a href=\"../../../../../../Projet_IP_HTML/Maquette/inscription.html\">Inscription</a>
     </div>
     <header>
-        <img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"><span>IP13</span>
+        <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
         <nav>
             <ul id=\"menu\">
-                <li><a href=\"#\">Cours</a></li>
+                <li><a href=\"newChapitre\">Cours</a></li>
                 <li><a href=\"#\">Exercices</a></li>
                 <li><a href=\"#\">Progression</a></li>
                 <li><a href=\"#\">Forum</a></li>
@@ -114,15 +114,15 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 </body>
 </html>";
         
-        $__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa->leave($__internal_ac86be2ffc22d4bc231d291637a6775fc0bb3df336230556cdd0d953941034fa_prof);
+        $__internal_f3bb23d45b0f0a7699ca48370a3bcae949a032137ce7c6a7bf24b20f386ebeec->leave($__internal_f3bb23d45b0f0a7699ca48370a3bcae949a032137ce7c6a7bf24b20f386ebeec_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880 = $this->env->getExtension("native_profiler");
-        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880->enter($__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7fc9c93d36a072c8f2c7d05867bf77fd94042e893037c462d6e6182c6f0af6d9 = $this->env->getExtension("native_profiler");
+        $__internal_7fc9c93d36a072c8f2c7d05867bf77fd94042e893037c462d6e6182c6f0af6d9->enter($__internal_7fc9c93d36a072c8f2c7d05867bf77fd94042e893037c462d6e6182c6f0af6d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -130,7 +130,7 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880->leave($__internal_2e336eccdfac9eea1177944514f2146abd1fc1dc64601d5b5d0accd9f9584880_prof);
+        $__internal_7fc9c93d36a072c8f2c7d05867bf77fd94042e893037c462d6e6182c6f0af6d9->leave($__internal_7fc9c93d36a072c8f2c7d05867bf77fd94042e893037c462d6e6182c6f0af6d9_prof);
 
     }
 
@@ -164,13 +164,13 @@ class __TwigTemplate_61c8bda53271ad7fc6f92454496655e1904a78c99ab4ed5e713c28b6cc9
 /* <div id="container">*/
 /* */
 /*     <div id="account">*/
-/*         <a href="../../../../../../Projet_IP_HTML/Maquette/connexion.html">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>*/
+/*         <a href="login">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>*/
 /*     </div>*/
 /*     <header>*/
-/*         <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>*/
+/*         <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /*         <nav>*/
 /*             <ul id="menu">*/
-/*                 <li><a href="#">Cours</a></li>*/
+/*                 <li><a href="newChapitre">Cours</a></li>*/
 /*                 <li><a href="#">Exercices</a></li>*/
 /*                 <li><a href="#">Progression</a></li>*/
 /*                 <li><a href="#">Forum</a></li>*/

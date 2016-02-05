@@ -427,3 +427,16 @@ b5e7dc,127.0.0.1,POST,http://localhost:8000/newEleve,1454683109,,200
 5f04dc,127.0.0.1,GET,http://localhost:8000/index,1454683281,,200
 151a94,127.0.0.1,GET,http://localhost:8000/newEleve,1454683284,,200
 5e76f2,127.0.0.1,GET,http://localhost:8000/index,1454683286,,200
+b3d062,127.0.0.1,GET,http://localhost:8000/newChapitre,1454683473,,200
+273271,127.0.0.1,GET,http://localhost:8000/index,1454683476,,200
+2436eb,127.0.0.1,GET,http://localhost:8000/login,1454683499,,200
+9956d4,127.0.0.1,POST,http://localhost:8000/login_check,1454683503,,302
+c12b29,127.0.0.1,GET,http://localhost:8000/index,1454683504,,200
+bc6698,127.0.0.1,GET,http://localhost:8000/login,1454683900,,200
+4883be,127.0.0.1,GET,http://localhost:8000/index,1454683902,,200
+79d266,127.0.0.1,GET,http://localhost:8000/newEleve,1454683904,,200
+799308,127.0.0.1,GET,http://localhost:8000/index,1454683906,,200
+19a4bd,127.0.0.1,GET,http://localhost:8000/newChapitre,1454683908,,200
+333582,127.0.0.1,GET,http://localhost:8000/index,1454683913,,200
+3fee05,127.0.0.1,GET,http://localhost:8000/newChapitre,1454683939,,200
+a5e60a,127.0.0.1,GET,http://localhost:8000/index,1454683941,,200

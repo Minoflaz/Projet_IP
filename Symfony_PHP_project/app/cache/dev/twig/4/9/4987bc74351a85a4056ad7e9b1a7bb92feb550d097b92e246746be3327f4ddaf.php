@@ -16,8 +16,8 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4 = $this->env->getExtension("native_profiler");
-        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4->enter($__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
+        $__internal_51e3461b1eccf01b3dd3f092de432aa3dc3356e751481f7fa8cc7b6114a72a24 = $this->env->getExtension("native_profiler");
+        $__internal_51e3461b1eccf01b3dd3f092de432aa3dc3356e751481f7fa8cc7b6114a72a24->enter($__internal_51e3461b1eccf01b3dd3f092de432aa3dc3356e751481f7fa8cc7b6114a72a24_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -46,7 +46,7 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
         <div id=\"container\">
             
             <header>
-                <img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"><span>IP13</span>
+                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
             </header>
 
             <div id=\"content\">
@@ -95,15 +95,15 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
     </body>
 </html>";
         
-        $__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4->leave($__internal_957001c6a797e906e89ac037a50c073b1b502de747e78e905022d00f40f553f4_prof);
+        $__internal_51e3461b1eccf01b3dd3f092de432aa3dc3356e751481f7fa8cc7b6114a72a24->leave($__internal_51e3461b1eccf01b3dd3f092de432aa3dc3356e751481f7fa8cc7b6114a72a24_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3 = $this->env->getExtension("native_profiler");
-        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3->enter($__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_0e1e8a5dd4ef3556afaff05007f421bc1c8e812844931cc9da1c7a2eea3f09fb = $this->env->getExtension("native_profiler");
+        $__internal_0e1e8a5dd4ef3556afaff05007f421bc1c8e812844931cc9da1c7a2eea3f09fb->enter($__internal_0e1e8a5dd4ef3556afaff05007f421bc1c8e812844931cc9da1c7a2eea3f09fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -111,7 +111,7 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
         echo "\" type=\"text/css\" media=\"all\">
         ";
         
-        $__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3->leave($__internal_b81ab730f9acd120b127150ee31d01b5f19665c70e2b9b301435bc370e9939f3_prof);
+        $__internal_0e1e8a5dd4ef3556afaff05007f421bc1c8e812844931cc9da1c7a2eea3f09fb->leave($__internal_0e1e8a5dd4ef3556afaff05007f421bc1c8e812844931cc9da1c7a2eea3f09fb_prof);
 
     }
 
@@ -147,7 +147,7 @@ class __TwigTemplate_a7af80e8aa47cdb70adb453e6a12b4263ea05df5bf7844eec91929abcae
 /*         <div id="container">*/
 /*             */
 /*             <header>*/
-/*                 <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>*/
+/*                 <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /*             </header>*/
 /* */
 /*             <div id="content">*/
