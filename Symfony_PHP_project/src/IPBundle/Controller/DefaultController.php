@@ -92,7 +92,9 @@ class DefaultController extends Controller
             $em->persist($chapitre);
             $em->flush();
 
-            return $this->render('IPBundle:Default:ChapterAddSuccess.html.twig');
+            return $this->render('IPBundle:Default:ChapterAddSuccess.html.twig',array(
+                'user'=> $this->getUser(),
+            ));
         }
 
         return $this->render('IPBundle:Default:AjoutChapitre.html.twig',array(
