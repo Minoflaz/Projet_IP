@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+    {% endblock %}
+    <title>IP13</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="account">
+        <a href="../../../../../../Projet_IP_HTML/Maquette/connexion.html">Connexion</a> | <a href="../../../../../../Projet_IP_HTML/Maquette/inscription.html">Inscription</a>
+    </div>
+    <header>
+        <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Cours</a></li>
+                <li><a href="#">Exercices</a></li>
+                <li><a href="#">Progression</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+
+        <div id="welcome">
+            <h1>Enregistrer un nouveau chapitre</h1>
+            <p>Ici vous pouvez ajouter votre chapitre. Il sera enregistré et consultable immédiatement après.</p>
+        </div>
+
+
+
+        <form id="AjoutCours" method="post">
+            <aside>
+                <h4> Nom du Cours ? </h4>
+                <select name="select">
+                    <option value="1" selected>Cours 1</option>
+                    <option value="2">Cours 2</option>
+                    <option value="3">Cours 3</option>
+                </select>
+            </aside>
+
+            <section>
+                <article>
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    <header>
+                        <h1><label for="texte">Nom du chapitre : </label></h1>
+                            {{ form_widget(form.nom) }}
+                        <hr>
+                    </header>
+
+                    <p>
+                        {{ form_widget(form.text) }}
+                    </p>
+
+                    <footer>
+                        {{ form_row(form.save, { 'label': 'Submit chapter' }) }}
+                        {{ form_end(form) }}
+                    </footer>
+                </article>
+            </section>
+        </form>
+    </div>
+</div>
+</body>
+</html>

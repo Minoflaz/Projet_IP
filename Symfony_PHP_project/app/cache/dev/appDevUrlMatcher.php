@@ -220,8 +220,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // newChapitre
-            if (0 === strpos($pathinfo, '/newChapitre') && preg_match('#^/newChapitre/(?P<nomCours>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'newChapitre')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newChapitreAction',));
+            if ($pathinfo === '/newChapitre') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newChapitreAction',  '_route' => 'newChapitre',);
             }
 
         }

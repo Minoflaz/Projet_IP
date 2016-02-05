@@ -52,11 +52,11 @@ class DefaultController extends Controller
             ));
     }
 
-    public function newChapitreAction(Request $request,$nomCours) {
+    public function newChapitreAction(Request $request) {
 
         $chapitre = new Chapitre();
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $nomCours));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
         $chapitre->setCours($cours);
 
@@ -64,7 +64,7 @@ class DefaultController extends Controller
 
         $form = $this->createFormBuilder($chapitre)
             ->add('nom','text')
-            ->add('text','textarea', array('attr' => array('cols' => '50', 'rows' => '25')))
+            ->add('text','textarea', array('attr' => array('cols' => '75', 'rows' => '50')))
             ->add('save','submit')
             ->getForm();
 
@@ -79,7 +79,7 @@ class DefaultController extends Controller
             return $this->render('IPBundle:Default:ChapterAddSuccess.html.twig');
         }
 
-        return $this->render('IPBundle:Default:testChapitre.html.twig',array(
+        return $this->render('IPBundle:Default:AjoutChapitre.html.twig',array(
                 'form' => $form->createView(),
             ));
 

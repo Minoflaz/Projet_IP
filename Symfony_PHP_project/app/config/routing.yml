@@ -59,7 +59,7 @@ newCours:
     defaults: {_controller: IPBundle:Default:newCours}
 
 newChapitre:
-    path: /newChapitre/{nomCours}
+    path: /newChapitre
     defaults: {_controller: IPBundle:Default:newChapitre}
 
 showCours:
