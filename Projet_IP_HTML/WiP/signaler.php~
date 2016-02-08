@@ -1,0 +1,50 @@
+<?php
+	require_once('header.php');
+?>
+	<nav>
+					<ul id="menu">
+						<li><a href="#">Cours</a>
+							<ul>
+								<li><a href="#">Trouver un cours</a></li>
+								<li><a href="#">Ajouter un cours</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Exercices</a></li>
+						<li><a href="#">Progression</a></li>
+						<li><a href="#">Forum</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+
+			<div id="content">
+		
+				<div id="welcome">
+					<h1>Signaler une erreur</h1>
+
+					<section id="signaler">
+						<article>
+							<header>
+								<h1>Message</h1>
+								<hr>
+							</header>
+							<form action="post" id="signalement">
+								<textarea rows="15" cols="70" name="signalement" form="signalement">Ecrivez votre message.</textarea>
+
+							<footer>
+								<p id="btns">
+									<input id="btnValider" type="submit" value="Valider"/>
+								</p>
+							</footer>
+							</form>
+						</article>
+					</section>
+
+				</div>
+				
+			</div>
+		<?php
+	require_once('footer.php');
+?>
+	

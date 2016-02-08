@@ -73,6 +73,10 @@ header span
 	border-bottom: 3px solid rgb(0,217,143);
 }
 
+a.hidden{
+	text-decoration: none;
+}
+
 nav
 {
 	display: inline-block;
@@ -331,7 +335,7 @@ form#identification p#btns, form#signalement p#btns
 	height: 100%;
 }
 
-form#identification p#btns input, form#signalement p#btns input
+form#identification p#btns input, form#signalement p#btns input, p#validCours input
 {
 	background-color: rgb(0,217,143);
     border: none;
@@ -347,7 +351,7 @@ form#identification p#btns input, form#signalement p#btns input
     transition-duration: 0.4s;
 }
 
-form#identification p#btns input:hover, form#signalement p#btns input:hover
+form#identification p#btns input:hover, form#signalement p#btns input:hover, p#validCours input:hover
 {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -388,4 +392,20 @@ form#signalement
 form#signalement textarea
 {
 	text-align: left;
+}
+
+/* AJOUT COURS */
+
+h4
+{
+	display: inline-block;
+	color: rgb(0,217,143);
+	text-align: center;
+	margin-left: 1em;
+}
+
+select#selectChapitre
+{
+	margin-left: 1em;
+	margin-bottom: 1em;
 }
