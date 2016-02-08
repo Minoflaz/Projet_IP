@@ -42,6 +42,16 @@ class DefaultController extends Controller
         ));
     }
 
+    public function progressionAction() {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        return $this->render('IPBundle:Default:Progression.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+        ));
+    }
+
     public function newCoursAction(Request $request) {
 
         $cours = new Cours();
@@ -155,7 +165,10 @@ class DefaultController extends Controller
             $em->persist($eleve);
             $em->flush();
 
-            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig');
+            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig',array(
+                'user'=> $this->getUser(),
+                'cours' => $cours,
+            ));
         }
 
         else {

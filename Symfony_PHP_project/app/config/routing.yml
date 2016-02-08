@@ -70,6 +70,10 @@ exercises:
     path: /exercises
     defaults: {_controller: IPBundle:Default:exercises}
 
+progression:
+    path: /progression
+    defaults: {_controller: IPBundle:Default:progression}
+
 
 login_check:
     path: /login_check

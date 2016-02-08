@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+    {% endblock %}
+    <title>IP13</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="account">
+
+        {% if user == null %}
+            <a href="login">Connexion</a> | <a href="newEleve">Inscription</a>
+        {% else %}
+            <a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>
+        {% endif %}
+
+    </div>
+    <header>
+        <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
+        <nav>
+            <ul id="menu">
+
+                <li><a href="#">Cours</a>
+                    <ul>
+                        <li><a href="#">Trouver un cours</a></li>
+                        <li><a href="newChapitre">Ajouter un cours</a></li>
+                    </ul>
+                </li>
+                <li><a href="exercises">Exercices</a></li>
+                <li><a href="#">Progression</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="Chart.js"></script>
+
+    <div id="content">
+
+        <aside id = "chapter">
+            <h1> Reseau </h1>
+            <ul>
+                {% for chapitre in cours.chapitres %}
+                    <li>{{ chapitre.nom }}</li>
+                {% endfor %}
+            </ul>
+        </aside>
+            <section>
+            <article>
+                <header>
+                    <h1>Votre progression</h1>
+                    <hr>
+                </header>
+                <div class="content">
+                    <div style="width:100%">
+                        <canvas id="canvas" height="450" width="600"></canvas>
+                    </div>
+            
+            
+                <script>
+                        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+                        var lineChartData = {
+                            labels : ["January","February","March","April","May","June","July"],
+                            datasets : [
+                                {
+                                    label: "My First dataset",
+                                    fillColor : "rgba(220,220,220,0.2)",
+                                    strokeColor : "rgba(220,220,220,1)",
+                                    pointColor : "rgba(220,220,220,1)",
+                                    pointStrokeColor : "#fff",
+                                    pointHighlightFill : "#fff",
+                                    pointHighlightStroke : "rgba(220,220,220,1)",
+                                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
+                                },
+                                {
+                                    label: "My Second dataset",
+                                    fillColor : "rgba(151,187,205,0.2)",
+                                    strokeColor : "rgba(151,187,205,1)",
+                                    pointColor : "rgba(151,187,205,1)",
+                                    pointStrokeColor : "#fff",
+                                    pointHighlightFill : "#fff",
+                                    pointHighlightStroke : "rgba(151,187,205,1)",
+                                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
+                                }
+                            ]
+                
+                        }
+                
+                    window.onload = function(){
+                        var ctx = document.getElementById("canvas").getContext("2d");
+                        window.myLine = new Chart(ctx).Line(lineChartData, {
+                            responsive: true
+                        });
+                    }
+                
+                
+                    </script>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+</html>
