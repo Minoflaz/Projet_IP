@@ -52,6 +52,16 @@ class DefaultController extends Controller
         ));
     }
 
+    public function showCoursAction() {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        return $this->render('IPBundle:Default:showCours.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+        ));
+    }
+
     public function newCoursAction(Request $request) {
 
         $cours = new Cours();
@@ -115,28 +125,7 @@ class DefaultController extends Controller
 
     }
 
-    public function showCoursAction(Request $request) {
 
-        $listCours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
-
-        $str = "";
-
-        foreach($listCours as $cours) {
-
-            $str .= $cours->getNom()."<br/>" ;
-
-            foreach ($cours->getChapitres() as $chapitre) {
-
-
-                $str .=$chapitre->getText()."<br/>";
-
-            }
-
-            $str.="<br/><br/>";
-        }
-
-        return new Response($str);
-    }
     
     /**
      * Create a new eleve and persist it into the database

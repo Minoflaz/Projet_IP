@@ -16,8 +16,8 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6d12c3b3e4651a9f96332558ee88ea4faf8b4a3ce3c8e63c8bd78f1952d8ac91 = $this->env->getExtension("native_profiler");
-        $__internal_6d12c3b3e4651a9f96332558ee88ea4faf8b4a3ce3c8e63c8bd78f1952d8ac91->enter($__internal_6d12c3b3e4651a9f96332558ee88ea4faf8b4a3ce3c8e63c8bd78f1952d8ac91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:index.html.twig"));
+        $__internal_8861a51f9a5e9edde2fc1606465e2598121ec3c81d93e84df05023837975db43 = $this->env->getExtension("native_profiler");
+        $__internal_8861a51f9a5e9edde2fc1606465e2598121ec3c81d93e84df05023837975db43->enter($__internal_8861a51f9a5e9edde2fc1606465e2598121ec3c81d93e84df05023837975db43_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,9 +57,14 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 \t\t\t\t<a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
 \t\t\t\t<nav>
 \t\t\t\t\t<ul id=\"menu\">
-\t\t\t\t\t\t<li><a href=\"newChapitre\">Cours</a></li>
+\t\t\t\t\t\t<li><a href=\"#\">Cours</a>
+\t\t                    <ul>
+\t\t                        <li><a href=\"showCours\">Trouver un cours</a></li>
+\t\t                        <li><a href=\"newChapitre\">Ajouter un cours</a></li>
+\t\t                    </ul>
+                \t\t</li>
 \t\t\t\t\t\t<li><a href=\"exercises\">Exercices</a></li>
-\t\t\t\t\t\t<li><a href=\"#\">Progression</a></li>
+\t\t\t\t\t\t<li><a href=\"progression\">Progression</a></li>
 \t\t\t\t\t\t<li><a href=\"#\">Forum</a></li>
 \t\t\t\t\t</ul>
 \t\t\t\t</nav>
@@ -73,26 +78,23 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 \t\t\t\t</div>
 \t\t\t\t
 \t\t\t\t<aside id = \"chapter\">
-\t\t\t\t\t<h1>";
-        // line 44
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "nom", array()), "html", null, true);
-        echo "</h1>
+\t\t\t\t\t<h1> Reseau </h1>
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t";
-        // line 46
+        // line 51
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
-            // line 47
-            echo "                            <li>";
+            // line 52
+            echo "                            <li><a href=\"#\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
-            echo "</li>
+            echo "</a></li>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 54
         echo "\t\t\t\t\t</ul>
 \t\t\t\t</aside>
 \t\t\t\t\t
@@ -153,15 +155,15 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 </html> 
 ";
         
-        $__internal_6d12c3b3e4651a9f96332558ee88ea4faf8b4a3ce3c8e63c8bd78f1952d8ac91->leave($__internal_6d12c3b3e4651a9f96332558ee88ea4faf8b4a3ce3c8e63c8bd78f1952d8ac91_prof);
+        $__internal_8861a51f9a5e9edde2fc1606465e2598121ec3c81d93e84df05023837975db43->leave($__internal_8861a51f9a5e9edde2fc1606465e2598121ec3c81d93e84df05023837975db43_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_441fd99314686a914f2afe3fd65fe7fdd8af437f039338d44149926f856e15e7 = $this->env->getExtension("native_profiler");
-        $__internal_441fd99314686a914f2afe3fd65fe7fdd8af437f039338d44149926f856e15e7->enter($__internal_441fd99314686a914f2afe3fd65fe7fdd8af437f039338d44149926f856e15e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_8d9c260d06a4dae0ed69e0acb8394ac55d84f2e78e2ca477acbd72dca8d31c1a = $this->env->getExtension("native_profiler");
+        $__internal_8d9c260d06a4dae0ed69e0acb8394ac55d84f2e78e2ca477acbd72dca8d31c1a->enter($__internal_8d9c260d06a4dae0ed69e0acb8394ac55d84f2e78e2ca477acbd72dca8d31c1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "\t\t<link rel=\"stylesheet\" href=\"";
@@ -169,7 +171,7 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
         echo "\" type=\"text/css\" media=\"all\">
 \t\t";
         
-        $__internal_441fd99314686a914f2afe3fd65fe7fdd8af437f039338d44149926f856e15e7->leave($__internal_441fd99314686a914f2afe3fd65fe7fdd8af437f039338d44149926f856e15e7_prof);
+        $__internal_8d9c260d06a4dae0ed69e0acb8394ac55d84f2e78e2ca477acbd72dca8d31c1a->leave($__internal_8d9c260d06a4dae0ed69e0acb8394ac55d84f2e78e2ca477acbd72dca8d31c1a_prof);
 
     }
 
@@ -185,7 +187,7 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 
     public function getDebugInfo()
     {
-        return array (  167 => 6,  161 => 5,  96 => 49,  87 => 47,  83 => 46,  78 => 44,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  169 => 6,  163 => 5,  98 => 54,  89 => 52,  85 => 51,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -215,9 +217,14 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 /* 				<a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /* 				<nav>*/
 /* 					<ul id="menu">*/
-/* 						<li><a href="newChapitre">Cours</a></li>*/
+/* 						<li><a href="#">Cours</a>*/
+/* 		                    <ul>*/
+/* 		                        <li><a href="showCours">Trouver un cours</a></li>*/
+/* 		                        <li><a href="newChapitre">Ajouter un cours</a></li>*/
+/* 		                    </ul>*/
+/*                 		</li>*/
 /* 						<li><a href="exercises">Exercices</a></li>*/
-/* 						<li><a href="#">Progression</a></li>*/
+/* 						<li><a href="progression">Progression</a></li>*/
 /* 						<li><a href="#">Forum</a></li>*/
 /* 					</ul>*/
 /* 				</nav>*/
@@ -231,10 +238,10 @@ class __TwigTemplate_586a3dba508f0f284884b088dc1bfcbfa553925e5a2c6fa19f3dbdea6fe
 /* 				</div>*/
 /* 				*/
 /* 				<aside id = "chapter">*/
-/* 					<h1>{{ cours.nom }}</h1>*/
+/* 					<h1> Reseau </h1>*/
 /* 					<ul>*/
 /* 						{% for chapitre in cours.chapitres %}*/
-/*                             <li>{{ chapitre.nom }}</li>*/
+/*                             <li><a href="#">{{ chapitre.nom }}</a></li>*/
 /*                         {% endfor %}*/
 /* 					</ul>*/
 /* 				</aside>*/
