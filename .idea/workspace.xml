@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38f5451e-71a4-4d11-83ae-5beaaf9df3a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Symfony_PHP_project/web/showChapter.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exo.html.twig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevDebugProjectContainerCompiler.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/appDevUrlMatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/assetic/routing.yml" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/assetic/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/classes.php.meta" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/classes.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/3/03d2606461122c503667524aa5946fd2f43414ff1b9216f81f21eca22dd84e9c.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/3/03d2606461122c503667524aa5946fd2f43414ff1b9216f81f21eca22dd84e9c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/d/0d4ed90b33f42441b65315810f937c7a243f4da5d9a7c1ae1a95491b223b0486.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/d/0d4ed90b33f42441b65315810f937c7a243f4da5d9a7c1ae1a95491b223b0486.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/f/0f453530a7788b14d4f3ec1e8df75c02f408f9467aacaa171342e236aa124e80.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/0/f/0f453530a7788b14d4f3ec1e8df75c02f408f9467aacaa171342e236aa124e80.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/1/8/18bca0bbc2e4f1d765e97472f37de46f032cf2b496816c7ccf65e2b854800470.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/1/8/18bca0bbc2e4f1d765e97472f37de46f032cf2b496816c7ccf65e2b854800470.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/1/d/1d5152902e4f1a005f1c1f6c3731a7bc6296013bf76cca12bab18da497079298.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/1/d/1d5152902e4f1a005f1c1f6c3731a7bc6296013bf76cca12bab18da497079298.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/2/8/28ecb61226c9c18b952461bfbf5177fef5ee64f0a10ecc807db1d54a53d5f541.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/2/8/28ecb61226c9c18b952461bfbf5177fef5ee64f0a10ecc807db1d54a53d5f541.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/2/3283e2a2d5c3f43bea4072f9e7fd88a27bc81ddf294f103d8d54818931651ba5.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/2/3283e2a2d5c3f43bea4072f9e7fd88a27bc81ddf294f103d8d54818931651ba5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/3/3361956404f369eae43be7c0e5565c48da221b016557ccb1e8322a8cfc2308a8.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/3/3361956404f369eae43be7c0e5565c48da221b016557ccb1e8322a8cfc2308a8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/7/37769c26c42cb66cd25ed1ffd37c85f879f71f5cc1c7a24aaae5a473b2cdb77f.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/7/37769c26c42cb66cd25ed1ffd37c85f879f71f5cc1c7a24aaae5a473b2cdb77f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/8/384e363739b204d174ec4c2171175d7cc6239417532aead4e97e33b8147efe1c.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/3/8/384e363739b204d174ec4c2171175d7cc6239417532aead4e97e33b8147efe1c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/a/4ad3185fba5f2aa29a2901bbf5658d00be259a0e0b54c5ba6eeea12856f90621.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/a/4ad3185fba5f2aa29a2901bbf5658d00be259a0e0b54c5ba6eeea12856f90621.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/e/4eb4a4893c17be0694e4f855fce8685f1c16abfcf680382037c3124eb6ed915c.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/4/e/4eb4a4893c17be0694e4f855fce8685f1c16abfcf680382037c3124eb6ed915c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/5/c/5c12198181968dbbc1f45617d451192f0b96ed618e75e94fbe8fa5331fe42903.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/5/c/5c12198181968dbbc1f45617d451192f0b96ed618e75e94fbe8fa5331fe42903.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/6/6/66713340588d25a54d69760789954ed4bcc19903e0d388dbc3b7fc848d25f0b3.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/6/6/66713340588d25a54d69760789954ed4bcc19903e0d388dbc3b7fc848d25f0b3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/6/7/67c594ee54b0fd91829772c1306d865ce744e2183ee4038ee26535555b90538f.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/6/7/67c594ee54b0fd91829772c1306d865ce744e2183ee4038ee26535555b90538f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/7/0/708e68a57a4bbeb22fe643a2726144a708b78cb7326a5ef73e6b47bd8e336e6b.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/7/0/708e68a57a4bbeb22fe643a2726144a708b78cb7326a5ef73e6b47bd8e336e6b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/0/8046854f7e66772a50ecde3b95fb5710778b15b1ba026efb60dfe5a038200240.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/0/8046854f7e66772a50ecde3b95fb5710778b15b1ba026efb60dfe5a038200240.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/c/8c6065de9082c174cb97b6e1af0421e685bf3d1eeaf7b37cabf2ce3284750555.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/8/c/8c6065de9082c174cb97b6e1af0421e685bf3d1eeaf7b37cabf2ce3284750555.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/9/a/9adfee269bc0646aa62f250dfe409bc0d3642f2aadf71b78a3b7fac3d185fb4b.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/9/a/9adfee269bc0646aa62f250dfe409bc0d3642f2aadf71b78a3b7fac3d185fb4b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/a/2/a2e87dcc244caa3ff045db88d8fc8cd9d46424b70c9eb3ce2ab573d139753ac9.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/a/2/a2e87dcc244caa3ff045db88d8fc8cd9d46424b70c9eb3ce2ab573d139753ac9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/a/a/aaddafefafe1033fda9fe13d83abf7221337a6f1d48fb87fd29b9a80e22e6261.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/a/a/aaddafefafe1033fda9fe13d83abf7221337a6f1d48fb87fd29b9a80e22e6261.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/0/c031df3d155bb4fb8e6f4935c7f7a9ea159ba1fa47505f2c466d2c63a229adac.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/0/c031df3d155bb4fb8e6f4935c7f7a9ea159ba1fa47505f2c466d2c63a229adac.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/f/cf0dd09dabb1218a3f4766ce3c0f31ee0de60c4cf7ea8266e459a03596388e6f.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/c/f/cf0dd09dabb1218a3f4766ce3c0f31ee0de60c4cf7ea8266e459a03596388e6f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/d/1/d195423e0ad04510996a0a69a0764087e8752ccf91c1cfa24602c7fe3f94a4e1.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/d/1/d195423e0ad04510996a0a69a0764087e8752ccf91c1cfa24602c7fe3f94a4e1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/4/e40a783d7c68a3ac389f4db942debf6686f8ba8b00ba3396a5c5b721e14b492e.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/4/e40a783d7c68a3ac389f4db942debf6686f8ba8b00ba3396a5c5b721e14b492e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/d/edc3482e225077d766f35d53cdfdc58248603276cb8a6ce3c09d508ef3842faa.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/d/edc3482e225077d766f35d53cdfdc58248603276cb8a6ce3c09d508ef3842faa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/f/ef0269231784078bd97e142e66f95a20e1e3d250fd3702218422efafa7791275.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/cache/dev/twig/e/f/ef0269231784078bd97e142e66f95a20e1e3d250fd3702218422efafa7791275.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/logs/dev.log" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/ChapterAddSuccess.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/ChapterAddSuccess.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/Progression.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/Progression.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/SubscriptionSuccess.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/SubscriptionSuccess.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classFailed.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classFailed.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/classSuccess.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exercises.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoClass.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/exoMask.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskFailed.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/maskSuccess.html.twig" />
-    </list>
+    <list default="true" id="38f5451e-71a4-4d11-83ae-5beaaf9df3a4" name="Default" comment="" />
     <ignored path="Projet_IP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -102,7 +45,7 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
               <folding>
                 <element signature="e#39#96#0#PHP" expanded="true" />
@@ -111,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showCours.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showCours.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.538462">
-              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+            <state vertical-scroll-proportion="1.4664879">
+              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showChapter.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="showChapter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/showChapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.018973215">
-              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -165,8 +108,8 @@
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/Progression.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/SubscriptionSuccess.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/AjoutChapitre.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/web/showChapter.js" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig" />
       </list>
     </option>
   </component>
@@ -182,8 +125,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -210,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,14 +288,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_c7e0cbde92ba565cb218a521411d0e854079a28c/cmd/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -403,17 +346,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19083156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -421,6 +363,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -447,7 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="64" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -455,7 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,7 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,7 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="113" selection-start-line="25" selection-start-column="113" selection-end-line="25" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -505,7 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -513,7 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="59" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -529,7 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,7 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5">
           <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,7 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
           <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,14 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.518581">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1455038025148" expanded="true" signature="73137:73180" placeholder="..." />
-            <marker date="1455038025148" expanded="true" signature="82725:82768" placeholder="..." />
-            <marker date="1455038025148" expanded="true" signature="89535:89580" placeholder="..." />
-            <marker date="1455038025148" expanded="true" signature="101656:101699" placeholder="..." />
-            <marker date="1455038025148" expanded="true" signature="109552:109597" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14487633">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41519433">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14487633">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.052873563">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27126437">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09770115">
           <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29310346">
           <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03908046">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0816092">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28735632">
           <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5862069">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5862069">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18965517">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,13 +732,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.346153">
           <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
           <folding>
             <element signature="e#39#96#0#PHP" expanded="true" />
@@ -838,18 +745,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig">
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/showChapter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.538462">
-          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/showChapter.js">
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/showCours.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018973215">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        <state vertical-scroll-proportion="1.4664879">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
           <folding />
         </state>
       </provider>
