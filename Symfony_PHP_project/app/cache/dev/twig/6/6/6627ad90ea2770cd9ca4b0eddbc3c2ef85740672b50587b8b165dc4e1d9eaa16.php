@@ -16,8 +16,8 @@ class __TwigTemplate_6d3a43f8e6ec1ba6e122a000ba11c8f7ca2d0266f4bd6f816b324f5eb91
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b9ed3a52a3d07254770a4fc2f27aa740ac481fa0caa1f642d37cbeca45bc8af = $this->env->getExtension("native_profiler");
-        $__internal_2b9ed3a52a3d07254770a4fc2f27aa740ac481fa0caa1f642d37cbeca45bc8af->enter($__internal_2b9ed3a52a3d07254770a4fc2f27aa740ac481fa0caa1f642d37cbeca45bc8af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:exercises.html.twig"));
+        $__internal_dbe54974396ba24cfa0719792849e27cb4ccf9f93ade4a7b7436fc801368178a = $this->env->getExtension("native_profiler");
+        $__internal_dbe54974396ba24cfa0719792849e27cb4ccf9f93ade4a7b7436fc801368178a->enter($__internal_dbe54974396ba24cfa0719792849e27cb4ccf9f93ade4a7b7436fc801368178a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:exercises.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -59,7 +59,7 @@ class __TwigTemplate_6d3a43f8e6ec1ba6e122a000ba11c8f7ca2d0266f4bd6f816b324f5eb91
             <ul id=\"menu\">
                 <li><a href=\"#\">Cours</a>
                     <ul>
-                        <li><a href=\"#\">Trouver un cours</a></li>
+                        <li><a href=\"showCours\">Trouver un cours</a></li>
                         <li><a href=\"newChapitre\">Ajouter un cours</a></li>
                     </ul>
                 </li>
@@ -101,15 +101,15 @@ class __TwigTemplate_6d3a43f8e6ec1ba6e122a000ba11c8f7ca2d0266f4bd6f816b324f5eb91
 </body>
 </html>";
         
-        $__internal_2b9ed3a52a3d07254770a4fc2f27aa740ac481fa0caa1f642d37cbeca45bc8af->leave($__internal_2b9ed3a52a3d07254770a4fc2f27aa740ac481fa0caa1f642d37cbeca45bc8af_prof);
+        $__internal_dbe54974396ba24cfa0719792849e27cb4ccf9f93ade4a7b7436fc801368178a->leave($__internal_dbe54974396ba24cfa0719792849e27cb4ccf9f93ade4a7b7436fc801368178a_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_2b58221430ff09536157e0fa50b6086cc5e153e09f54b3fcbb5addb803365eed = $this->env->getExtension("native_profiler");
-        $__internal_2b58221430ff09536157e0fa50b6086cc5e153e09f54b3fcbb5addb803365eed->enter($__internal_2b58221430ff09536157e0fa50b6086cc5e153e09f54b3fcbb5addb803365eed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_671a1b5330b420aa4d24894e57b339aba97b2ce967ff4fdd385591c856e580da = $this->env->getExtension("native_profiler");
+        $__internal_671a1b5330b420aa4d24894e57b339aba97b2ce967ff4fdd385591c856e580da->enter($__internal_671a1b5330b420aa4d24894e57b339aba97b2ce967ff4fdd385591c856e580da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -117,7 +117,7 @@ class __TwigTemplate_6d3a43f8e6ec1ba6e122a000ba11c8f7ca2d0266f4bd6f816b324f5eb91
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_2b58221430ff09536157e0fa50b6086cc5e153e09f54b3fcbb5addb803365eed->leave($__internal_2b58221430ff09536157e0fa50b6086cc5e153e09f54b3fcbb5addb803365eed_prof);
+        $__internal_671a1b5330b420aa4d24894e57b339aba97b2ce967ff4fdd385591c856e580da->leave($__internal_671a1b5330b420aa4d24894e57b339aba97b2ce967ff4fdd385591c856e580da_prof);
 
     }
 
@@ -165,7 +165,7 @@ class __TwigTemplate_6d3a43f8e6ec1ba6e122a000ba11c8f7ca2d0266f4bd6f816b324f5eb91
 /*             <ul id="menu">*/
 /*                 <li><a href="#">Cours</a>*/
 /*                     <ul>*/
-/*                         <li><a href="#">Trouver un cours</a></li>*/
+/*                         <li><a href="showCours">Trouver un cours</a></li>*/
 /*                         <li><a href="newChapitre">Ajouter un cours</a></li>*/
 /*                     </ul>*/
 /*                 </li>*/

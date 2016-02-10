@@ -74,6 +74,10 @@ progression:
     path: /progression
     defaults: {_controller: IPBundle:Default:progression}
 
+showChapitre:
+    path: /showChapitre/{id}
+    defaults: {_controller: IPBundle:Default:showChapitre}
+
 
 login_check:
     path: /login_check

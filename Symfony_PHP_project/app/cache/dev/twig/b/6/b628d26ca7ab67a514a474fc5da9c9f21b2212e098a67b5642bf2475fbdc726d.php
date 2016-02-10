@@ -16,8 +16,8 @@ class __TwigTemplate_097a8e394bb5b34bf23dd058e4be1ca2dcd84ecb7c7d282cf1b55f521f6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9a313b38e02c548b5a89e1526cbe3c04832cd400cf2e19ab1154abf6edb60f94 = $this->env->getExtension("native_profiler");
-        $__internal_9a313b38e02c548b5a89e1526cbe3c04832cd400cf2e19ab1154abf6edb60f94->enter($__internal_9a313b38e02c548b5a89e1526cbe3c04832cd400cf2e19ab1154abf6edb60f94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:Progression.html.twig"));
+        $__internal_ed4e920d55aac6399fcf5dcde1a4423a3e51c23fab5bdec919163baeea3250bd = $this->env->getExtension("native_profiler");
+        $__internal_ed4e920d55aac6399fcf5dcde1a4423a3e51c23fab5bdec919163baeea3250bd->enter($__internal_ed4e920d55aac6399fcf5dcde1a4423a3e51c23fab5bdec919163baeea3250bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:Progression.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -60,7 +60,7 @@ class __TwigTemplate_097a8e394bb5b34bf23dd058e4be1ca2dcd84ecb7c7d282cf1b55f521f6
 
                 <li><a href=\"#\">Cours</a>
                     <ul>
-                        <li><a href=\"#\">Trouver un cours</a></li>
+                        <li><a href=\"showCours\">Trouver un cours</a></li>
                         <li><a href=\"newChapitre\">Ajouter un cours</a></li>
                     </ul>
                 </li>
@@ -153,15 +153,15 @@ class __TwigTemplate_097a8e394bb5b34bf23dd058e4be1ca2dcd84ecb7c7d282cf1b55f521f6
 </body>
 </html>";
         
-        $__internal_9a313b38e02c548b5a89e1526cbe3c04832cd400cf2e19ab1154abf6edb60f94->leave($__internal_9a313b38e02c548b5a89e1526cbe3c04832cd400cf2e19ab1154abf6edb60f94_prof);
+        $__internal_ed4e920d55aac6399fcf5dcde1a4423a3e51c23fab5bdec919163baeea3250bd->leave($__internal_ed4e920d55aac6399fcf5dcde1a4423a3e51c23fab5bdec919163baeea3250bd_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_5af0f9d344049f1fb98beb0c21d7d7dfe1ce82a946a470fed2fac23502b640b2 = $this->env->getExtension("native_profiler");
-        $__internal_5af0f9d344049f1fb98beb0c21d7d7dfe1ce82a946a470fed2fac23502b640b2->enter($__internal_5af0f9d344049f1fb98beb0c21d7d7dfe1ce82a946a470fed2fac23502b640b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_f05ee5265d046e1804b70d5af051a8440d01cae3f3656bce038f1218bdb3e26e = $this->env->getExtension("native_profiler");
+        $__internal_f05ee5265d046e1804b70d5af051a8440d01cae3f3656bce038f1218bdb3e26e->enter($__internal_f05ee5265d046e1804b70d5af051a8440d01cae3f3656bce038f1218bdb3e26e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -169,7 +169,7 @@ class __TwigTemplate_097a8e394bb5b34bf23dd058e4be1ca2dcd84ecb7c7d282cf1b55f521f6
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_5af0f9d344049f1fb98beb0c21d7d7dfe1ce82a946a470fed2fac23502b640b2->leave($__internal_5af0f9d344049f1fb98beb0c21d7d7dfe1ce82a946a470fed2fac23502b640b2_prof);
+        $__internal_f05ee5265d046e1804b70d5af051a8440d01cae3f3656bce038f1218bdb3e26e->leave($__internal_f05ee5265d046e1804b70d5af051a8440d01cae3f3656bce038f1218bdb3e26e_prof);
 
     }
 
@@ -218,7 +218,7 @@ class __TwigTemplate_097a8e394bb5b34bf23dd058e4be1ca2dcd84ecb7c7d282cf1b55f521f6
 /* */
 /*                 <li><a href="#">Cours</a>*/
 /*                     <ul>*/
-/*                         <li><a href="#">Trouver un cours</a></li>*/
+/*                         <li><a href="showCours">Trouver un cours</a></li>*/
 /*                         <li><a href="newChapitre">Ajouter un cours</a></li>*/
 /*                     </ul>*/
 /*                 </li>*/

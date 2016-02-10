@@ -50,12 +50,12 @@
             <h1> Reseau </h1>
             <ul>
                 {% for chapitre in cours.chapitres %}
-                    <li class="chapterName"><a href="#">{{ chapitre.nom }}</a></li>
+                    <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>
                 {% endfor %}
             </ul>
         </aside>
 
-        <script>
+        <!--<script>
             var titreChapter = document.getElementById("titreChapter");
             var chapterText = document.getElementById("chapterText")
 
@@ -64,10 +64,11 @@
             for(var i=0;i<chapter.length;i++) {
 
                 chapter[i].onclick = function (e) {
-                    chapterText.innerText = ((e.target).innerText);
+                    var nom = ((e.target).innerText);
+
                 };
             }
-        </script>
+        </script> -->
 
 
 

@@ -62,6 +62,20 @@ class DefaultController extends Controller
         ));
     }
 
+    public function showChapitreAction($id) {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        $chapitre = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findOneById($id);
+
+        return $this->render('IPBundle:Default:showChapitre.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+            'chapitre' => $chapitre,
+        ));
+
+    }
+
     public function newCoursAction(Request $request) {
 
         $cours = new Cours();

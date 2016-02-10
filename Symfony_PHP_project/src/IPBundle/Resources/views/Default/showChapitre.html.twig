@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+    {% endblock %}
+    <title>IP13</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="account">
+
+        {% if user == null %}
+            <a href="{{ path('login_route')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>
+        {% else %}
+            <a href="#">{{ user.nom }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
+        {% endif %}
+
+    </div>
+    <header>
+        <a href="{{ path('index')}}"><img id="logo" src="../img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
+        <nav>
+            <ul id="menu">
+
+                <li><a href="#">Cours</a>
+                    <ul>
+                        <li><a href="{{ path('showCours')}}">Trouver un cours</a></li>
+                        <li><a href="{{ path('newChapitre')}}">Ajouter un cours</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('exercises')}}">Exercices</a></li>
+                <li><a href="{{  path('progression')}}">Progression</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+
+        <div id="welcome">
+            <h1 id="titreChapter"></h1>
+            <p id="chapterText"></p>
+        </div>
+
+        <aside id = "chapter">
+            <h1> Reseau </h1>
+            <ul>
+                {% for chapitre in cours.chapitres %}
+                    <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+
+        <section>
+            <article>
+               {{chapitre.text}}
+            </article>
+        </section>
+
+    </div>
+</div>
+</body>
+</html>
