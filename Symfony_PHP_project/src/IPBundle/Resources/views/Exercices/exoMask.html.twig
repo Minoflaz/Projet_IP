@@ -1,44 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8"/>
-	{% block stylesheets %}
-		<link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
-	{% endblock %}
-	<title>IP13</title>
-</head>
+{% extends "base.html.twig" %}
 
-<body>
 
-<div id="container">
 
-	<div id="account">
 
-		{% if user == null %}
-			<a href="login">Connexion</a> | <a href="newEleve">Inscription</a>
-		{% else %}
-			<a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>
-		{% endif %}
-
-	</div>
-	<header>
-		<a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
-		<nav>
-			<ul id="menu">
-				<li><a href="#">Cours</a>
-                    <ul>
-                        <li><a href="showCours">Trouver un cours</a></li>
-                        <li><a href="newChapitre">Ajouter un cours</a></li>
-                    </ul>
-                </li>
-				<li><a href="exercises">Exercices</a></li>
-				<li><a href="progression">Progression</a></li>
-				<li><a href="#">Forum</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<div id="content">
+    {% block content %}
 
 		<div id="welcome">
 			<h1>Faire des exercices</h1>
@@ -58,26 +23,39 @@
 			</ul>
 		</aside>
 
-        <section>
-            <article>
+            <section>
+                <article>
+                    <header>
+                        <h1>Exercice : Class IP</h1>
+                    </header>
 
-                <div>
+                    <p>
+                        Soit une adresse IP : {{ip.getBytes()}}.<br>
+                    <p>
+                        On veut un masque de sous réseau pour {{ nbSubNet }} sous réseaux
+                    </p>
+                    <br>
 
-                    Donnez le masque de sous réseau pour une adresse ip : {{ip.getBytes()}} avec {{nbSubNet}} sous réseaux
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
 
-                    </br>
+                    <p>{{ form_label(form.class) }} :
+                        {{ form_widget(form.class) }}</p>
 
-                </div>
+                    <p id="btns">
+                        <input type="submit" id="form_save" name="form[save]" value="Valider" />
+                        {% do form.save.setRendered %}
+                        {{ form_end(form) }}
+                    </p>
 
-                <div>
-                    {{form(form)}}
+                    </p>
 
-                </div>
 
-            </article>
-        </section>
 
-    </div>
-</div>
-</body>
-</html>
+
+                </article>
+            </section>
+
+    {% endblock %}
+
+

@@ -7,71 +7,37 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "IPBundle:Exercices:exoMask.html.twig", 1);
         $this->blocks = array(
-            'stylesheets' => array($this, 'block_stylesheets'),
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_072fc887754a2a0dcf2480e13d6f5b3f21a86153de450da24f7f13d233253345 = $this->env->getExtension("native_profiler");
-        $__internal_072fc887754a2a0dcf2480e13d6f5b3f21a86153de450da24f7f13d233253345->enter($__internal_072fc887754a2a0dcf2480e13d6f5b3f21a86153de450da24f7f13d233253345_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
+        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc = $this->env->getExtension("native_profiler");
+        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc->enter($__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-<html>
-<head>
-\t<meta charset=\"UTF-8\"/>
-\t";
-        // line 5
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
-        echo "\t<title>IP13</title>
-</head>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc->leave($__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc_prof);
 
-<body>
+    }
 
-<div id=\"container\">
+    // line 6
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871 = $this->env->getExtension("native_profiler");
+        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871->enter($__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-\t<div id=\"account\">
-
-\t\t";
-        // line 17
-        if (((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")) == null)) {
-            // line 18
-            echo "\t\t\t<a href=\"login\">Connexion</a> | <a href=\"newEleve\">Inscription</a>
-\t\t";
-        } else {
-            // line 20
-            echo "\t\t\t<a href=\"#\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nom", array()), "html", null, true);
-            echo "</a> | <a href=\"logout\">Deconnexion</a>
-\t\t";
-        }
-        // line 22
+        // line 7
         echo "
-\t</div>
-\t<header>
-\t\t<a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
-\t\t<nav>
-\t\t\t<ul id=\"menu\">
-\t\t\t\t<li><a href=\"#\">Cours</a>
-                    <ul>
-                        <li><a href=\"showCours\">Trouver un cours</a></li>
-                        <li><a href=\"newChapitre\">Ajouter un cours</a></li>
-                    </ul>
-                </li>
-\t\t\t\t<li><a href=\"exercises\">Exercices</a></li>
-\t\t\t\t<li><a href=\"progression\">Progression</a></li>
-\t\t\t\t<li><a href=\"#\">Forum</a></li>
-\t\t\t</ul>
-\t\t</nav>
-\t</header>
-
-\t<div id=\"content\">
-
 \t\t<div id=\"welcome\">
 \t\t\t<h1>Faire des exercices</h1>
 \t\t\t<p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
@@ -90,55 +56,65 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 \t\t\t</ul>
 \t\t</aside>
 
-        <section>
-            <article>
+            <section>
+                <article>
+                    <header>
+                        <h1>Exercice : Class IP</h1>
+                    </header>
 
-                <div>
-
-                    Donnez le masque de sous réseau pour une adresse ip : ";
-        // line 66
+                    <p>
+                        Soit une adresse IP : ";
+        // line 33
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "getBytes", array(), "method"), "html", null, true);
-        echo " avec ";
+        echo ".<br>
+                    <p>
+                        On veut un masque de sous réseau pour ";
+        // line 35
         echo twig_escape_filter($this->env, (isset($context["nbSubNet"]) ? $context["nbSubNet"] : $this->getContext($context, "nbSubNet")), "html", null, true);
         echo " sous réseaux
+                    </p>
+                    <br>
 
-                    </br>
-
-                </div>
-
-                <div>
                     ";
-        // line 73
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        // line 39
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
+        echo "
+                    ";
+        // line 40
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 
-                </div>
+                    <p>";
+        // line 42
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "class", array()), 'label');
+        echo " :
+                        ";
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "class", array()), 'widget');
+        echo "</p>
 
-            </article>
-        </section>
+                    <p id=\"btns\">
+                        <input type=\"submit\" id=\"form_save\" name=\"form[save]\" value=\"Valider\" />
+                        ";
+        // line 47
+        $this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), "setRendered", array());
+        // line 48
+        echo "                        ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+                    </p>
 
-    </div>
-</div>
-</body>
-</html>";
+                    </p>
+
+
+
+
+                </article>
+            </section>
+
+    ";
         
-        $__internal_072fc887754a2a0dcf2480e13d6f5b3f21a86153de450da24f7f13d233253345->leave($__internal_072fc887754a2a0dcf2480e13d6f5b3f21a86153de450da24f7f13d233253345_prof);
-
-    }
-
-    // line 5
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        $__internal_7095e3a6ad981d40fa5b210e548980d97b3dc9d22b4003fe05e3c49080da0da2 = $this->env->getExtension("native_profiler");
-        $__internal_7095e3a6ad981d40fa5b210e548980d97b3dc9d22b4003fe05e3c49080da0da2->enter($__internal_7095e3a6ad981d40fa5b210e548980d97b3dc9d22b4003fe05e3c49080da0da2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 6
-        echo "\t\t<link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("style.css"), "html", null, true);
-        echo "\" type=\"text/css\" media=\"all\">
-\t";
-        
-        $__internal_7095e3a6ad981d40fa5b210e548980d97b3dc9d22b4003fe05e3c49080da0da2->leave($__internal_7095e3a6ad981d40fa5b210e548980d97b3dc9d22b4003fe05e3c49080da0da2_prof);
+        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871->leave($__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871_prof);
 
     }
 
@@ -154,50 +130,15 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
     public function getDebugInfo()
     {
-        return array (  136 => 6,  130 => 5,  112 => 73,  100 => 66,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  102 => 48,  100 => 47,  93 => 43,  89 => 42,  84 => 40,  80 => 39,  73 => 35,  68 => 33,  40 => 7,  34 => 6,  11 => 1,);
     }
 }
-/* <!DOCTYPE html>*/
-/* <html>*/
-/* <head>*/
-/* 	<meta charset="UTF-8"/>*/
-/* 	{% block stylesheets %}*/
-/* 		<link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">*/
-/* 	{% endblock %}*/
-/* 	<title>IP13</title>*/
-/* </head>*/
+/* {% extends "base.html.twig" %}*/
 /* */
-/* <body>*/
 /* */
-/* <div id="container">*/
 /* */
-/* 	<div id="account">*/
 /* */
-/* 		{% if user == null %}*/
-/* 			<a href="login">Connexion</a> | <a href="newEleve">Inscription</a>*/
-/* 		{% else %}*/
-/* 			<a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>*/
-/* 		{% endif %}*/
-/* */
-/* 	</div>*/
-/* 	<header>*/
-/* 		<a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
-/* 		<nav>*/
-/* 			<ul id="menu">*/
-/* 				<li><a href="#">Cours</a>*/
-/*                     <ul>*/
-/*                         <li><a href="showCours">Trouver un cours</a></li>*/
-/*                         <li><a href="newChapitre">Ajouter un cours</a></li>*/
-/*                     </ul>*/
-/*                 </li>*/
-/* 				<li><a href="exercises">Exercices</a></li>*/
-/* 				<li><a href="progression">Progression</a></li>*/
-/* 				<li><a href="#">Forum</a></li>*/
-/* 			</ul>*/
-/* 		</nav>*/
-/* 	</header>*/
-/* */
-/* 	<div id="content">*/
+/*     {% block content %}*/
 /* */
 /* 		<div id="welcome">*/
 /* 			<h1>Faire des exercices</h1>*/
@@ -217,26 +158,40 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 /* 			</ul>*/
 /* 		</aside>*/
 /* */
-/*         <section>*/
-/*             <article>*/
+/*             <section>*/
+/*                 <article>*/
+/*                     <header>*/
+/*                         <h1>Exercice : Class IP</h1>*/
+/*                     </header>*/
 /* */
-/*                 <div>*/
+/*                     <p>*/
+/*                         Soit une adresse IP : {{ip.getBytes()}}.<br>*/
+/*                     <p>*/
+/*                         On veut un masque de sous réseau pour {{ nbSubNet }} sous réseaux*/
+/*                     </p>*/
+/*                     <br>*/
 /* */
-/*                     Donnez le masque de sous réseau pour une adresse ip : {{ip.getBytes()}} avec {{nbSubNet}} sous réseaux*/
+/*                     {{ form_start(form) }}*/
+/*                     {{ form_errors(form) }}*/
 /* */
-/*                     </br>*/
+/*                     <p>{{ form_label(form.class) }} :*/
+/*                         {{ form_widget(form.class) }}</p>*/
 /* */
-/*                 </div>*/
+/*                     <p id="btns">*/
+/*                         <input type="submit" id="form_save" name="form[save]" value="Valider" />*/
+/*                         {% do form.save.setRendered %}*/
+/*                         {{ form_end(form) }}*/
+/*                     </p>*/
 /* */
-/*                 <div>*/
-/*                     {{form(form)}}*/
+/*                     </p>*/
 /* */
-/*                 </div>*/
 /* */
-/*             </article>*/
-/*         </section>*/
 /* */
-/*     </div>*/
-/* </div>*/
-/* </body>*/
-/* </html>*/
+/* */
+/*                 </article>*/
+/*             </section>*/
+/* */
+/*     {% endblock %}*/
+/* */
+/* */
+/* */

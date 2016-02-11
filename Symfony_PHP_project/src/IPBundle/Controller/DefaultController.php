@@ -216,7 +216,7 @@ class DefaultController extends Controller
         }
 
         $form = $this->createFormBuilder($ipAdress)
-            ->add('class','text')
+            ->add('class','choice',array('choices' => array('A' => 'A', 'B' => 'B', 'C' => 'C,', 'D' => 'D')))
             ->add('save','submit')
             ->getForm();
 

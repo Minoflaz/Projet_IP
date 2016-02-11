@@ -18,8 +18,8 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820 = $this->env->getExtension("native_profiler");
-        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820->enter($__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_3688d5cf6bebb951884cfb52057afede0d3237c8c122ee2c3e87c953392cec3c = $this->env->getExtension("native_profiler");
+        $__internal_3688d5cf6bebb951884cfb52057afede0d3237c8c122ee2c3e87c953392cec3c->enter($__internal_3688d5cf6bebb951884cfb52057afede0d3237c8c122ee2c3e87c953392cec3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -43,14 +43,16 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
                 ";
         // line 19
-        if (((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")) == null)) {
+        if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()) == null)) {
             // line 20
-            echo "                    <a href=\"login\">Connexion</a> | <a href=\"newEleve\">Inscription</a>
+            echo "                    <a href=\"login\">Connexion</a> | <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("newEleve");
+            echo "\">Inscription</a>
                 ";
         } else {
             // line 22
             echo "                    <a href=\"#\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nom", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "nom", array()), "html", null, true);
             echo "</a> | <a href=\"logout\">Deconnexion</a>
                 ";
         }
@@ -67,12 +69,24 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
                     <ul id=\"menu\">
                         <li><a href=\"#\">Cours</a>
                             <ul>
-                                <li><a href=\"showCours\">Trouver un cours</a></li>
-                                <li><a href=\"newChapitre\">Ajouter un cours</a></li>
+                                <li><a href=\"";
+        // line 35
+        echo $this->env->getExtension('routing')->getPath("showCours");
+        echo "\">Trouver un cours</a></li>
+                                <li><a href=\"";
+        // line 36
+        echo $this->env->getExtension('routing')->getPath("newChapitre");
+        echo "'\">Ajouter un cours</a></li>
                             </ul>
                         </li>
-                        <li><a href=\"exercises\">Exercices</a></li>
-                        <li><a href=\"progression\">Progression</a></li>
+                        <li><a href=\"";
+        // line 39
+        echo $this->env->getExtension('routing')->getPath("exercises");
+        echo "\">Exercices</a></li>
+                        <li><a href=\"";
+        // line 40
+        echo $this->env->getExtension('routing')->getPath("progression");
+        echo "\">Progression</a></li>
                         <li><a href=\"#\">Forum</a></li>
                     </ul>
                 </nav>
@@ -87,15 +101,15 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
     </body>
 </html>";
         
-        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820->leave($__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820_prof);
+        $__internal_3688d5cf6bebb951884cfb52057afede0d3237c8c122ee2c3e87c953392cec3c->leave($__internal_3688d5cf6bebb951884cfb52057afede0d3237c8c122ee2c3e87c953392cec3c_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69 = $this->env->getExtension("native_profiler");
-        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69->enter($__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_fd6a7ce98686f532c91f960a0e28071c94b78661b14edc30d7aa7457a44d88cb = $this->env->getExtension("native_profiler");
+        $__internal_fd6a7ce98686f532c91f960a0e28071c94b78661b14edc30d7aa7457a44d88cb->enter($__internal_fd6a7ce98686f532c91f960a0e28071c94b78661b14edc30d7aa7457a44d88cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "            <link rel=\"stylesheet\" href=\"";
@@ -103,32 +117,32 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
         echo "\" type=\"text/css\" media=\"all\">
         ";
         
-        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69->leave($__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69_prof);
+        $__internal_fd6a7ce98686f532c91f960a0e28071c94b78661b14edc30d7aa7457a44d88cb->leave($__internal_fd6a7ce98686f532c91f960a0e28071c94b78661b14edc30d7aa7457a44d88cb_prof);
 
     }
 
     // line 28
     public function block_logo($context, array $blocks = array())
     {
-        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740 = $this->env->getExtension("native_profiler");
-        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740->enter($__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "logo"));
+        $__internal_eb4fd391db6b7539902be67b6794e14a4df54caba30eb0f3bd7054393163d777 = $this->env->getExtension("native_profiler");
+        $__internal_eb4fd391db6b7539902be67b6794e14a4df54caba30eb0f3bd7054393163d777->enter($__internal_eb4fd391db6b7539902be67b6794e14a4df54caba30eb0f3bd7054393163d777_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "logo"));
 
         // line 29
         echo "                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
                 ";
         
-        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740->leave($__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740_prof);
+        $__internal_eb4fd391db6b7539902be67b6794e14a4df54caba30eb0f3bd7054393163d777->leave($__internal_eb4fd391db6b7539902be67b6794e14a4df54caba30eb0f3bd7054393163d777_prof);
 
     }
 
     // line 46
     public function block_content($context, array $blocks = array())
     {
-        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63 = $this->env->getExtension("native_profiler");
-        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63->enter($__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_bce94904956041e2d36000e1a3067dac9daefc093b90b422bef05f9ba12487be = $this->env->getExtension("native_profiler");
+        $__internal_bce94904956041e2d36000e1a3067dac9daefc093b90b422bef05f9ba12487be->enter($__internal_bce94904956041e2d36000e1a3067dac9daefc093b90b422bef05f9ba12487be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         
-        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63->leave($__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63_prof);
+        $__internal_bce94904956041e2d36000e1a3067dac9daefc093b90b422bef05f9ba12487be->leave($__internal_bce94904956041e2d36000e1a3067dac9daefc093b90b422bef05f9ba12487be_prof);
 
     }
 
@@ -144,7 +158,7 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
     public function getDebugInfo()
     {
-        return array (  125 => 46,  117 => 29,  111 => 28,  101 => 7,  95 => 6,  83 => 46,  66 => 31,  64 => 28,  58 => 24,  52 => 22,  48 => 20,  46 => 19,  34 => 9,  32 => 6,  25 => 1,);
+        return array (  139 => 46,  131 => 29,  125 => 28,  115 => 7,  109 => 6,  97 => 46,  88 => 40,  84 => 39,  78 => 36,  74 => 35,  68 => 31,  66 => 28,  60 => 24,  54 => 22,  48 => 20,  46 => 19,  34 => 9,  32 => 6,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -165,10 +179,10 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 /* */
 /*             <div id="account">*/
 /* */
-/*                 {% if user == null %}*/
-/*                     <a href="login">Connexion</a> | <a href="newEleve">Inscription</a>*/
+/*                 {% if app.user == null %}*/
+/*                     <a href="login">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>*/
 /*                 {% else %}*/
-/*                     <a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>*/
+/*                     <a href="#">{{ app.user.nom }}</a> | <a href="logout">Deconnexion</a>*/
 /*                 {% endif %}*/
 /* */
 /*             </div>*/
@@ -181,12 +195,12 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 /*                     <ul id="menu">*/
 /*                         <li><a href="#">Cours</a>*/
 /*                             <ul>*/
-/*                                 <li><a href="showCours">Trouver un cours</a></li>*/
-/*                                 <li><a href="newChapitre">Ajouter un cours</a></li>*/
+/*                                 <li><a href="{{ path('showCours')}}">Trouver un cours</a></li>*/
+/*                                 <li><a href="{{ path('newChapitre')}}'">Ajouter un cours</a></li>*/
 /*                             </ul>*/
 /*                         </li>*/
-/*                         <li><a href="exercises">Exercices</a></li>*/
-/*                         <li><a href="progression">Progression</a></li>*/
+/*                         <li><a href="{{ path('exercises')}}">Exercices</a></li>*/
+/*                         <li><a href="{{ path('progression')}}">Progression</a></li>*/
 /*                         <li><a href="#">Forum</a></li>*/
 /*                     </ul>*/
 /*                 </nav>*/
