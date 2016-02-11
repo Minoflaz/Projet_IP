@@ -10,93 +10,125 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
         $this->parent = false;
 
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'body' => array($this, 'block_body'),
-            'javascripts' => array($this, 'block_javascripts'),
+            'logo' => array($this, 'block_logo'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_04ab57fafb9a96af87c757be5b6d6360606bae6a8d51b9e30b093b75db5fecaf = $this->env->getExtension("native_profiler");
-        $__internal_04ab57fafb9a96af87c757be5b6d6360606bae6a8d51b9e30b093b75db5fecaf->enter($__internal_04ab57fafb9a96af87c757be5b6d6360606bae6a8d51b9e30b093b75db5fecaf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820 = $this->env->getExtension("native_profiler");
+        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820->enter($__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
 <html>
     <head>
-        <meta charset=\"UTF-8\" />
-        <title>";
-        // line 5
-        $this->displayBlock('title', $context, $blocks);
-        echo "</title>
+
+        <meta charset=\"UTF-8\"/>
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
-        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+        // line 9
+        echo "        <title>IP13</title>
+
     </head>
+
     <body>
-        ";
-        // line 10
-        $this->displayBlock('body', $context, $blocks);
-        // line 11
-        echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
-        echo "    </body>
-</html>
-";
+
+        <div id=\"container\">
+
+            <div id=\"account\">
+
+                ";
+        // line 19
+        if (((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")) == null)) {
+            // line 20
+            echo "                    <a href=\"login\">Connexion</a> | <a href=\"newEleve\">Inscription</a>
+                ";
+        } else {
+            // line 22
+            echo "                    <a href=\"#\">";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nom", array()), "html", null, true);
+            echo "</a> | <a href=\"logout\">Deconnexion</a>
+                ";
+        }
+        // line 24
+        echo "
+            </div>
+
+            <header>
+                ";
+        // line 28
+        $this->displayBlock('logo', $context, $blocks);
+        // line 31
+        echo "                <nav>
+                    <ul id=\"menu\">
+                        <li><a href=\"#\">Cours</a>
+                            <ul>
+                                <li><a href=\"showCours\">Trouver un cours</a></li>
+                                <li><a href=\"newChapitre\">Ajouter un cours</a></li>
+                            </ul>
+                        </li>
+                        <li><a href=\"exercises\">Exercices</a></li>
+                        <li><a href=\"progression\">Progression</a></li>
+                        <li><a href=\"#\">Forum</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id=\"content\">";
+        // line 46
+        $this->displayBlock('content', $context, $blocks);
+        echo "</div>
+
+        </div>
+    </body>
+</html>";
         
-        $__internal_04ab57fafb9a96af87c757be5b6d6360606bae6a8d51b9e30b093b75db5fecaf->leave($__internal_04ab57fafb9a96af87c757be5b6d6360606bae6a8d51b9e30b093b75db5fecaf_prof);
-
-    }
-
-    // line 5
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_d581d31562899b71e160a24864af01141176c954a17d160885fee5375062d765 = $this->env->getExtension("native_profiler");
-        $__internal_d581d31562899b71e160a24864af01141176c954a17d160885fee5375062d765->enter($__internal_d581d31562899b71e160a24864af01141176c954a17d160885fee5375062d765_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
-
-        echo "Welcome!";
-        
-        $__internal_d581d31562899b71e160a24864af01141176c954a17d160885fee5375062d765->leave($__internal_d581d31562899b71e160a24864af01141176c954a17d160885fee5375062d765_prof);
+        $__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820->leave($__internal_dead0a252d67230433bdeaf59a16500964a96e12f39d56fd00fd3912663e2820_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b35b55d72afeb7c18897e1383e028f683736fcd788c956eb0d87eae4e7899b9f = $this->env->getExtension("native_profiler");
-        $__internal_b35b55d72afeb7c18897e1383e028f683736fcd788c956eb0d87eae4e7899b9f->enter($__internal_b35b55d72afeb7c18897e1383e028f683736fcd788c956eb0d87eae4e7899b9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69 = $this->env->getExtension("native_profiler");
+        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69->enter($__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
+        // line 7
+        echo "            <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("style.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\">
+        ";
         
-        $__internal_b35b55d72afeb7c18897e1383e028f683736fcd788c956eb0d87eae4e7899b9f->leave($__internal_b35b55d72afeb7c18897e1383e028f683736fcd788c956eb0d87eae4e7899b9f_prof);
+        $__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69->leave($__internal_be122a2bd7b2dc96d6eb083b8e70287c75f974d2144d8cc9ab101918af584e69_prof);
 
     }
 
-    // line 10
-    public function block_body($context, array $blocks = array())
+    // line 28
+    public function block_logo($context, array $blocks = array())
     {
-        $__internal_df0e03946bee2d1ce822c24acc90e2479660c7f561abcb03d63ba46d8724341b = $this->env->getExtension("native_profiler");
-        $__internal_df0e03946bee2d1ce822c24acc90e2479660c7f561abcb03d63ba46d8724341b->enter($__internal_df0e03946bee2d1ce822c24acc90e2479660c7f561abcb03d63ba46d8724341b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740 = $this->env->getExtension("native_profiler");
+        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740->enter($__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "logo"));
 
+        // line 29
+        echo "                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
+                ";
         
-        $__internal_df0e03946bee2d1ce822c24acc90e2479660c7f561abcb03d63ba46d8724341b->leave($__internal_df0e03946bee2d1ce822c24acc90e2479660c7f561abcb03d63ba46d8724341b_prof);
+        $__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740->leave($__internal_426eb0b24a568d1d3a09fb520ce746be63eee267e7ee0f8a89f4baea027e4740_prof);
 
     }
 
-    // line 11
-    public function block_javascripts($context, array $blocks = array())
+    // line 46
+    public function block_content($context, array $blocks = array())
     {
-        $__internal_0c50d2a03f67caf3fbe2425ffe96c5d1bd14ae9b27733be743df53fd7b0def81 = $this->env->getExtension("native_profiler");
-        $__internal_0c50d2a03f67caf3fbe2425ffe96c5d1bd14ae9b27733be743df53fd7b0def81->enter($__internal_0c50d2a03f67caf3fbe2425ffe96c5d1bd14ae9b27733be743df53fd7b0def81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63 = $this->env->getExtension("native_profiler");
+        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63->enter($__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         
-        $__internal_0c50d2a03f67caf3fbe2425ffe96c5d1bd14ae9b27733be743df53fd7b0def81->leave($__internal_0c50d2a03f67caf3fbe2425ffe96c5d1bd14ae9b27733be743df53fd7b0def81_prof);
+        $__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63->leave($__internal_b3f15276d3ea827af31853fc1ec673aa80b36dab73a84b32eb39e9f38a7f2b63_prof);
 
     }
 
@@ -112,20 +144,56 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
     public function getDebugInfo()
     {
-        return array (  93 => 11,  82 => 10,  71 => 6,  59 => 5,  50 => 12,  47 => 11,  45 => 10,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  125 => 46,  117 => 29,  111 => 28,  101 => 7,  95 => 6,  83 => 46,  66 => 31,  64 => 28,  58 => 24,  52 => 22,  48 => 20,  46 => 19,  34 => 9,  32 => 6,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
 /*     <head>*/
-/*         <meta charset="UTF-8" />*/
-/*         <title>{% block title %}Welcome!{% endblock %}</title>*/
-/*         {% block stylesheets %}{% endblock %}*/
-/*         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
+/* */
+/*         <meta charset="UTF-8"/>*/
+/*         {% block stylesheets %}*/
+/*             <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">*/
+/*         {% endblock %}*/
+/*         <title>IP13</title>*/
+/* */
 /*     </head>*/
+/* */
 /*     <body>*/
-/*         {% block body %}{% endblock %}*/
-/*         {% block javascripts %}{% endblock %}*/
+/* */
+/*         <div id="container">*/
+/* */
+/*             <div id="account">*/
+/* */
+/*                 {% if user == null %}*/
+/*                     <a href="login">Connexion</a> | <a href="newEleve">Inscription</a>*/
+/*                 {% else %}*/
+/*                     <a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>*/
+/*                 {% endif %}*/
+/* */
+/*             </div>*/
+/* */
+/*             <header>*/
+/*                 {% block logo %}*/
+/*                 <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                 {% endblock %}*/
+/*                 <nav>*/
+/*                     <ul id="menu">*/
+/*                         <li><a href="#">Cours</a>*/
+/*                             <ul>*/
+/*                                 <li><a href="showCours">Trouver un cours</a></li>*/
+/*                                 <li><a href="newChapitre">Ajouter un cours</a></li>*/
+/*                             </ul>*/
+/*                         </li>*/
+/*                         <li><a href="exercises">Exercices</a></li>*/
+/*                         <li><a href="progression">Progression</a></li>*/
+/*                         <li><a href="#">Forum</a></li>*/
+/*                     </ul>*/
+/*                 </nav>*/
+/*             </header>*/
+/* */
+/*             <div id="content">{% block content %}{% endblock %}</div>*/
+/* */
+/*         </div>*/
 /*     </body>*/
 /* </html>*/
-/* */

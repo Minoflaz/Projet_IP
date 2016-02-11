@@ -91,9 +91,9 @@ class DatabaseController extends Controller
 
 	}
 
-	public function showNotesEleveAction($idEleve) {
+	public function showNotesEleveAction($prenom) {
 
-		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($idEleve);
+		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneByPrenom($prenom);
 		$notesRecup = $eleve->getNotes();
 
 		$affichage ="Notes de ".$eleve->getPrenom()." : ";

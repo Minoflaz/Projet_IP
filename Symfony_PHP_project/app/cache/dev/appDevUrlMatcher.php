@@ -167,7 +167,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             if (0 === strpos($pathinfo, '/showNotes')) {
                 // showNotesEleve
-                if (0 === strpos($pathinfo, '/showNotesEleve') && preg_match('#^/showNotesEleve/(?P<idEleve>[^/]++)$#s', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/showNotesEleve') && preg_match('#^/showNotesEleve/(?P<prenom>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'showNotesEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showNotesEleveAction',));
                 }
 

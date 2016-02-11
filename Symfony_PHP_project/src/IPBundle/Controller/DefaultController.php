@@ -26,7 +26,7 @@ class DefaultController extends Controller
     {
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
-        return $this->render('IPBundle:Default:index.html.twig',array(
+        return $this->render('IPBundle:Accueil:index.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
@@ -36,7 +36,7 @@ class DefaultController extends Controller
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
-        return $this->render('IPBundle:Default:exercises.html.twig',array(
+        return $this->render('IPBundle:Exercices:exercises.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
@@ -46,7 +46,7 @@ class DefaultController extends Controller
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
-        return $this->render('IPBundle:Default:Progression.html.twig',array(
+        return $this->render('IPBundle:Progression:Progression.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
@@ -56,7 +56,7 @@ class DefaultController extends Controller
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
-        return $this->render('IPBundle:Default:showCours.html.twig',array(
+        return $this->render('IPBundle:Cours:showCours.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
@@ -68,7 +68,7 @@ class DefaultController extends Controller
 
         $chapitre = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findOneById($id);
 
-        return $this->render('IPBundle:Default:showChapitre.html.twig',array(
+        return $this->render('IPBundle:Cours:showChapitre.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
             'chapitre' => $chapitre,
@@ -93,7 +93,7 @@ class DefaultController extends Controller
             $em->persist($cours);
             $em->flush();
 
-            return $this->render('IPBundle:Default:LessonSubscriptionSuccess.html.twig');
+            return $this->render('IPBundle:Cours:LessonSubscriptionSuccess.html.twig');
         }
 
         return $this->render('IPBundle:Default:testCours.html.twig',array(
@@ -126,12 +126,12 @@ class DefaultController extends Controller
             $em->persist($chapitre);
             $em->flush();
 
-            return $this->render('IPBundle:Default:ChapterAddSuccess.html.twig',array(
+            return $this->render('IPBundle:Cours:ChapterAddSuccess.html.twig',array(
                 'user'=> $this->getUser(),
             ));
         }
 
-        return $this->render('IPBundle:Default:AjoutChapitre.html.twig',array(
+        return $this->render('IPBundle:Cours:AjoutChapitre.html.twig',array(
                 'form' => $form->createView(),
                 'user'=> $this->getUser(),
                 'cours' => $cours,
@@ -168,9 +168,8 @@ class DefaultController extends Controller
             $em->persist($eleve);
             $em->flush();
 
-            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig',array(
+            return $this->render('IPBundle:Inscription:SubscriptionSuccess.html.twig',array(
                 'user'=> $this->getUser(),
-                'cours' => $cours,
             ));
         }
 
@@ -179,7 +178,7 @@ class DefaultController extends Controller
         }
 
 
-        return $this->render('IPBundle:Default:inscription.html.twig',array(
+        return $this->render('IPBundle:Inscription:inscription.html.twig',array(
                 'form' => $form->createView(),
             ));
     }
@@ -192,9 +191,18 @@ class DefaultController extends Controller
 
         $session = $this->container->get('session');
 
+        $em = $this->getDoctrine()->getManager();
+
         $ipAdress = new IPAdress();
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Class'));
+
+        if($cours == null) {
+            $cours = new Cours();
+            $cours->setNom("Class");
+            $em->persist($cours);
+            $em->flush();
+        }
 
         if($session->has('ip'))
             $ipAdress->setbytes($session->get('ip'));
@@ -220,25 +228,34 @@ class DefaultController extends Controller
 
             if( (strtoupper( $ipAdress->getClass())) == ($ipAdress->giveClass())  ) { // strtoupper allows to compare properly
 
-                if($this->getUser() != null)
-                    $this->getUser()->addNote(new Note(20,$cours));
+                if($this->getUser() != null){
+                    $note = new Note(20,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
 
-                return $this->render('IPBundle:Default:classSuccess.html.twig',array(
+                return $this->render('IPBundle:Exercices:classSuccess.html.twig',array(
                     'user'=> $this->getUser(),
                 ));
             }
             else {
 
-                if($this->getUser() != null)
-                    $this->getUser()->addNote(new Note(0,$cours));
-                return $this->render('IPBundle:Default:classFailed.html.twig',array(
+                if($this->getUser() != null){
+                    $note = new Note(0,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
+
+                return $this->render('IPBundle:Exercices:classFailed.html.twig',array(
                     'user'=> $this->getUser(),
                 ));
 
             }
         }
 
-        return $this->render('IPBundle:Default:exoClass.html.twig',array(
+        return $this->render('IPBundle:Exercices:exoClass.html.twig',array(
             'form' => $form->createView(),
             'ip' => $ipAdress,
             'user'=> $this->getUser(),
@@ -307,18 +324,18 @@ class DefaultController extends Controller
             $reponse->send();
 
             if($mask->isSame($ipAdress->giveMask(   $nbSubNet)))
-                return $this->render('IPBundle:Default:maskSuccess.html.twig',array(
+                return $this->render('IPBundle:Exercices:maskSuccess.html.twig',array(
                     'user'=> $this->getUser(),
                 ));
             else
-                return $this->render('IPBundle:Default:maskFailed.html.twig',array(
+                return $this->render('IPBundle:Exercices:maskFailed.html.twig',array(
                     'user'=> $this->getUser(),
                 ));
 
         }
 
 
-        return $this->render('IPBundle:Default:exoMask.html.twig',array(
+        return $this->render('IPBundle:Exercices:exoMask.html.twig',array(
                 'form' => $form->createView(),
                 'ip' => $ipAdress,
                 'mask' => $mask,

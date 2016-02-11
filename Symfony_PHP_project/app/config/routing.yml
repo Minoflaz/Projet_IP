@@ -23,7 +23,7 @@ showAllEleve:
     defaults: {_controller : IPBundle:Database:showAllEleve}
 
 showNotesEleve:
-    path: /showNotesEleve/{idEleve}
+    path: /showNotesEleve/{prenom}
     defaults: {_controller : IPBundle:Database:showNotesEleve}
 
 showNotesCours:
