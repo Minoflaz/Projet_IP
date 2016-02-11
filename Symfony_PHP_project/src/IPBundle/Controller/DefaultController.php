@@ -42,6 +42,40 @@ class DefaultController extends Controller
         ));
     }
 
+    public function progressionAction() {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        return $this->render('IPBundle:Default:Progression.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+        ));
+    }
+
+    public function showCoursAction() {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        return $this->render('IPBundle:Default:showCours.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+        ));
+    }
+
+    public function showChapitreAction($id) {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+
+        $chapitre = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findOneById($id);
+
+        return $this->render('IPBundle:Default:showChapitre.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+            'chapitre' => $chapitre,
+        ));
+
+    }
+
     public function newCoursAction(Request $request) {
 
         $cours = new Cours();
@@ -105,28 +139,7 @@ class DefaultController extends Controller
 
     }
 
-    public function showCoursAction(Request $request) {
 
-        $listCours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
-
-        $str = "";
-
-        foreach($listCours as $cours) {
-
-            $str .= $cours->getNom()."<br/>" ;
-
-            foreach ($cours->getChapitres() as $chapitre) {
-
-
-                $str .=$chapitre->getText()."<br/>";
-
-            }
-
-            $str.="<br/><br/>";
-        }
-
-        return new Response($str);
-    }
     
     /**
      * Create a new eleve and persist it into the database
@@ -155,7 +168,10 @@ class DefaultController extends Controller
             $em->persist($eleve);
             $em->flush();
 
-            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig');
+            return $this->render('IPBundle:Default:SubscriptionSuccess.html.twig',array(
+                'user'=> $this->getUser(),
+                'cours' => $cours,
+            ));
         }
 
         else {

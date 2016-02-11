@@ -16,8 +16,8 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d61de7a268f4ce61949f2e49a6b934b1ccd6fa8b60dad61ee0325262c1a64c55 = $this->env->getExtension("native_profiler");
-        $__internal_d61de7a268f4ce61949f2e49a6b934b1ccd6fa8b60dad61ee0325262c1a64c55->enter($__internal_d61de7a268f4ce61949f2e49a6b934b1ccd6fa8b60dad61ee0325262c1a64c55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
+        $__internal_a4006fc3d060f5e0b6572f44bc830af5b14d55b5c3832ae5d01bb1c1779dd45a = $this->env->getExtension("native_profiler");
+        $__internal_a4006fc3d060f5e0b6572f44bc830af5b14d55b5c3832ae5d01bb1c1779dd45a->enter($__internal_a4006fc3d060f5e0b6572f44bc830af5b14d55b5c3832ae5d01bb1c1779dd45a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Default:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -46,7 +46,7 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
         <div id=\"container\">
             
             <header>
-                <img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"><span>IP13</span>
+                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
             </header>
 
             <div id=\"content\">
@@ -78,8 +78,10 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
                                     <input type=\"password\" id=\"password\" name=\"_password\" />
                                 </td>
                                 ";
-        // line 48
-        echo "                            </tr>
+        // line 47
+        echo "                                    <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+
+                            </tr>
                         </table>
 
                         <p id=\"btns\">
@@ -93,15 +95,15 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
     </body>
 </html>";
         
-        $__internal_d61de7a268f4ce61949f2e49a6b934b1ccd6fa8b60dad61ee0325262c1a64c55->leave($__internal_d61de7a268f4ce61949f2e49a6b934b1ccd6fa8b60dad61ee0325262c1a64c55_prof);
+        $__internal_a4006fc3d060f5e0b6572f44bc830af5b14d55b5c3832ae5d01bb1c1779dd45a->leave($__internal_a4006fc3d060f5e0b6572f44bc830af5b14d55b5c3832ae5d01bb1c1779dd45a_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_bb89b75b52af4c064deab7a666f79c811ebbbeeeaa28ff5ee2425609698bb944 = $this->env->getExtension("native_profiler");
-        $__internal_bb89b75b52af4c064deab7a666f79c811ebbbeeeaa28ff5ee2425609698bb944->enter($__internal_bb89b75b52af4c064deab7a666f79c811ebbbeeeaa28ff5ee2425609698bb944_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_c90b92ebed9e580384b78e521d2b62d103780fad6efdbaddf3eb0ad1dc41c6e4 = $this->env->getExtension("native_profiler");
+        $__internal_c90b92ebed9e580384b78e521d2b62d103780fad6efdbaddf3eb0ad1dc41c6e4->enter($__internal_c90b92ebed9e580384b78e521d2b62d103780fad6efdbaddf3eb0ad1dc41c6e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -109,7 +111,7 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
         echo "\" type=\"text/css\" media=\"all\">
         ";
         
-        $__internal_bb89b75b52af4c064deab7a666f79c811ebbbeeeaa28ff5ee2425609698bb944->leave($__internal_bb89b75b52af4c064deab7a666f79c811ebbbeeeaa28ff5ee2425609698bb944_prof);
+        $__internal_c90b92ebed9e580384b78e521d2b62d103780fad6efdbaddf3eb0ad1dc41c6e4->leave($__internal_c90b92ebed9e580384b78e521d2b62d103780fad6efdbaddf3eb0ad1dc41c6e4_prof);
 
     }
 
@@ -125,7 +127,7 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
 
     public function getDebugInfo()
     {
-        return array (  107 => 6,  101 => 5,  82 => 48,  70 => 34,  59 => 26,  44 => 13,  38 => 12,  36 => 11,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  109 => 6,  103 => 5,  82 => 47,  70 => 34,  59 => 26,  44 => 13,  38 => 12,  36 => 11,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -145,7 +147,7 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
 /*         <div id="container">*/
 /*             */
 /*             <header>*/
-/*                 <img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"><span>IP13</span>*/
+/*                 <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /*             </header>*/
 /* */
 /*             <div id="content">*/
@@ -173,8 +175,9 @@ class __TwigTemplate_87ab2b7147f77d95bd924e1270325ca5675a2d7a1b7903ed1c9837eee32
 /*                                 {#*/
 /*                                     If you want to control the URL the user*/
 /*                                     is redirected to on success (more details below)*/
-/*                                     <input type="hidden" name="_target_path" value="/account" />*/
 /*                                 #}*/
+/*                                     <input type="hidden" name="_target_path" value="/index" />*/
+/* */
 /*                             </tr>*/
 /*                         </table>*/
 /* */
