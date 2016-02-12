@@ -46,8 +46,8 @@
         <aside id = "chapter">
             <h1> Reseau </h1>
             <ul>
-                {% for chapitre in cours.chapitres %}
-                    <li>{{ chapitre.nom }}</li>
+                {% for cour in cours %}
+                    <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>
                 {% endfor %}
             </ul>
         </aside>
@@ -61,9 +61,21 @@
                     <div style="width:100%">
                         <canvas id="canvas" height="450" width="600"></canvas>
                     </div>
-            
-            
+                    <script src="jquery-2.2.0.js"></script>
                 <script>
+                        var valeurs = [];
+
+                        $.get('{{ path('recupNotes') }}', function(data) {
+
+                            for (var note in data) {
+
+                                valeurs.push(note.valeur);
+                            }
+
+                            console.log(valeurs);
+
+                        });
+
                         var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
                         var lineChartData = {
                             labels : ["January","February","March","April","May","June","July"],
@@ -76,8 +88,8 @@
                                     pointStrokeColor : "#fff",
                                     pointHighlightFill : "#fff",
                                     pointHighlightStroke : "rgba(220,220,220,1)",
-                                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
-                                },
+                                    data : valeurs
+                                }/*,
                                 {
                                     label: "My Second dataset",
                                     fillColor : "rgba(151,187,205,0.2)",
@@ -87,7 +99,7 @@
                                     pointHighlightFill : "#fff",
                                     pointHighlightStroke : "rgba(151,187,205,1)",
                                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
-                                }
+                                }*/
                             ]
                 
                         }
@@ -97,6 +109,7 @@
                         window.myLine = new Chart(ctx).Line(lineChartData, {
                             responsive: true
                         });
+
                     }
                 
                 

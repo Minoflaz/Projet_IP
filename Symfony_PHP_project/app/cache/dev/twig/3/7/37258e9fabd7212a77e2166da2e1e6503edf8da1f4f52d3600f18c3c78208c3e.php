@@ -21,20 +21,20 @@ class __TwigTemplate_1df0ac1789db86cedfb657b07979623b408ddedaf6b68ac6ed6ffe8027a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7b6d4b7e6da6dfa402511bbcd2eb3522867ab6bda47ad65f0140d23c0a682b1b = $this->env->getExtension("native_profiler");
-        $__internal_7b6d4b7e6da6dfa402511bbcd2eb3522867ab6bda47ad65f0140d23c0a682b1b->enter($__internal_7b6d4b7e6da6dfa402511bbcd2eb3522867ab6bda47ad65f0140d23c0a682b1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Cours:AjoutChapitre.html.twig"));
+        $__internal_f8432f9a2fb0b1eaa50cf0786f57dee184f03f69747df5227bb28dfe750f1d0c = $this->env->getExtension("native_profiler");
+        $__internal_f8432f9a2fb0b1eaa50cf0786f57dee184f03f69747df5227bb28dfe750f1d0c->enter($__internal_f8432f9a2fb0b1eaa50cf0786f57dee184f03f69747df5227bb28dfe750f1d0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Cours:AjoutChapitre.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7b6d4b7e6da6dfa402511bbcd2eb3522867ab6bda47ad65f0140d23c0a682b1b->leave($__internal_7b6d4b7e6da6dfa402511bbcd2eb3522867ab6bda47ad65f0140d23c0a682b1b_prof);
+        $__internal_f8432f9a2fb0b1eaa50cf0786f57dee184f03f69747df5227bb28dfe750f1d0c->leave($__internal_f8432f9a2fb0b1eaa50cf0786f57dee184f03f69747df5227bb28dfe750f1d0c_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_a257ff1064e1e7e78bcdb01abcca17af228789f0b7d7aea1e7bc0f73b049570b = $this->env->getExtension("native_profiler");
-        $__internal_a257ff1064e1e7e78bcdb01abcca17af228789f0b7d7aea1e7bc0f73b049570b->enter($__internal_a257ff1064e1e7e78bcdb01abcca17af228789f0b7d7aea1e7bc0f73b049570b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_c9586a49643ed1e6c3d26e04fc3e4ed4ddba35298ca60f5756f3d0b0d37a80a8 = $this->env->getExtension("native_profiler");
+        $__internal_c9586a49643ed1e6c3d26e04fc3e4ed4ddba35298ca60f5756f3d0b0d37a80a8->enter($__internal_c9586a49643ed1e6c3d26e04fc3e4ed4ddba35298ca60f5756f3d0b0d37a80a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -48,12 +48,12 @@ class __TwigTemplate_1df0ac1789db86cedfb657b07979623b408ddedaf6b68ac6ed6ffe8027a
         <form id=\"AjoutCours\" method=\"post\">
             <aside>
                 <h4> Nom du Cours ? </h4>
-                <select name=\"select\">
-                    <option value=\"1\" selected>";
+                <p >
+                    ";
         // line 16
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "nom", array()), "html", null, true);
-        echo "</option>
-                </select>
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "cours", array()), 'row');
+        echo "
+                </p>
             </aside>
 
             <section>
@@ -97,7 +97,7 @@ class __TwigTemplate_1df0ac1789db86cedfb657b07979623b408ddedaf6b68ac6ed6ffe8027a
         </form>
     ";
         
-        $__internal_a257ff1064e1e7e78bcdb01abcca17af228789f0b7d7aea1e7bc0f73b049570b->leave($__internal_a257ff1064e1e7e78bcdb01abcca17af228789f0b7d7aea1e7bc0f73b049570b_prof);
+        $__internal_c9586a49643ed1e6c3d26e04fc3e4ed4ddba35298ca60f5756f3d0b0d37a80a8->leave($__internal_c9586a49643ed1e6c3d26e04fc3e4ed4ddba35298ca60f5756f3d0b0d37a80a8_prof);
 
     }
 
@@ -130,9 +130,9 @@ class __TwigTemplate_1df0ac1789db86cedfb657b07979623b408ddedaf6b68ac6ed6ffe8027a
 /*         <form id="AjoutCours" method="post">*/
 /*             <aside>*/
 /*                 <h4> Nom du Cours ? </h4>*/
-/*                 <select name="select">*/
-/*                     <option value="1" selected>{{ cours.nom }}</option>*/
-/*                 </select>*/
+/*                 <p >*/
+/*                     {{ form_row(form.cours) }}*/
+/*                 </p>*/
 /*             </aside>*/
 /* */
 /*             <section>*/

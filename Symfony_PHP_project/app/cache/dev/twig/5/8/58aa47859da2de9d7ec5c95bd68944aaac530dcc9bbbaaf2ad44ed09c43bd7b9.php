@@ -16,8 +16,8 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5fc25579fe6d8c16ce8799cc2a373b370c6fb407619c927e119a17f70f037694 = $this->env->getExtension("native_profiler");
-        $__internal_5fc25579fe6d8c16ce8799cc2a373b370c6fb407619c927e119a17f70f037694->enter($__internal_5fc25579fe6d8c16ce8799cc2a373b370c6fb407619c927e119a17f70f037694_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Progression:Progression.html.twig"));
+        $__internal_99378dd52cbe567c7f8168f37aa2e61fefff7f6359b69dd4a7394ecb148f25c5 = $this->env->getExtension("native_profiler");
+        $__internal_99378dd52cbe567c7f8168f37aa2e61fefff7f6359b69dd4a7394ecb148f25c5->enter($__internal_99378dd52cbe567c7f8168f37aa2e61fefff7f6359b69dd4a7394ecb148f25c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Progression:Progression.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -81,16 +81,18 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
                 ";
         // line 49
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
+        $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")));
+        foreach ($context['_seq'] as $context["_key"] => $context["cour"]) {
             // line 50
-            echo "                    <li>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
-            echo "</li>
+            echo "                    <li class=\"chapterName\"><a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showCours", array("id" => $this->getAttribute($context["cour"], "id", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["cour"], "nom", array()), "html", null, true);
+            echo "</a></li>
                 ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cour'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 52
         echo "            </ul>
@@ -105,9 +107,24 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
                     <div style=\"width:100%\">
                         <canvas id=\"canvas\" height=\"450\" width=\"600\"></canvas>
                     </div>
-            
-            
+                    <script src=\"jquery-2.2.0.js\"></script>
                 <script>
+                        var valeurs = [];
+
+                        \$.get('";
+        // line 68
+        echo $this->env->getExtension('routing')->getPath("recupNotes");
+        echo "', function(data) {
+
+                            for (var note in data) {
+
+                                valeurs.push(note.valeur);
+                            }
+
+                            console.log(valeurs);
+
+                        });
+
                         var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
                         var lineChartData = {
                             labels : [\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\"],
@@ -120,8 +137,8 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
                                     pointStrokeColor : \"#fff\",
                                     pointHighlightFill : \"#fff\",
                                     pointHighlightStroke : \"rgba(220,220,220,1)\",
-                                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
-                                },
+                                    data : valeurs
+                                }/*,
                                 {
                                     label: \"My Second dataset\",
                                     fillColor : \"rgba(151,187,205,0.2)\",
@@ -131,7 +148,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
                                     pointHighlightFill : \"#fff\",
                                     pointHighlightStroke : \"rgba(151,187,205,1)\",
                                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]
-                                }
+                                }*/
                             ]
                 
                         }
@@ -141,6 +158,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
                         window.myLine = new Chart(ctx).Line(lineChartData, {
                             responsive: true
                         });
+
                     }
                 
                 
@@ -153,15 +171,15 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 </body>
 </html>";
         
-        $__internal_5fc25579fe6d8c16ce8799cc2a373b370c6fb407619c927e119a17f70f037694->leave($__internal_5fc25579fe6d8c16ce8799cc2a373b370c6fb407619c927e119a17f70f037694_prof);
+        $__internal_99378dd52cbe567c7f8168f37aa2e61fefff7f6359b69dd4a7394ecb148f25c5->leave($__internal_99378dd52cbe567c7f8168f37aa2e61fefff7f6359b69dd4a7394ecb148f25c5_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b5a21d5a1843927b69197f42fda81b193597e9711765043c59dc26a61c2e1879 = $this->env->getExtension("native_profiler");
-        $__internal_b5a21d5a1843927b69197f42fda81b193597e9711765043c59dc26a61c2e1879->enter($__internal_b5a21d5a1843927b69197f42fda81b193597e9711765043c59dc26a61c2e1879_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_45a9e63fcdc3587303e7ecd2d5eb7a616f006a14fe807593a79332afce60a498 = $this->env->getExtension("native_profiler");
+        $__internal_45a9e63fcdc3587303e7ecd2d5eb7a616f006a14fe807593a79332afce60a498->enter($__internal_45a9e63fcdc3587303e7ecd2d5eb7a616f006a14fe807593a79332afce60a498_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -169,7 +187,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_b5a21d5a1843927b69197f42fda81b193597e9711765043c59dc26a61c2e1879->leave($__internal_b5a21d5a1843927b69197f42fda81b193597e9711765043c59dc26a61c2e1879_prof);
+        $__internal_45a9e63fcdc3587303e7ecd2d5eb7a616f006a14fe807593a79332afce60a498->leave($__internal_45a9e63fcdc3587303e7ecd2d5eb7a616f006a14fe807593a79332afce60a498_prof);
 
     }
 
@@ -185,7 +203,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 
     public function getDebugInfo()
     {
-        return array (  167 => 6,  161 => 5,  96 => 52,  87 => 50,  83 => 49,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  185 => 6,  179 => 5,  116 => 68,  98 => 52,  87 => 50,  83 => 49,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -236,8 +254,8 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 /*         <aside id = "chapter">*/
 /*             <h1> Reseau </h1>*/
 /*             <ul>*/
-/*                 {% for chapitre in cours.chapitres %}*/
-/*                     <li>{{ chapitre.nom }}</li>*/
+/*                 {% for cour in cours %}*/
+/*                     <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>*/
 /*                 {% endfor %}*/
 /*             </ul>*/
 /*         </aside>*/
@@ -251,9 +269,21 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 /*                     <div style="width:100%">*/
 /*                         <canvas id="canvas" height="450" width="600"></canvas>*/
 /*                     </div>*/
-/*             */
-/*             */
+/*                     <script src="jquery-2.2.0.js"></script>*/
 /*                 <script>*/
+/*                         var valeurs = [];*/
+/* */
+/*                         $.get('{{ path('recupNotes') }}', function(data) {*/
+/* */
+/*                             for (var note in data) {*/
+/* */
+/*                                 valeurs.push(note.valeur);*/
+/*                             }*/
+/* */
+/*                             console.log(valeurs);*/
+/* */
+/*                         });*/
+/* */
 /*                         var randomScalingFactor = function(){ return Math.round(Math.random()*100)};*/
 /*                         var lineChartData = {*/
 /*                             labels : ["January","February","March","April","May","June","July"],*/
@@ -266,8 +296,8 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 /*                                     pointStrokeColor : "#fff",*/
 /*                                     pointHighlightFill : "#fff",*/
 /*                                     pointHighlightStroke : "rgba(220,220,220,1)",*/
-/*                                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]*/
-/*                                 },*/
+/*                                     data : valeurs*/
+/*                                 }/*,*/
 /*                                 {*/
 /*                                     label: "My Second dataset",*/
 /*                                     fillColor : "rgba(151,187,205,0.2)",*/
@@ -277,7 +307,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 /*                                     pointHighlightFill : "#fff",*/
 /*                                     pointHighlightStroke : "rgba(151,187,205,1)",*/
 /*                                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),          randomScalingFactor(),randomScalingFactor()]*/
-/*                                 }*/
+/*                                 }*//* */
 /*                             ]*/
 /*                 */
 /*                         }*/
@@ -287,6 +317,7 @@ class __TwigTemplate_cc61d1b914b524f92942daa82498212010778c16eca9342317aeecfc66e
 /*                         window.myLine = new Chart(ctx).Line(lineChartData, {*/
 /*                             responsive: true*/
 /*                         });*/
+/* */
 /*                     }*/
 /*                 */
 /*                 */

@@ -178,6 +178,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
+            // showListeCours
+            if ($pathinfo === '/showListeCours') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::showListeCoursAction',  '_route' => 'showListeCours',);
+            }
+
         }
 
         // newEleve
@@ -226,9 +231,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // showCours
-        if ($pathinfo === '/showCours') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showCoursAction',  '_route' => 'showCours',);
+        if (0 === strpos($pathinfo, '/show')) {
+            // showCours
+            if (0 === strpos($pathinfo, '/showCours') && preg_match('#^/showCours/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'showCours')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showCoursAction',));
+            }
+
+            // showAllCours
+            if ($pathinfo === '/showAllCours') {
+                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showAllCoursAction',  '_route' => 'showAllCours',);
+            }
+
         }
 
         // exercises
@@ -244,6 +257,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // showChapitre
         if (0 === strpos($pathinfo, '/showChapitre') && preg_match('#^/showChapitre/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'showChapitre')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::showChapitreAction',));
+        }
+
+        // recupNotes
+        if ($pathinfo === '/recupNotes') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::recupNotesAction',  '_route' => 'recupNotes',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {

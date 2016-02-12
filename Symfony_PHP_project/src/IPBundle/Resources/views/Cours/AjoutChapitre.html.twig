@@ -12,9 +12,9 @@
         <form id="AjoutCours" method="post">
             <aside>
                 <h4> Nom du Cours ? </h4>
-                <select name="select">
-                    <option value="1" selected>{{ cours.nom }}</option>
-                </select>
+                <p >
+                    {{ form_row(form.cours) }}
+                </p>
             </aside>
 
             <section>

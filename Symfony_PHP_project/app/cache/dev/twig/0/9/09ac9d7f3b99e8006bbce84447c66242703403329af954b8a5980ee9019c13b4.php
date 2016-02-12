@@ -21,20 +21,20 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc = $this->env->getExtension("native_profiler");
-        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc->enter($__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
+        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4 = $this->env->getExtension("native_profiler");
+        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4->enter($__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc->leave($__internal_f912273f50f2f0b4d6785f03da7f0069bcc920a28788c4b40e79462f835b06cc_prof);
+        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4->leave($__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871 = $this->env->getExtension("native_profiler");
-        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871->enter($__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707 = $this->env->getExtension("native_profiler");
+        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707->enter($__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "
@@ -86,11 +86,11 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
                     <p>";
         // line 42
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "class", array()), 'label');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "bytes", array()), 'label', array("label" => "Masque "));
         echo " :
                         ";
         // line 43
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "class", array()), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "bytes", array()), 'widget');
         echo "</p>
 
                     <p id=\"btns\">
@@ -114,7 +114,7 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
     ";
         
-        $__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871->leave($__internal_ff42e338e1025e1a237f5034ed086750d18ecf28b72fc6820d9ec6a3f2ed7871_prof);
+        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707->leave($__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707_prof);
 
     }
 
@@ -174,8 +174,8 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 /*                     {{ form_start(form) }}*/
 /*                     {{ form_errors(form) }}*/
 /* */
-/*                     <p>{{ form_label(form.class) }} :*/
-/*                         {{ form_widget(form.class) }}</p>*/
+/*                     <p>{{ form_label(form.bytes, 'Masque ') }} :*/
+/*                         {{ form_widget(form.bytes) }}</p>*/
 /* */
 /*                     <p id="btns">*/
 /*                         <input type="submit" id="form_save" name="form[save]" value="Valider" />*/

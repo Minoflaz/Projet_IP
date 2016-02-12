@@ -44,29 +44,41 @@ class DefaultController extends Controller
 
     public function progressionAction() {
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         return $this->render('IPBundle:Progression:Progression.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours
+        ));
+    }
+
+    public function showAllCoursAction() {
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+        return $this->render('IPBundle:Cours:showAllCours.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
     }
 
-    public function showCoursAction() {
+    public function showCoursAction($id) {
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneById($id);
 
         return $this->render('IPBundle:Cours:showCours.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
         ));
+
     }
 
     public function showChapitreAction($id) {
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
-
         $chapitre = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findOneById($id);
+
+        $cours = $chapitre->getCours();
+
 
         return $this->render('IPBundle:Cours:showChapitre.html.twig',array(
             'user' => $this->getUser(),
@@ -106,15 +118,12 @@ class DefaultController extends Controller
 
         $chapitre = new Chapitre();
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
-
-        $chapitre->setCours($cours);
-
-        $cours->addChapitre($chapitre);
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         $form = $this->createFormBuilder($chapitre)
             ->add('nom','text')
             ->add('text','textarea', array('attr' => array('cols' => '75', 'rows' => '50')))
+            ->add('cours','entity' , array('class' => 'IPBundle:Cours', 'choice_label' => 'nom'))
             ->add('save','submit')
             ->getForm();
 
@@ -122,6 +131,7 @@ class DefaultController extends Controller
 
         if($form->isValid()) {
 
+            $chapitre->getCours()->addChapitre($chapitre);
             $em = $this->getDoctrine()->getManager();
             $em->persist($chapitre);
             $em->flush();
@@ -275,6 +285,17 @@ class DefaultController extends Controller
         $mask = new Mask();
         $nbSubNet = "";
 
+        $em = $this->getDoctrine()->getManager();
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Mask'));
+
+        if($cours == null) {
+            $cours = new Cours();
+            $cours->setNom("Mask");
+            $em->persist($cours);
+            $em->flush();
+        }
+
 
         if($cookies->has('ip')) 
             $ipAdress->setBytes($cookies->get('ip'));
@@ -323,14 +344,32 @@ class DefaultController extends Controller
             $reponse->headers->clearCookie('nbSubNet');
             $reponse->send();
 
-            if($mask->isSame($ipAdress->giveMask(   $nbSubNet)))
-                return $this->render('IPBundle:Exercices:maskSuccess.html.twig',array(
-                    'user'=> $this->getUser(),
+            if($mask->isSame($ipAdress->giveMask(   $nbSubNet))) { // Si l'éleve réussit l'éxercice
+
+                if($this->getUser() != null){
+                    $note = new Note(20,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
+
+                return $this->render('IPBundle:Exercices:maskSuccess.html.twig', array(
+                    'user' => $this->getUser(),
                 ));
-            else
-                return $this->render('IPBundle:Exercices:maskFailed.html.twig',array(
-                    'user'=> $this->getUser(),
+            }
+            else {
+
+                if($this->getUser() != null){
+                    $note = new Note(0,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
+
+                return $this->render('IPBundle:Exercices:maskFailed.html.twig', array(
+                    'user' => $this->getUser(),
                 ));
+            }
 
         }
 

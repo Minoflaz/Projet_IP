@@ -28,8 +28,8 @@
 
                 <li><a href="#">Cours</a>
                     <ul>
-                        <li><a href="{{ path('showCours')}}">Trouver un cours</a></li>
-                        <li><a href="{{ path('newChapitre')}}">Ajouter un cours</a></li>
+                        <li><a href="{{ path('showAllCours')}}">Trouver un cours</a></li>
+                        <li><a href="{{ path('newChapitre')}}">Ajouter un chapitre</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ path('exercises')}}">Exercices</a></li>
@@ -47,7 +47,7 @@
         </div>
 
         <aside id = "chapter">
-            <h1> Reseau </h1>
+            <h1> {{ cours.nom }} </h1>
             <ul>
                 {% for chapitre in cours.chapitres %}
                     <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>
@@ -57,7 +57,13 @@
 
         <section>
             <article>
-               {{chapitre.text}}
+                <header>
+                    <h1>{{ chapitre.nom }}</h1>
+                    <hr>
+                </header>
+                <p>
+                    {{chapitre.text}}
+                </p>
             </article>
         </section>
 

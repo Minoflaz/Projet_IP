@@ -30,6 +30,10 @@ showNotesCours:
     path: /showNotesCours/{cours}
     defaults: {_controller : IPBundle:Database:showNotesCours}
 
+showListeCours:
+    path: /showListeCours
+    defaults: {_controller : IPBundle:Database:showListeCours}
+
 newEleve:
     path: /newEleve
     defaults: {_controller : IPBundle:Default:newEleve}
@@ -63,8 +67,12 @@ newChapitre:
     defaults: {_controller: IPBundle:Default:newChapitre}
 
 showCours:
-    path: /showCours
+    path: /showCours/{id}
     defaults: {_controller: IPBundle:Default:showCours}
+
+showAllCours:
+    path: /showAllCours
+    defaults: {_controller: IPBundle:Default:showAllCours}
 
 exercises:
     path: /exercises
@@ -77,6 +85,10 @@ progression:
 showChapitre:
     path: /showChapitre/{id}
     defaults: {_controller: IPBundle:Default:showChapitre}
+
+recupNotes:
+    path: /recupNotes
+    defaults: {_controller: IPBundle:Database:recupNotes}
 
 
 login_check:

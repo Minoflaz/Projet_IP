@@ -6,6 +6,7 @@ use IPBundle\Entity\Eleve;
 use IPBundle\Entity\Note;
 use IPBundle\Entity\Exercice;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -121,6 +122,37 @@ class DatabaseController extends Controller
 
         return new Response($affichage);
     }
+
+	public function showListeCoursAction() {
+
+		$cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+		$affichage = "Liste cours : ";
+
+		foreach($cours as $cour ) {
+
+			$affichage .= " - ".$cour->getNom();
+		}
+
+		return new Response($affichage);
+	}
+
+	public function recupNotesAction() {
+
+		if($this->getUser() != null) {
+            $eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneById($this->getUser()->getId());
+            $notes = $eleve->getNotes();
+        }
+		else
+			$notes = array();
+
+		$res = new JsonResponse();
+        $res->setData($notes);
+
+        dump($notes);
+
+        return $res;
+	}
 
 
 

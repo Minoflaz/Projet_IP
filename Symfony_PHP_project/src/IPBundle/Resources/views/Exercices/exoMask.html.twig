@@ -39,8 +39,8 @@
                     {{ form_start(form) }}
                     {{ form_errors(form) }}
 
-                    <p>{{ form_label(form.class) }} :
-                        {{ form_widget(form.class) }}</p>
+                    <p>{{ form_label(form.bytes, 'Masque ') }} :
+                        {{ form_widget(form.bytes) }}</p>
 
                     <p id="btns">
                         <input type="submit" id="form_save" name="form[save]" value="Valider" />
