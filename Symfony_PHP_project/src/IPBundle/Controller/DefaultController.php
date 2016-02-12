@@ -90,6 +90,8 @@ class DefaultController extends Controller
 
     public function newCoursAction(Request $request) {
 
+        $listeCours = $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
         $cours = new Cours();
 
         $form = $this->createFormBuilder($cours)
@@ -108,9 +110,10 @@ class DefaultController extends Controller
             return $this->render('IPBundle:Cours:LessonSubscriptionSuccess.html.twig');
         }
 
-        return $this->render('IPBundle:Default:testCours.html.twig',array(
+        return $this->render('IPBundle:Cours:AjoutCours.html.twig',array(
                 'form' => $form->createView(),
                 'user'=> $this->getUser(),
+                'cours'=> $listeCours
             ));
     }
 
@@ -244,6 +247,7 @@ class DefaultController extends Controller
                     $em->persist($note);
                     $em->flush();
                 }
+
 
                 return $this->render('IPBundle:Exercices:classSuccess.html.twig',array(
                     'user'=> $this->getUser(),

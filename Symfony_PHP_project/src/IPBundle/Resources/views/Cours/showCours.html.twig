@@ -29,6 +29,7 @@
                 <li><a href="#">Cours</a>
                     <ul>
                         <li><a href="{{ path('showAllCours')}}">Trouver un cours</a></li>
+                        <li><a href="{{ path('newCours')}}">Ajouter un cours</a></li>
                         <li><a href="{{ path('newChapitre')}}">Ajouter un chapitre</a></li>
                     </ul>
                 </li>
@@ -42,8 +43,8 @@
     <div id="content">
 
         <div id="welcome">
-            <h1 id="titreChapter"></h1>
-            <p id="chapterText"></p>
+            <h1 id="titreChapter">Cours : {{ cours.nom }}</h1>
+            <p id="chapterText">Ici vous pouvez consulter les chapitres du cours {{ cours.nom }}</p>
         </div>
 
         <aside id = "chapter">
