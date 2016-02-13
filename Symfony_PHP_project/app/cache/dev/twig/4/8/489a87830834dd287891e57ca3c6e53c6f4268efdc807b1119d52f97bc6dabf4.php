@@ -21,20 +21,20 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_364e3eacf57c4c808800d71b84a800005d36e2490d398d52881785f9efaf019a = $this->env->getExtension("native_profiler");
-        $__internal_364e3eacf57c4c808800d71b84a800005d36e2490d398d52881785f9efaf019a->enter($__internal_364e3eacf57c4c808800d71b84a800005d36e2490d398d52881785f9efaf019a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exercises.html.twig"));
+        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419 = $this->env->getExtension("native_profiler");
+        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419->enter($__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exercises.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_364e3eacf57c4c808800d71b84a800005d36e2490d398d52881785f9efaf019a->leave($__internal_364e3eacf57c4c808800d71b84a800005d36e2490d398d52881785f9efaf019a_prof);
+        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419->leave($__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_c9477f80fe4d91b8e8016ada9db66dc353d05f9230ce83aff18df54b9262b14a = $this->env->getExtension("native_profiler");
-        $__internal_c9477f80fe4d91b8e8016ada9db66dc353d05f9230ce83aff18df54b9262b14a->enter($__internal_c9477f80fe4d91b8e8016ada9db66dc353d05f9230ce83aff18df54b9262b14a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e = $this->env->getExtension("native_profiler");
+        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e->enter($__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -47,9 +47,20 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
             <h1>Exercices</h1>
             <ul>
 
-                <li><a href=\"exoClass\">Exo classe</a></li>
+                <li><a href=\"";
+        // line 14
+        echo $this->env->getExtension('routing')->getPath("convert");
+        echo "\">Exo conversion</a></li>
 
-                <li><a href=\"exoMask\">Exo masque</a></li>
+                <li><a href=\"";
+        // line 16
+        echo $this->env->getExtension('routing')->getPath("exoClass");
+        echo "\">Exo classe</a></li>
+
+                <li><a href=\"";
+        // line 18
+        echo $this->env->getExtension('routing')->getPath("exoMask");
+        echo "\">Exo masque</a></li>
 
                 <li><a href=\"#\">Exo table de routage</a></li>
 
@@ -58,7 +69,7 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 
     ";
         
-        $__internal_c9477f80fe4d91b8e8016ada9db66dc353d05f9230ce83aff18df54b9262b14a->leave($__internal_c9477f80fe4d91b8e8016ada9db66dc353d05f9230ce83aff18df54b9262b14a_prof);
+        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e->leave($__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e_prof);
 
     }
 
@@ -74,7 +85,7 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 
     public function getDebugInfo()
     {
-        return array (  40 => 4,  34 => 3,  11 => 1,);
+        return array (  62 => 18,  57 => 16,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
@@ -90,9 +101,11 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 /*             <h1>Exercices</h1>*/
 /*             <ul>*/
 /* */
-/*                 <li><a href="exoClass">Exo classe</a></li>*/
+/*                 <li><a href="{{ path('convert') }}">Exo conversion</a></li>*/
 /* */
-/*                 <li><a href="exoMask">Exo masque</a></li>*/
+/*                 <li><a href="{{ path('exoClass')}}">Exo classe</a></li>*/
+/* */
+/*                 <li><a href="{{ path('exoMask')}}">Exo masque</a></li>*/
 /* */
 /*                 <li><a href="#">Exo table de routage</a></li>*/
 /* */

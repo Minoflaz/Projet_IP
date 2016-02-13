@@ -21,20 +21,20 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_840231fa90bfe3a4dae473b1bb34a8f12a9cbbd6cf08c7cf9f89b116c3dd8130 = $this->env->getExtension("native_profiler");
-        $__internal_840231fa90bfe3a4dae473b1bb34a8f12a9cbbd6cf08c7cf9f89b116c3dd8130->enter($__internal_840231fa90bfe3a4dae473b1bb34a8f12a9cbbd6cf08c7cf9f89b116c3dd8130_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
+        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5 = $this->env->getExtension("native_profiler");
+        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5->enter($__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_840231fa90bfe3a4dae473b1bb34a8f12a9cbbd6cf08c7cf9f89b116c3dd8130->leave($__internal_840231fa90bfe3a4dae473b1bb34a8f12a9cbbd6cf08c7cf9f89b116c3dd8130_prof);
+        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5->leave($__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_9c156aed271395d971cd5642867b7dc89d819f8474b59938aa2e55c50b3b6bc6 = $this->env->getExtension("native_profiler");
-        $__internal_9c156aed271395d971cd5642867b7dc89d819f8474b59938aa2e55c50b3b6bc6->enter($__internal_9c156aed271395d971cd5642867b7dc89d819f8474b59938aa2e55c50b3b6bc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335 = $this->env->getExtension("native_profiler");
+        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335->enter($__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "\t\t
@@ -48,21 +48,27 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t";
         // line 16
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
+        if ((((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")) != null) && (twig_length_filter($this->env, $this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array())) > 0))) {
             // line 17
-            echo "\t\t\t\t\t\t\t<li class=\"chapterName\"><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showChapitre", array("id" => $this->getAttribute($context["chapitre"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
-            echo "</a></li>
-\t\t\t\t\t\t";
+            echo "                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
+                // line 18
+                echo "                                <li class=\"chapterName\"><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showChapitre", array("id" => $this->getAttribute($context["chapitre"], "id", array()))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
+                echo "</a></li>
+                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 20
+            echo "                        ";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
+        // line 21
         echo "\t\t\t\t\t</ul>
         \t\t</aside>
 \t\t\t\t\t
@@ -117,7 +123,7 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 \t\t\t
 \t\t\t";
         
-        $__internal_9c156aed271395d971cd5642867b7dc89d819f8474b59938aa2e55c50b3b6bc6->leave($__internal_9c156aed271395d971cd5642867b7dc89d819f8474b59938aa2e55c50b3b6bc6_prof);
+        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335->leave($__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335_prof);
 
     }
 
@@ -133,7 +139,7 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 
     public function getDebugInfo()
     {
-        return array (  66 => 19,  55 => 17,  51 => 16,  40 => 7,  34 => 6,  11 => 1,);
+        return array (  72 => 21,  69 => 20,  58 => 18,  53 => 17,  51 => 16,  40 => 7,  34 => 6,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
@@ -151,9 +157,11 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 /* 				<aside id = "chapter">*/
 /* 					<h1> Reseau </h1>*/
 /* 					<ul>*/
-/* 						{% for chapitre in cours.chapitres %}*/
-/* 							<li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>*/
-/* 						{% endfor %}*/
+/* 						{% if cours != null  and cours.chapitres|length>0  %}*/
+/*                             {% for chapitre in cours.chapitres %}*/
+/*                                 <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>*/
+/*                             {% endfor %}*/
+/*                         {% endif %}*/
 /* 					</ul>*/
 /*         		</aside>*/
 /* 					*/

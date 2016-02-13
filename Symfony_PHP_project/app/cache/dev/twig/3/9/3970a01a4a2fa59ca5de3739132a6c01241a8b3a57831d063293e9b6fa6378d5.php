@@ -21,20 +21,20 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7493d395d0476f010d293a702d4ef1ca098ac657566f64f3483cc335b57fe5a5 = $this->env->getExtension("native_profiler");
-        $__internal_7493d395d0476f010d293a702d4ef1ca098ac657566f64f3483cc335b57fe5a5->enter($__internal_7493d395d0476f010d293a702d4ef1ca098ac657566f64f3483cc335b57fe5a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
+        $__internal_fb8932e235f53fe92feee697ac8668168a2b343b6e071e09e2ce5250bfbb8d7f = $this->env->getExtension("native_profiler");
+        $__internal_fb8932e235f53fe92feee697ac8668168a2b343b6e071e09e2ce5250bfbb8d7f->enter($__internal_fb8932e235f53fe92feee697ac8668168a2b343b6e071e09e2ce5250bfbb8d7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7493d395d0476f010d293a702d4ef1ca098ac657566f64f3483cc335b57fe5a5->leave($__internal_7493d395d0476f010d293a702d4ef1ca098ac657566f64f3483cc335b57fe5a5_prof);
+        $__internal_fb8932e235f53fe92feee697ac8668168a2b343b6e071e09e2ce5250bfbb8d7f->leave($__internal_fb8932e235f53fe92feee697ac8668168a2b343b6e071e09e2ce5250bfbb8d7f_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_391ed91fcc59f8892f87152ffe59b48d1bd0b8e6b4bbe72616a050be85a6432d = $this->env->getExtension("native_profiler");
-        $__internal_391ed91fcc59f8892f87152ffe59b48d1bd0b8e6b4bbe72616a050be85a6432d->enter($__internal_391ed91fcc59f8892f87152ffe59b48d1bd0b8e6b4bbe72616a050be85a6432d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e0b3a0ba339c5fa71aba08bf7f3c048ad0cd2ee44f2c6690f26de144277f8c48 = $this->env->getExtension("native_profiler");
+        $__internal_e0b3a0ba339c5fa71aba08bf7f3c048ad0cd2ee44f2c6690f26de144277f8c48->enter($__internal_e0b3a0ba339c5fa71aba08bf7f3c048ad0cd2ee44f2c6690f26de144277f8c48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "
@@ -47,11 +47,22 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 \t\t\t<h1>Exercices</h1>
 \t\t\t<ul>
 
-\t\t\t\t<li><a href=\"exoClass\">Exo classe</a></li>
+                <li><a href=\"";
+        // line 17
+        echo $this->env->getExtension('routing')->getPath("convert");
+        echo "\">Exo conversion</a></li>
 
-\t\t\t\t<li><a href=\"exoMask\">Exo masque</a></li>
+                <li><a href=\"";
+        // line 19
+        echo $this->env->getExtension('routing')->getPath("exoClass");
+        echo "\">Exo classe</a></li>
 
-\t\t\t\t<li><a href=\"#\">Exo table de routage</a></li>
+                <li><a href=\"";
+        // line 21
+        echo $this->env->getExtension('routing')->getPath("exoMask");
+        echo "\">Exo masque</a></li>
+
+                <li><a href=\"#\">Exo table de routage</a></li>
 
 \t\t\t</ul>
 \t\t</aside>
@@ -64,41 +75,41 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 
                     <p>
                         Soit une adresse IP : ";
-        // line 33
+        // line 35
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "getBytes", array(), "method"), "html", null, true);
         echo "<br>
                     <p>
                         On veut un masque de sous réseau pour ";
-        // line 35
+        // line 37
         echo twig_escape_filter($this->env, (isset($context["nbSubNet"]) ? $context["nbSubNet"] : $this->getContext($context, "nbSubNet")), "html", null, true);
         echo " sous réseaux
                     </p>
                     <br>
 
                     ";
-        // line 39
+        // line 41
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
                     ";
-        // line 40
+        // line 42
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 
                     <p>";
-        // line 42
+        // line 44
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "bytes", array()), 'label', array("label" => "Masque "));
         echo " :
                         ";
-        // line 43
+        // line 45
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "bytes", array()), 'widget');
         echo "</p>
 
                     <p id=\"btns\">
                         <input type=\"submit\" id=\"form_save\" name=\"form[save]\" value=\"Valider\" />
                         ";
-        // line 47
+        // line 49
         $this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), "setRendered", array());
-        // line 48
+        // line 50
         echo "                        ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -114,7 +125,7 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 
     ";
         
-        $__internal_391ed91fcc59f8892f87152ffe59b48d1bd0b8e6b4bbe72616a050be85a6432d->leave($__internal_391ed91fcc59f8892f87152ffe59b48d1bd0b8e6b4bbe72616a050be85a6432d_prof);
+        $__internal_e0b3a0ba339c5fa71aba08bf7f3c048ad0cd2ee44f2c6690f26de144277f8c48->leave($__internal_e0b3a0ba339c5fa71aba08bf7f3c048ad0cd2ee44f2c6690f26de144277f8c48_prof);
 
     }
 
@@ -130,7 +141,7 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 
     public function getDebugInfo()
     {
-        return array (  102 => 48,  100 => 47,  93 => 43,  89 => 42,  84 => 40,  80 => 39,  73 => 35,  68 => 33,  40 => 7,  34 => 6,  11 => 1,);
+        return array (  113 => 50,  111 => 49,  104 => 45,  100 => 44,  95 => 42,  91 => 41,  84 => 37,  79 => 35,  62 => 21,  57 => 19,  52 => 17,  40 => 7,  34 => 6,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
@@ -149,11 +160,13 @@ class __TwigTemplate_280381bd97a9d535b342c21ba1344bc8a0726eb28864f6a5204f2f7311c
 /* 			<h1>Exercices</h1>*/
 /* 			<ul>*/
 /* */
-/* 				<li><a href="exoClass">Exo classe</a></li>*/
+/*                 <li><a href="{{ path('convert') }}">Exo conversion</a></li>*/
 /* */
-/* 				<li><a href="exoMask">Exo masque</a></li>*/
+/*                 <li><a href="{{ path('exoClass')}}">Exo classe</a></li>*/
 /* */
-/* 				<li><a href="#">Exo table de routage</a></li>*/
+/*                 <li><a href="{{ path('exoMask')}}">Exo masque</a></li>*/
+/* */
+/*                 <li><a href="#">Exo table de routage</a></li>*/
 /* */
 /* 			</ul>*/
 /* 		</aside>*/

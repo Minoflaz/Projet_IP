@@ -11,9 +11,11 @@
             <h1>Exercices</h1>
             <ul>
 
-                <li><a href="exoClass">Exo classe</a></li>
+                <li><a href="{{ path('convert') }}">Exo conversion</a></li>
 
-                <li><a href="exoMask">Exo masque</a></li>
+                <li><a href="{{ path('exoClass')}}">Exo classe</a></li>
+
+                <li><a href="{{ path('exoMask')}}">Exo masque</a></li>
 
                 <li><a href="#">Exo table de routage</a></li>
 
@@ -22,10 +24,10 @@
 
         <section>
             <article>
-
-                C'est la bonne classe ! Bien joué :)
                 <br>
-                <p><a href="exoClass">Réessayer l'éxercice</a></p>
+                <p>C'est la bonne classe ! Bien joué </p>
+                <br>
+                <p><a href="{{ path('exoClass')}}">Réessayer l'éxercice</a></p>
 
             </article>
         </section>

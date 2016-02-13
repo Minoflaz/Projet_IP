@@ -78,6 +78,10 @@ exercises:
     path: /exercises
     defaults: {_controller: IPBundle:Default:exercises}
 
+convert:
+    path: /convert
+    defaults: {_controller: IPBundle:Default:convert}
+
 progression:
     path: /progression
     defaults: {_controller: IPBundle:Default:progression}

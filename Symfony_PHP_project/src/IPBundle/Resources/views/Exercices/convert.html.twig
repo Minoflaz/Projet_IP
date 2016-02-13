@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+    {% block content %}
+
+        <div id="welcome">
+            <h1>Faire des exercices</h1>
+            <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
+        </div>
+
+        <aside id = "chapter">
+            <h1>Exercices</h1>
+            <ul>
+
+                <li><a href="{{ path('convert') }}">Exo conversion</a></li>
+
+                <li><a href="{{ path('exoClass')}}">Exo classe</a></li>
+
+                <li><a href="{{ path('exoMask')}}">Exo masque</a></li>
+
+                <li><a href="#">Exo table de routage</a></li>
+
+
+            </ul>
+        </aside>
+
+        <section>
+            <article>
+                <br>
+                <p>Convertir l'adresse IP : {{ ip }} en decimal</p>
+
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+
+                <p>IP : {{ form_widget(form.string1) }}.{{ form_widget(form.string2) }}.{{ form_widget(form.string3) }}.{{ form_widget(form.string4) }}</p>
+
+                <p id="btns">
+                    <input type="submit" id="form_save" name="form[save]" value="Valider" />
+                    {% do form.save.setRendered %}
+                    {{ form_end(form) }}
+                </p>
+            </article>
+        </section>
+
+    {% endblock %}

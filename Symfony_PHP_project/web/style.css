@@ -411,3 +411,7 @@ select#selectChapitre
 	margin-left: 1em;
 	margin-bottom: 1em;
 }
+
+textarea {
+	resize: none;
+}

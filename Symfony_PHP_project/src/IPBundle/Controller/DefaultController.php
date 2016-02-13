@@ -2,6 +2,7 @@
 
 namespace IPBundle\Controller;
 
+use IPBundle\Model\FourStrings;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Cookie;
@@ -18,6 +19,7 @@ use IPBundle\Model\IPAdress;
 use IPBundle\Model\Mask;
 use IPBundle\Model\RoutingTable;
 use IPBundle\Model\RoutingTableLine;
+use IPBundle\Model\FourStr;
 
 
 class DefaultController extends Controller
@@ -274,6 +276,7 @@ class DefaultController extends Controller
 
                 return $this->render('IPBundle:Exercices:classSuccess.html.twig',array(
                     'user'=> $this->getUser(),
+
                 ));
             }
             else {
@@ -287,6 +290,8 @@ class DefaultController extends Controller
 
                 return $this->render('IPBundle:Exercices:classFailed.html.twig',array(
                     'user'=> $this->getUser(),
+                    'ip' => $ipAdress,
+                    'ipClass' => $ipAdress->giveClass()
                 ));
 
             }
@@ -371,7 +376,7 @@ class DefaultController extends Controller
             $reponse->headers->clearCookie('nbSubNet');
             $reponse->send();
 
-            if($mask->isSame($ipAdress->giveMask(   $nbSubNet))) { // Si l'éleve réussit l'éxercice
+            if($mask->isSame($ipAdress->giveMask($nbSubNet))) { // Si l'éleve réussit l'éxercice
 
                 if($this->getUser() != null){
                     $note = new Note(20,$cours);
@@ -395,6 +400,7 @@ class DefaultController extends Controller
 
                 return $this->render('IPBundle:Exercices:maskFailed.html.twig', array(
                     'user' => $this->getUser(),
+                    'mask' => $ipAdress->giveMask($nbSubNet)
                 ));
             }
 
@@ -431,9 +437,65 @@ class DefaultController extends Controller
 
     }
 
-    public function convertAction() {
+    public function convertAction(Request $request) {
+
+        $session = $this->container->get('session');
+
+        $ipAdressFourStr = new IPAdress();
+
+        $ipAdress = new IPAdress();
 
 
+        $fourStr = new FourStr();
+
+        if($session->has('ip'))
+            $ipAdress->setbytes($session->get('ip'));
+
+        else {
+
+            $ipAdress->setAlea();
+
+            $session->set('ip',$ipAdress->getBytes());
+
+        }
+
+        $form = $this->createFormBuilder($fourStr)
+            ->add('string1','textarea', array('attr' => array('cols' => '3', 'rows' => '1')))
+            ->add('string2','textarea', array('attr' => array('cols' => '3', 'rows' => '1')))
+            ->add('string3','textarea', array('attr' => array('cols' => '3', 'rows' => '1')))
+            ->add('string4','textarea', array('attr' => array('cols' => '3', 'rows' => '1')))
+            ->add('save','submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+
+            $ipAdressFourStr->initStr($fourStr->getStrings());
+
+            $session->remove('ip');
+
+            if($ipAdressFourStr->isSame($ipAdress)) {
+
+                return $this->render('IPBundle:Exercices:convertSuccess.html.twig', array(
+                    'ipFourStr' => $ipAdressFourStr,
+                    'ip' => $ipAdress->getBytes()
+                ));
+            }
+            else {
+                return $this->render('IPBundle:Exercices:convertFailed.html.twig', array(
+                    'ipFourStr' => $ipAdressFourStr,
+                    'ip' => $ipAdress->getBytes()
+                ));
+            }
+        }
+
+        return $this->render('IPBundle:Exercices:convert.html.twig',array(
+            'form' =>$form->createView(),
+            'user' => $this->getUser(),
+            'ip' => $ipAdress->getBytesBin()
+
+        ));
 
 
     }

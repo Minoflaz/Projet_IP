@@ -13,9 +13,11 @@
 				<aside id = "chapter">
 					<h1> Reseau </h1>
 					<ul>
-						{% for chapitre in cours.chapitres %}
-							<li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>
-						{% endfor %}
+						{% if cours != null  and cours.chapitres|length>0  %}
+                            {% for chapitre in cours.chapitres %}
+                                <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>
+                            {% endfor %}
+                        {% endif %}
 					</ul>
         		</aside>
 					

@@ -249,6 +249,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exercisesAction',  '_route' => 'exercises',);
         }
 
+        // convert
+        if ($pathinfo === '/convert') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::convertAction',  '_route' => 'convert',);
+        }
+
         if (0 === strpos($pathinfo, '/progression')) {
             // progression
             if ($pathinfo === '/progression') {
