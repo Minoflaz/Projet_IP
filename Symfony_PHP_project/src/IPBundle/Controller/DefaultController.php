@@ -24,23 +24,43 @@ use IPBundle\Model\FourStr;
 
 class DefaultController extends Controller
 {
+    /**
+     * Index
+     *
+     * @return Response
+     */
     public function indexAction()
     {
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
+        $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findAll();
+
         return $this->render('IPBundle:Accueil:index.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
+            'chapitres' => $chapitres
         ));
     }
 
+    /**
+     * Temporary account page
+     *
+     * @return Response
+     */
     public function compteAction() {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
         return $this->render('IPBundle:Progression:compte.html.twig',array(
             'user' => $this->getUser(),
         ));
     }
 
+    /**
+     * Exercises
+     *
+     * @return Response
+     */
     public function exercisesAction() {
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
@@ -50,6 +70,11 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * Progression
+     *
+     * @return Response
+     */
     public function progressionAction() {
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
@@ -62,6 +87,12 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * Progression with a specific course
+     *
+     * @param $id
+     * @return Response
+     */
     public function progressionCoursAction($id) {
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
@@ -77,6 +108,12 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * Course consulting
+     *
+     * @return Response
+     *
+     */
     public function showAllCoursAction() {
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
@@ -87,6 +124,12 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * Chapter consulting for a specific course
+     *
+     * @param $id
+     * @return Response
+     */
     public function showCoursAction($id) {
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneById($id);
@@ -98,6 +141,12 @@ class DefaultController extends Controller
 
     }
 
+    /**
+     * Consulting a specific chapter
+     *
+     * @param $id
+     * @return Response
+     */
     public function showChapitreAction($id) {
 
         $chapitre = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findOneById($id);
@@ -115,8 +164,10 @@ class DefaultController extends Controller
     
     /**
      * Function returning the good mask with a given ip and a given number of sub net
+     *
      * @param  string $ipBytes  
-     * @param  int $nbSubNet           
+     * @param  int $nbSubNet
+     * @return Response
      */
     public function giveMaskAction($ipBytes,$nbSubNet) {
 

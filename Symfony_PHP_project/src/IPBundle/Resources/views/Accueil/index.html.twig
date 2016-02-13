@@ -22,52 +22,24 @@
         		</aside>
 					
 				<section>
-					<article>
-						<header>
-							<h1>Nom premier chapitre</h1>
-							<hr>
-						</header>
 
-						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
+                    {% if chapitres != null %}
+                        {% for chapitre in chapitres %}
+                            <article>
+                                <header>
+                                    <h1>{{ chapitre.nom }}</h1>
+                                    <hr>
+                                </header>
 
-						<footer>
-							<p>> <a href="#">Lien vers le cours</a></p>
-						</footer>
-					</article>
-					<article>
-						<header>
-							<h1>Nom premier chapitre</h1>
-						</header>
+                                <p>{{ chapitre.text[:225] }}...</p>
 
-						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
+                                <footer>
+                                    <p><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">>Lien vers le chapitre</a></p>
+                                </footer>
+                            </article>
+                        {% endfor %}
+                    {% endif %}
 
-						<footer>
-							<p>> <a href="#">Lien vers le cours</a></p>
-						</footer>
-					</article>
-					<article>
-						<header>
-							<h1>Nom premier chapitre</h1>
-						</header>
-
-						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
-
-						<footer>
-							<p>> <a href="#">Lien vers le cours</a></p>
-						</footer>
-					</article>
 				</section>
-				
-				<div id="all_courses">
-				
-					<div id="chapter1" class="courses">
-		
-					</div>
-		
-					<div id="chapter2" class="courses">
-		
-					</div>
-				
-				</div>
 			
 			{% endblock %}

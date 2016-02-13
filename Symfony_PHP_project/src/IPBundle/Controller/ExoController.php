@@ -36,6 +36,8 @@ class ExoController extends Controller
 
         $ipAdress = new IPAdress();
 
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Class'));
 
         if($cours == null) {
@@ -119,6 +121,8 @@ class ExoController extends Controller
         $ipAdress = new IPAdress();
         $mask = new Mask();
         $nbSubNet = "";
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
         $em = $this->getDoctrine()->getManager();
 
@@ -237,8 +241,20 @@ class ExoController extends Controller
 
         $ipAdress = new IPAdress();
 
-
         $fourStr = new FourStr();
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
+
+        $em = $this->getDoctrine()->getManager();
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Conversion'));
+
+        if($cours == null) {
+            $cours = new Cours();
+            $cours->setNom("Conversion");
+            $em->persist($cours);
+            $em->flush();
+        }
 
         if($session->has('ip'))
             $ipAdress->setbytes($session->get('ip'));
@@ -269,12 +285,27 @@ class ExoController extends Controller
 
             if($ipAdressFourStr->isSame($ipAdress)) {
 
+                if($this->getUser() != null){
+                    $note = new Note(20,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
+
                 return $this->render('IPBundle:Exercices:convertSuccess.html.twig', array(
                     'ipFourStr' => $ipAdressFourStr,
                     'ip' => $ipAdress->getBytes()
                 ));
             }
             else {
+
+                if($this->getUser() != null){
+                    $note = new Note(0,$cours);
+                    $this->getUser()->addNote($note);
+                    $em->persist($note);
+                    $em->flush();
+                }
+
                 return $this->render('IPBundle:Exercices:convertFailed.html.twig', array(
                     'ipFourStr' => $ipAdressFourStr,
                     'ip' => $ipAdress->getBytes()
@@ -292,10 +323,20 @@ class ExoController extends Controller
 
     }
 
+    /**
+     * Exercice dealing with routing tables
+     *
+     * The goal is to fill blank tables with a given network schema
+     *
+     * @param Request $request
+     * @return Response
+     */
     public function routingTableAction(Request $request) {
 
         $routingTable = new RoutingTable();
         $routingTableLine = new RoutingTableLine();
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
         $form = $this->createFormBuilder($routingTableLine)
             ->add('ip','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))

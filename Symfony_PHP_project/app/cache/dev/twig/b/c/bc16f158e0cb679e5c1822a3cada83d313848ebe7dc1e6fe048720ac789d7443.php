@@ -21,20 +21,20 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad = $this->env->getExtension("native_profiler");
-        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad->enter($__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
+        $__internal_103f014ee370d07e8789a11e9a0d7cc271c8276729e9a63fb5506d511dd1f0ea = $this->env->getExtension("native_profiler");
+        $__internal_103f014ee370d07e8789a11e9a0d7cc271c8276729e9a63fb5506d511dd1f0ea->enter($__internal_103f014ee370d07e8789a11e9a0d7cc271c8276729e9a63fb5506d511dd1f0ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad->leave($__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad_prof);
+        $__internal_103f014ee370d07e8789a11e9a0d7cc271c8276729e9a63fb5506d511dd1f0ea->leave($__internal_103f014ee370d07e8789a11e9a0d7cc271c8276729e9a63fb5506d511dd1f0ea_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f = $this->env->getExtension("native_profiler");
-        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f->enter($__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_217624e04f3cc014953c47b666592bd7ee21238a7e948518e782c20f7b3808bc = $this->env->getExtension("native_profiler");
+        $__internal_217624e04f3cc014953c47b666592bd7ee21238a7e948518e782c20f7b3808bc->enter($__internal_217624e04f3cc014953c47b666592bd7ee21238a7e948518e782c20f7b3808bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "\t\t
@@ -73,57 +73,52 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
         \t\t</aside>
 \t\t\t\t\t
 \t\t\t\t<section>
-\t\t\t\t\t<article>
-\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t<h1>Nom premier chapitre</h1>
-\t\t\t\t\t\t\t<hr>
-\t\t\t\t\t\t</header>
 
-\t\t\t\t\t\t<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
+                    ";
+        // line 26
+        if (((isset($context["chapitres"]) ? $context["chapitres"] : $this->getContext($context, "chapitres")) != null)) {
+            // line 27
+            echo "                        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["chapitres"]) ? $context["chapitres"] : $this->getContext($context, "chapitres")));
+            foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
+                // line 28
+                echo "                            <article>
+                                <header>
+                                    <h1>";
+                // line 30
+                echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
+                echo "</h1>
+                                    <hr>
+                                </header>
 
-\t\t\t\t\t\t<footer>
-\t\t\t\t\t\t\t<p>> <a href=\"#\">Lien vers le cours</a></p>
-\t\t\t\t\t\t</footer>
-\t\t\t\t\t</article>
-\t\t\t\t\t<article>
-\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t<h1>Nom premier chapitre</h1>
-\t\t\t\t\t\t</header>
+                                <p>";
+                // line 34
+                echo twig_escape_filter($this->env, twig_slice($this->env, $this->getAttribute($context["chapitre"], "text", array()), 0, 225), "html", null, true);
+                echo "...</p>
 
-\t\t\t\t\t\t<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
-
-\t\t\t\t\t\t<footer>
-\t\t\t\t\t\t\t<p>> <a href=\"#\">Lien vers le cours</a></p>
-\t\t\t\t\t\t</footer>
-\t\t\t\t\t</article>
-\t\t\t\t\t<article>
-\t\t\t\t\t\t<header>
-\t\t\t\t\t\t\t<h1>Nom premier chapitre</h1>
-\t\t\t\t\t\t</header>
-
-\t\t\t\t\t\t<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>
-
-\t\t\t\t\t\t<footer>
-\t\t\t\t\t\t\t<p>> <a href=\"#\">Lien vers le cours</a></p>
-\t\t\t\t\t\t</footer>
-\t\t\t\t\t</article>
+                                <footer>
+                                    <p><a href=\"";
+                // line 37
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showChapitre", array("id" => $this->getAttribute($context["chapitre"], "id", array()))), "html", null, true);
+                echo "\">>Lien vers le chapitre</a></p>
+                                </footer>
+                            </article>
+                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 41
+            echo "                    ";
+        }
+        // line 42
+        echo "
 \t\t\t\t</section>
-\t\t\t\t
-\t\t\t\t<div id=\"all_courses\">
-\t\t\t\t
-\t\t\t\t\t<div id=\"chapter1\" class=\"courses\">
-\t\t
-\t\t\t\t\t</div>
-\t\t
-\t\t\t\t\t<div id=\"chapter2\" class=\"courses\">
-\t\t
-\t\t\t\t\t</div>
-\t\t\t\t
-\t\t\t\t</div>
 \t\t\t
 \t\t\t";
         
-        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f->leave($__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f_prof);
+        $__internal_217624e04f3cc014953c47b666592bd7ee21238a7e948518e782c20f7b3808bc->leave($__internal_217624e04f3cc014953c47b666592bd7ee21238a7e948518e782c20f7b3808bc_prof);
 
     }
 
@@ -139,7 +134,7 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 
     public function getDebugInfo()
     {
-        return array (  72 => 21,  69 => 20,  58 => 18,  53 => 17,  51 => 16,  40 => 7,  34 => 6,  11 => 1,);
+        return array (  116 => 42,  113 => 41,  103 => 37,  97 => 34,  90 => 30,  86 => 28,  81 => 27,  79 => 26,  72 => 21,  69 => 20,  58 => 18,  53 => 17,  51 => 16,  40 => 7,  34 => 6,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
@@ -166,53 +161,25 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 /*         		</aside>*/
 /* 					*/
 /* 				<section>*/
-/* 					<article>*/
-/* 						<header>*/
-/* 							<h1>Nom premier chapitre</h1>*/
-/* 							<hr>*/
-/* 						</header>*/
 /* */
-/* 						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>*/
+/*                     {% if chapitres != null %}*/
+/*                         {% for chapitre in chapitres %}*/
+/*                             <article>*/
+/*                                 <header>*/
+/*                                     <h1>{{ chapitre.nom }}</h1>*/
+/*                                     <hr>*/
+/*                                 </header>*/
 /* */
-/* 						<footer>*/
-/* 							<p>> <a href="#">Lien vers le cours</a></p>*/
-/* 						</footer>*/
-/* 					</article>*/
-/* 					<article>*/
-/* 						<header>*/
-/* 							<h1>Nom premier chapitre</h1>*/
-/* 						</header>*/
+/*                                 <p>{{ chapitre.text[:225] }}...</p>*/
 /* */
-/* 						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>*/
+/*                                 <footer>*/
+/*                                     <p><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">>Lien vers le chapitre</a></p>*/
+/*                                 </footer>*/
+/*                             </article>*/
+/*                         {% endfor %}*/
+/*                     {% endif %}*/
 /* */
-/* 						<footer>*/
-/* 							<p>> <a href="#">Lien vers le cours</a></p>*/
-/* 						</footer>*/
-/* 					</article>*/
-/* 					<article>*/
-/* 						<header>*/
-/* 							<h1>Nom premier chapitre</h1>*/
-/* 						</header>*/
-/* */
-/* 						<p>Résumé du premier chapitre LoremIpsum na que si no na prout ehiuer eoijje eiojdhbdi duj hçuh doidiju dj duhjgdp jfdpj oidj jdi pfdijoijpoi opij ijfio ofdpijo ij oijoi joij opidj oij ijodi jpoij oijoi joi joij oijop fdijo gopjp.</p>*/
-/* */
-/* 						<footer>*/
-/* 							<p>> <a href="#">Lien vers le cours</a></p>*/
-/* 						</footer>*/
-/* 					</article>*/
 /* 				</section>*/
-/* 				*/
-/* 				<div id="all_courses">*/
-/* 				*/
-/* 					<div id="chapter1" class="courses">*/
-/* 		*/
-/* 					</div>*/
-/* 		*/
-/* 					<div id="chapter2" class="courses">*/
-/* 		*/
-/* 					</div>*/
-/* 				*/
-/* 				</div>*/
 /* 			*/
 /* 			{% endblock %}*/
 /* */

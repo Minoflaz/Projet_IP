@@ -16,7 +16,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DatabaseController extends Controller
 {
 
-
+	/**
+     * Displays a list of every student in the database
+     *
+	 * @return Response
+	 */
 	public function showAllEleveAction() {
 
 		$eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
@@ -36,6 +40,13 @@ class DatabaseController extends Controller
 
 	}
 
+    /**
+     * Add a specific mark for a specific course to the current user
+     *
+     * @param $valeur
+     * @param $cours
+     * @return Response
+     */
 	public function addNoteEleveAction($valeur,$cours) {  // A terme le paramètre "valeur" deviendra une note
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $cours));
@@ -54,6 +65,12 @@ class DatabaseController extends Controller
 
 	}
 
+    /**
+     * Displays a list of every mark a student with the specified name has
+     *
+     * @param $prenom
+     * @return Response
+     */
 	public function showNotesEleveAction($prenom) {
 
 		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneByPrenom($prenom);
@@ -71,6 +88,12 @@ class DatabaseController extends Controller
 
 	}
 
+    /**
+     * Displays every marks in the database for a specific course
+     *
+     * @param $cours
+     * @return Response
+     */
     public function showNotesCoursAction($cours) {
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => $cours));
@@ -85,6 +108,11 @@ class DatabaseController extends Controller
         return new Response($affichage);
     }
 
+    /**
+     * Displays a list of every course in the database
+     *
+     * @return Response
+     */
 	public function showListeCoursAction() {
 
 		$cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
@@ -99,6 +127,12 @@ class DatabaseController extends Controller
 		return new Response($affichage);
 	}
 
+    /**
+     * Get a JSonResponse containing an array of every mark in the database
+     *
+     * @return JsonResponse
+     * @throws \Exception
+     */
 	public function recupNotesAction() {
 
 		if($this->getUser() != null) {

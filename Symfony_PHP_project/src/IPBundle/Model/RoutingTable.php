@@ -49,7 +49,7 @@ class RoutingTable {
 	 * @param  RoutingTable  $routingTable 
 	 * @return boolean               
 	 */
-	public function isSame($routingTable) {
+	public function isSame(RoutingTable $routingTable) {
 
 		$bool = true;
 

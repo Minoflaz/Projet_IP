@@ -24,6 +24,13 @@ use IPBundle\Model\FourStr;
 
 class CreateController extends Controller
 {
+
+    /**
+     * Create a new course and persist it into the database
+     *
+     * @param Request $request
+     * @return Response
+     */
     public function newCoursAction(Request $request) {
 
         $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Il faut être professeur pour pouvoir ajouter un cours !');
@@ -55,6 +62,12 @@ class CreateController extends Controller
         ));
     }
 
+    /**
+     * Create a new chapter and persist it into the database
+     *
+     * @param Request $request
+     * @return Response
+     */
     public function newChapitreAction(Request $request) {
 
         $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Il faut être professeur pour pouvoir ajouter un chapitre !');
@@ -94,7 +107,9 @@ class CreateController extends Controller
 
     /**
      * Create a new eleve and persist it into the database
-     * @param  Request $request
+     *
+     * @param Request $request
+     * @return Response
      */
     public function newEleveAction(Request $request) {
 
