@@ -21,20 +21,20 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4 = $this->env->getExtension("native_profiler");
-        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4->enter($__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
+        $__internal_fc450e0419ede604af60b40c9df84107d6dddfafe94be51614e975c0dba09d97 = $this->env->getExtension("native_profiler");
+        $__internal_fc450e0419ede604af60b40c9df84107d6dddfafe94be51614e975c0dba09d97->enter($__internal_fc450e0419ede604af60b40c9df84107d6dddfafe94be51614e975c0dba09d97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exoMask.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4->leave($__internal_ecd4037709ff69d53ff3d3592e18d5fcbb32cc248c2bb2a307b02cbac567b6f4_prof);
+        $__internal_fc450e0419ede604af60b40c9df84107d6dddfafe94be51614e975c0dba09d97->leave($__internal_fc450e0419ede604af60b40c9df84107d6dddfafe94be51614e975c0dba09d97_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707 = $this->env->getExtension("native_profiler");
-        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707->enter($__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_473a33bfc033c79533cb239be98f0b58203ce115a2c44844aa06ae6dc7cf3164 = $this->env->getExtension("native_profiler");
+        $__internal_473a33bfc033c79533cb239be98f0b58203ce115a2c44844aa06ae6dc7cf3164->enter($__internal_473a33bfc033c79533cb239be98f0b58203ce115a2c44844aa06ae6dc7cf3164_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "
@@ -66,7 +66,7 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
                         Soit une adresse IP : ";
         // line 33
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "getBytes", array(), "method"), "html", null, true);
-        echo ".<br>
+        echo "<br>
                     <p>
                         On veut un masque de sous réseau pour ";
         // line 35
@@ -114,7 +114,7 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 
     ";
         
-        $__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707->leave($__internal_afcadc15464eb6c5ade7e83f858db2dfc494323d27bb4415bc9a0c723e819707_prof);
+        $__internal_473a33bfc033c79533cb239be98f0b58203ce115a2c44844aa06ae6dc7cf3164->leave($__internal_473a33bfc033c79533cb239be98f0b58203ce115a2c44844aa06ae6dc7cf3164_prof);
 
     }
 
@@ -165,7 +165,7 @@ class __TwigTemplate_79def68019f37c1bf8cb8e10e160ea3758ae790504f00ee4ed6a2711708
 /*                     </header>*/
 /* */
 /*                     <p>*/
-/*                         Soit une adresse IP : {{ip.getBytes()}}.<br>*/
+/*                         Soit une adresse IP : {{ip.getBytes()}}<br>*/
 /*                     <p>*/
 /*                         On veut un masque de sous réseau pour {{ nbSubNet }} sous réseaux*/
 /*                     </p>*/

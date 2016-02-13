@@ -64,10 +64,10 @@ class Eleve extends \IPBundle\Entity\Eleve implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'id', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'username', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'password', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'nom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'prenom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'dateNaissance', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'niveau', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'sexe', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'notes');
+            return array('__isInitialized__', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'id', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'username', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'password', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'nom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'prenom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'dateNaissance', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'sexe', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'role', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'notes');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'id', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'username', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'password', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'nom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'prenom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'dateNaissance', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'niveau', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'sexe', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'notes');
+        return array('__isInitialized__', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'id', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'username', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'password', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'nom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'prenom', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'dateNaissance', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'sexe', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'role', '' . "\0" . 'IPBundle\\Entity\\Eleve' . "\0" . 'notes');
     }
 
     /**
@@ -224,28 +224,6 @@ class Eleve extends \IPBundle\Entity\Eleve implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setString($string)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setString', array($string));
-
-        return parent::setString($string);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getString()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getString', array());
-
-        return parent::getString();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setUsername($username)
     {
 
@@ -356,28 +334,6 @@ class Eleve extends \IPBundle\Entity\Eleve implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setNiveau($niveau)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNiveau', array($niveau));
-
-        return parent::setNiveau($niveau);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getNiveau()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNiveau', array());
-
-        return parent::getNiveau();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setSexe($sexe)
     {
 
@@ -395,6 +351,17 @@ class Eleve extends \IPBundle\Entity\Eleve implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSexe', array());
 
         return parent::getSexe();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setRoles($roles)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRoles', array($roles));
+
+        return parent::setRoles($roles);
     }
 
     /**

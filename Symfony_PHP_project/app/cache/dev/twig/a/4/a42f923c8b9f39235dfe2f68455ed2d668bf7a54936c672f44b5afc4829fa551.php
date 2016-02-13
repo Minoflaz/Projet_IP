@@ -16,8 +16,8 @@ class __TwigTemplate_7b962b603510138449b9eeba846a1a40f774fb1711fb6022ba21293fc2d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_093c7450edc47b305433ffe5a706cf8d05c9cf58f1d6b499d617333f1debe122 = $this->env->getExtension("native_profiler");
-        $__internal_093c7450edc47b305433ffe5a706cf8d05c9cf58f1d6b499d617333f1debe122->enter($__internal_093c7450edc47b305433ffe5a706cf8d05c9cf58f1d6b499d617333f1debe122_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Inscription:SubscriptionSuccess.html.twig"));
+        $__internal_a42ca08eb720edea19ae35e763a0bc6e26844405b2c5563237805627fd435fcd = $this->env->getExtension("native_profiler");
+        $__internal_a42ca08eb720edea19ae35e763a0bc6e26844405b2c5563237805627fd435fcd->enter($__internal_a42ca08eb720edea19ae35e763a0bc6e26844405b2c5563237805627fd435fcd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Inscription:SubscriptionSuccess.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -75,23 +75,23 @@ class __TwigTemplate_7b962b603510138449b9eeba846a1a40f774fb1711fb6022ba21293fc2d
 
         <div id=\"welcome\">
             <h1>Inscritpion</h1>
-            <p>Vous vous êtes enregistré avec susccès !</p>
-            <a href=\"index\">Revenir a l'accueil</a>
+            <p>Vous vous êtes enregistré avec succès !</p>
+            <p><a href=\"index\">Revenir a l'accueil</a></p>
         </div>
     </div>
 </div>
 </body>
 </html>";
         
-        $__internal_093c7450edc47b305433ffe5a706cf8d05c9cf58f1d6b499d617333f1debe122->leave($__internal_093c7450edc47b305433ffe5a706cf8d05c9cf58f1d6b499d617333f1debe122_prof);
+        $__internal_a42ca08eb720edea19ae35e763a0bc6e26844405b2c5563237805627fd435fcd->leave($__internal_a42ca08eb720edea19ae35e763a0bc6e26844405b2c5563237805627fd435fcd_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_247f29224738aa1d24d9f3b07a1f8d12d71d03d4fa14b54f08156770d0c3839f = $this->env->getExtension("native_profiler");
-        $__internal_247f29224738aa1d24d9f3b07a1f8d12d71d03d4fa14b54f08156770d0c3839f->enter($__internal_247f29224738aa1d24d9f3b07a1f8d12d71d03d4fa14b54f08156770d0c3839f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_c5309b1639457779d0dbaf889e537810c85ade2a0f6fd5718a61482f8e9ae93b = $this->env->getExtension("native_profiler");
+        $__internal_c5309b1639457779d0dbaf889e537810c85ade2a0f6fd5718a61482f8e9ae93b->enter($__internal_c5309b1639457779d0dbaf889e537810c85ade2a0f6fd5718a61482f8e9ae93b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -99,7 +99,7 @@ class __TwigTemplate_7b962b603510138449b9eeba846a1a40f774fb1711fb6022ba21293fc2d
         echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_247f29224738aa1d24d9f3b07a1f8d12d71d03d4fa14b54f08156770d0c3839f->leave($__internal_247f29224738aa1d24d9f3b07a1f8d12d71d03d4fa14b54f08156770d0c3839f_prof);
+        $__internal_c5309b1639457779d0dbaf889e537810c85ade2a0f6fd5718a61482f8e9ae93b->leave($__internal_c5309b1639457779d0dbaf889e537810c85ade2a0f6fd5718a61482f8e9ae93b_prof);
 
     }
 
@@ -163,8 +163,8 @@ class __TwigTemplate_7b962b603510138449b9eeba846a1a40f774fb1711fb6022ba21293fc2d
 /* */
 /*         <div id="welcome">*/
 /*             <h1>Inscritpion</h1>*/
-/*             <p>Vous vous êtes enregistré avec susccès !</p>*/
-/*             <a href="index">Revenir a l'accueil</a>*/
+/*             <p>Vous vous êtes enregistré avec succès !</p>*/
+/*             <p><a href="index">Revenir a l'accueil</a></p>*/
 /*         </div>*/
 /*     </div>*/
 /* </div>*/

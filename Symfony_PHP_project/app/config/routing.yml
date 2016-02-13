@@ -82,6 +82,10 @@ progression:
     path: /progression
     defaults: {_controller: IPBundle:Default:progression}
 
+progressionCours:
+    path: /progressionCours/{id}
+    defaults: {_controller: IPBundle:Default:progressionCours}
+
 showChapitre:
     path: /showChapitre/{id}
     defaults: {_controller: IPBundle:Default:showChapitre}

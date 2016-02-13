@@ -18,8 +18,8 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3efa9ed42a38418202e2320d03c9cd4e45132d775bdfcac40a1edc5a01b38ffb = $this->env->getExtension("native_profiler");
-        $__internal_3efa9ed42a38418202e2320d03c9cd4e45132d775bdfcac40a1edc5a01b38ffb->enter($__internal_3efa9ed42a38418202e2320d03c9cd4e45132d775bdfcac40a1edc5a01b38ffb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_f62ea5e4b7238712d09f02460937683e3850932db2bf4d2f19ae89608f31b3a9 = $this->env->getExtension("native_profiler");
+        $__internal_f62ea5e4b7238712d09f02460937683e3850932db2bf4d2f19ae89608f31b3a9->enter($__internal_f62ea5e4b7238712d09f02460937683e3850932db2bf4d2f19ae89608f31b3a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -75,16 +75,20 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
         echo "\">Trouver un cours</a></li>
                                 <li><a href=\"";
         // line 36
+        echo $this->env->getExtension('routing')->getPath("newCours");
+        echo "\">Ajouter un cours</a></li>
+                                <li><a href=\"";
+        // line 37
         echo $this->env->getExtension('routing')->getPath("newChapitre");
         echo "\">Ajouter un chapitre</a></li>
                             </ul>
                         </li>
                         <li><a href=\"";
-        // line 39
+        // line 40
         echo $this->env->getExtension('routing')->getPath("exercises");
         echo "\">Exercices</a></li>
                         <li><a href=\"";
-        // line 40
+        // line 41
         echo $this->env->getExtension('routing')->getPath("progression");
         echo "\">Progression</a></li>
                         <li><a href=\"#\">Forum</a></li>
@@ -93,7 +97,7 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
             </header>
 
             <div id=\"content\">";
-        // line 46
+        // line 47
         $this->displayBlock('content', $context, $blocks);
         echo "</div>
 
@@ -101,15 +105,15 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
     </body>
 </html>";
         
-        $__internal_3efa9ed42a38418202e2320d03c9cd4e45132d775bdfcac40a1edc5a01b38ffb->leave($__internal_3efa9ed42a38418202e2320d03c9cd4e45132d775bdfcac40a1edc5a01b38ffb_prof);
+        $__internal_f62ea5e4b7238712d09f02460937683e3850932db2bf4d2f19ae89608f31b3a9->leave($__internal_f62ea5e4b7238712d09f02460937683e3850932db2bf4d2f19ae89608f31b3a9_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_ff2f01dc28f6bfb982d23e1c0e28f84539be9289dfdaf1973ee16bdb1e6cb345 = $this->env->getExtension("native_profiler");
-        $__internal_ff2f01dc28f6bfb982d23e1c0e28f84539be9289dfdaf1973ee16bdb1e6cb345->enter($__internal_ff2f01dc28f6bfb982d23e1c0e28f84539be9289dfdaf1973ee16bdb1e6cb345_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_279caefd5573abc6ad8cafa80f33845885a71b3ba202cacc2fc6780bf77edd05 = $this->env->getExtension("native_profiler");
+        $__internal_279caefd5573abc6ad8cafa80f33845885a71b3ba202cacc2fc6780bf77edd05->enter($__internal_279caefd5573abc6ad8cafa80f33845885a71b3ba202cacc2fc6780bf77edd05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "            <link rel=\"stylesheet\" href=\"";
@@ -117,32 +121,32 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
         echo "\" type=\"text/css\" media=\"all\">
         ";
         
-        $__internal_ff2f01dc28f6bfb982d23e1c0e28f84539be9289dfdaf1973ee16bdb1e6cb345->leave($__internal_ff2f01dc28f6bfb982d23e1c0e28f84539be9289dfdaf1973ee16bdb1e6cb345_prof);
+        $__internal_279caefd5573abc6ad8cafa80f33845885a71b3ba202cacc2fc6780bf77edd05->leave($__internal_279caefd5573abc6ad8cafa80f33845885a71b3ba202cacc2fc6780bf77edd05_prof);
 
     }
 
     // line 28
     public function block_logo($context, array $blocks = array())
     {
-        $__internal_cb739e9f3a9c4ff914cda7e2fe50b5feb09a0d2026a8a5733b846a39ef5706a7 = $this->env->getExtension("native_profiler");
-        $__internal_cb739e9f3a9c4ff914cda7e2fe50b5feb09a0d2026a8a5733b846a39ef5706a7->enter($__internal_cb739e9f3a9c4ff914cda7e2fe50b5feb09a0d2026a8a5733b846a39ef5706a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "logo"));
+        $__internal_5cd783a798f4e781f77ba698264b26334a8696a45c2fccfb896b27996d6f042f = $this->env->getExtension("native_profiler");
+        $__internal_5cd783a798f4e781f77ba698264b26334a8696a45c2fccfb896b27996d6f042f->enter($__internal_5cd783a798f4e781f77ba698264b26334a8696a45c2fccfb896b27996d6f042f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "logo"));
 
         // line 29
         echo "                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
                 ";
         
-        $__internal_cb739e9f3a9c4ff914cda7e2fe50b5feb09a0d2026a8a5733b846a39ef5706a7->leave($__internal_cb739e9f3a9c4ff914cda7e2fe50b5feb09a0d2026a8a5733b846a39ef5706a7_prof);
+        $__internal_5cd783a798f4e781f77ba698264b26334a8696a45c2fccfb896b27996d6f042f->leave($__internal_5cd783a798f4e781f77ba698264b26334a8696a45c2fccfb896b27996d6f042f_prof);
 
     }
 
-    // line 46
+    // line 47
     public function block_content($context, array $blocks = array())
     {
-        $__internal_1e2b28914b06badc56a4db4dca690450d7207358f2ae51b3cca7cd6751e0c0d0 = $this->env->getExtension("native_profiler");
-        $__internal_1e2b28914b06badc56a4db4dca690450d7207358f2ae51b3cca7cd6751e0c0d0->enter($__internal_1e2b28914b06badc56a4db4dca690450d7207358f2ae51b3cca7cd6751e0c0d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_900e9b69a2196c09ed33439590c3a384ee02a4ea9de04428420021bc2cb19197 = $this->env->getExtension("native_profiler");
+        $__internal_900e9b69a2196c09ed33439590c3a384ee02a4ea9de04428420021bc2cb19197->enter($__internal_900e9b69a2196c09ed33439590c3a384ee02a4ea9de04428420021bc2cb19197_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         
-        $__internal_1e2b28914b06badc56a4db4dca690450d7207358f2ae51b3cca7cd6751e0c0d0->leave($__internal_1e2b28914b06badc56a4db4dca690450d7207358f2ae51b3cca7cd6751e0c0d0_prof);
+        $__internal_900e9b69a2196c09ed33439590c3a384ee02a4ea9de04428420021bc2cb19197->leave($__internal_900e9b69a2196c09ed33439590c3a384ee02a4ea9de04428420021bc2cb19197_prof);
 
     }
 
@@ -158,7 +162,7 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 
     public function getDebugInfo()
     {
-        return array (  139 => 46,  131 => 29,  125 => 28,  115 => 7,  109 => 6,  97 => 46,  88 => 40,  84 => 39,  78 => 36,  74 => 35,  68 => 31,  66 => 28,  60 => 24,  54 => 22,  48 => 20,  46 => 19,  34 => 9,  32 => 6,  25 => 1,);
+        return array (  143 => 47,  135 => 29,  129 => 28,  119 => 7,  113 => 6,  101 => 47,  92 => 41,  88 => 40,  82 => 37,  78 => 36,  74 => 35,  68 => 31,  66 => 28,  60 => 24,  54 => 22,  48 => 20,  46 => 19,  34 => 9,  32 => 6,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -196,6 +200,7 @@ class __TwigTemplate_1f3ee9328b9e021acd33531148069c1856fec3ef980c22281ccc2161d2b
 /*                         <li><a href="#">Cours</a>*/
 /*                             <ul>*/
 /*                                 <li><a href="{{ path('showAllCours')}}">Trouver un cours</a></li>*/
+/*                                 <li><a href="{{ path('newCours')}}">Ajouter un cours</a></li>*/
 /*                                 <li><a href="{{ path('newChapitre')}}">Ajouter un chapitre</a></li>*/
 /*                             </ul>*/
 /*                         </li>*/

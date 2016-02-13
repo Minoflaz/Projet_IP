@@ -1,53 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
-    {% endblock %}
-    <title>IP13</title>
-</head>
+{% extends "base.html.twig" %}
 
-<body>
+    {% block content %}
 
-<div id="container">
-
-    <div id="account">
-
-        {% if user == null %}
-            <a href="login">Connexion</a> | <a href="newEleve">Inscription</a>
-        {% else %}
-            <a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>
-        {% endif %}
-
-    </div>
-    <header>
-        <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
-        <nav>
-            <ul id="menu">
-
-                <li><a href="#">Cours</a>
-                    <ul>
-                        <li><a href="showCours">Trouver un cours</a></li>
-                        <li><a href="newChapitre">Ajouter un cours</a></li>
-                    </ul>
-                </li>
-                <li><a href="exercises">Exercices</a></li>
-                <li><a href="#">Progression</a></li>
-                <li><a href="#">Forum</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <script src="Chart.js"></script>
-
-    <div id="content">
+        <script src="Chart.js"></script>
 
         <aside id = "chapter">
             <h1> Reseau </h1>
             <ul>
                 {% for cour in cours %}
-                    <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>
+                    <li class="chapterName"><a href="{{ path('progressionCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>
                 {% endfor %}
             </ul>
         </aside>
@@ -58,11 +19,12 @@
                     <hr>
                 </header>
                 <div class="content">
-                    <div style="width:100%">
+
+                    <!-- <div style="width:100%">
                         <canvas id="canvas" height="450" width="600"></canvas>
                     </div>
                     <script src="jquery-2.2.0.js"></script>
-                <script>
+                 <script>
                         var valeurs = [];
 
                         $.get('{{ path('recupNotes') }}', function(data) {
@@ -113,11 +75,8 @@
                     }
                 
                 
-                    </script>
+                    </script> -->
                 </div>
             </article>
         </section>
-    </div>
-</div>
-</body>
-</html>
+    {% endblock %}

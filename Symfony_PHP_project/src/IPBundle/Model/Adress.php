@@ -11,16 +11,6 @@ abstract class Adress
     private $bytes;
 
     /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
      * Set bytes
      *
      * @param string $bytes
@@ -71,6 +61,21 @@ abstract class Adress
                 $this->bytes = $this->bytes.strval($arrayOfInteger[$i]).".";
             else
                 $this->bytes = $this->bytes.strval($arrayOfInteger[$i]);
+
+        }
+
+    }
+
+    public function initStr($arrayOfString) {
+
+        $this->bytes = "";
+
+        for($i=0;$i<4;$i++) {
+
+            if($i<3)
+                $this->bytes = $this->bytes.$arrayOfString[$i].".";
+            else
+                $this->bytes = $this->bytes.$arrayOfString[$i];
 
         }
 
@@ -130,11 +135,11 @@ abstract class Adress
 
         for($i=0;$i<4;$i++) {
             if($i<3)
-                $strBin.$this->getByteBin($i).".";
+                $strBin.=$this->getByteBin($i).".";
             else
-                $strBin.$this->getByteBin($i);
+                $strBin.=$this->getByteBin($i);
         }
-
+        return $strBin;
     }
 
     /**

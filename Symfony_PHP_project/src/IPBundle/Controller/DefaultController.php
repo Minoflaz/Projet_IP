@@ -34,6 +34,8 @@ class DefaultController extends Controller
 
     public function exercisesAction() {
 
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Reseau'));
 
         return $this->render('IPBundle:Exercices:exercises.html.twig',array(
@@ -44,11 +46,28 @@ class DefaultController extends Controller
 
     public function progressionAction() {
 
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         return $this->render('IPBundle:Progression:Progression.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours
+        ));
+    }
+
+    public function progressionCoursAction($id) {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+        $cour = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneById($id);
+
+        return $this->render('IPBundle:Progression:ProgressionCours.html.twig',array(
+            'user' => $this->getUser(),
+            'cours' => $cours,
+            'cour' => $cour
         ));
     }
 
@@ -90,6 +109,8 @@ class DefaultController extends Controller
 
     public function newCoursAction(Request $request) {
 
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Il faut être professeur pour pouvoir ajouter un cours !');
+
         $listeCours = $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         $cours = new Cours();
@@ -118,6 +139,8 @@ class DefaultController extends Controller
     }
 
     public function newChapitreAction(Request $request) {
+
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Il faut être professeur pour pouvoir ajouter un chapitre !');
 
         $chapitre = new Chapitre();
 
@@ -404,6 +427,13 @@ class DefaultController extends Controller
         $mask = $ip->giveMask($nbSubNet);
 
         return new Response($mask->getBytes());
+
+
+    }
+
+    public function convertAction() {
+
+
 
 
     }

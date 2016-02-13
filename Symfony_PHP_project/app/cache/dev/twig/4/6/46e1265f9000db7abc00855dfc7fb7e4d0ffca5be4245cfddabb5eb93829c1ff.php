@@ -7,74 +7,40 @@ class __TwigTemplate_610c761d5254e67848ba127b8503b149aaf6ff55d80107db9bc847e64ce
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "IPBundle:Exercices:classFailed.html.twig", 1);
         $this->blocks = array(
-            'stylesheets' => array($this, 'block_stylesheets'),
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3b861057269f440cbadaadfa05f8f9b73d5dbd4ffa2bd9e85b07233b5e0086e5 = $this->env->getExtension("native_profiler");
-        $__internal_3b861057269f440cbadaadfa05f8f9b73d5dbd4ffa2bd9e85b07233b5e0086e5->enter($__internal_3b861057269f440cbadaadfa05f8f9b73d5dbd4ffa2bd9e85b07233b5e0086e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:classFailed.html.twig"));
+        $__internal_bfe410a3d04d8f0c29df5530224ccd84cc136fc863ddf0995f8fba7527529122 = $this->env->getExtension("native_profiler");
+        $__internal_bfe410a3d04d8f0c29df5530224ccd84cc136fc863ddf0995f8fba7527529122->enter($__internal_bfe410a3d04d8f0c29df5530224ccd84cc136fc863ddf0995f8fba7527529122_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:classFailed.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-<html>
-<head>
-    <meta charset=\"UTF-8\"/>
-    ";
-        // line 5
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
-        echo "    <title>IP13</title>
-</head>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_bfe410a3d04d8f0c29df5530224ccd84cc136fc863ddf0995f8fba7527529122->leave($__internal_bfe410a3d04d8f0c29df5530224ccd84cc136fc863ddf0995f8fba7527529122_prof);
 
-<body>
+    }
 
-<div id=\"container\">
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_759a1516e3ff4a1aca5b2d1341c32b19864a6654bc1f66b8bf700854ed4553f4 = $this->env->getExtension("native_profiler");
+        $__internal_759a1516e3ff4a1aca5b2d1341c32b19864a6654bc1f66b8bf700854ed4553f4->enter($__internal_759a1516e3ff4a1aca5b2d1341c32b19864a6654bc1f66b8bf700854ed4553f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-    <div id=\"account\">
-
-        ";
-        // line 17
-        if (((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")) == null)) {
-            // line 18
-            echo "            <a href=\"login\">Connexion</a> | <a href=\"newEleve\">Inscription</a>
-        ";
-        } else {
-            // line 20
-            echo "            <a href=\"#\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nom", array()), "html", null, true);
-            echo "</a> | <a href=\"logout\">Deconnexion</a>
-        ";
-        }
-        // line 22
+        // line 4
         echo "
-    </div>
-    <header>
-        <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
-        <nav>
-            <ul id=\"menu\">
-                <li><a href=\"#\">Cours</a>
-                    <ul>
-                        <li><a href=\"showCours\">Trouver un cours</a></li>
-                        <li><a href=\"newChapitre\">Ajouter un cours</a></li>
-                    </ul>
-                </li>
-                <li><a href=\"exercises\">Exercices</a></li>
-                <li><a href=\"progression\">Progression</a></li>
-                <li><a href=\"#\">Forum</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div id=\"content\">
-
         <div id=\"welcome\">
-            <h1>Faire des exercices</h1>
-            <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
+            <h1></h1>
+            <p></p>
         </div>
 
         <aside id = \"chapter\">
@@ -95,34 +61,15 @@ class __TwigTemplate_610c761d5254e67848ba127b8503b149aaf6ff55d80107db9bc847e64ce
 
                 Ce n'est pas la bonne classe ! :o
                 <br>
-                <a href=\"exoClass\">Réessayer l'éxercice</a>
+
+                <p><a href=\"exoClass\">Réessayer l'éxercice</a></p>
 
             </article>
         </section>
 
-    </div>
-</div>
-</body>
-</html>
-";
-        
-        $__internal_3b861057269f440cbadaadfa05f8f9b73d5dbd4ffa2bd9e85b07233b5e0086e5->leave($__internal_3b861057269f440cbadaadfa05f8f9b73d5dbd4ffa2bd9e85b07233b5e0086e5_prof);
-
-    }
-
-    // line 5
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        $__internal_7efed908205e3e3197db856ae733be4712eab751a8ad5beada5887ed60b0e66e = $this->env->getExtension("native_profiler");
-        $__internal_7efed908205e3e3197db856ae733be4712eab751a8ad5beada5887ed60b0e66e->enter($__internal_7efed908205e3e3197db856ae733be4712eab751a8ad5beada5887ed60b0e66e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 6
-        echo "        <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("style.css"), "html", null, true);
-        echo "\" type=\"text/css\" media=\"all\">
     ";
         
-        $__internal_7efed908205e3e3197db856ae733be4712eab751a8ad5beada5887ed60b0e66e->leave($__internal_7efed908205e3e3197db856ae733be4712eab751a8ad5beada5887ed60b0e66e_prof);
+        $__internal_759a1516e3ff4a1aca5b2d1341c32b19864a6654bc1f66b8bf700854ed4553f4->leave($__internal_759a1516e3ff4a1aca5b2d1341c32b19864a6654bc1f66b8bf700854ed4553f4_prof);
 
     }
 
@@ -138,54 +85,16 @@ class __TwigTemplate_610c761d5254e67848ba127b8503b149aaf6ff55d80107db9bc847e64ce
 
     public function getDebugInfo()
     {
-        return array (  120 => 6,  114 => 5,  54 => 22,  48 => 20,  44 => 18,  42 => 17,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* <!DOCTYPE html>*/
-/* <html>*/
-/* <head>*/
-/*     <meta charset="UTF-8"/>*/
-/*     {% block stylesheets %}*/
-/*         <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">*/
-/*     {% endblock %}*/
-/*     <title>IP13</title>*/
-/* </head>*/
+/* {% extends "base.html.twig" %}*/
 /* */
-/* <body>*/
-/* */
-/* <div id="container">*/
-/* */
-/*     <div id="account">*/
-/* */
-/*         {% if user == null %}*/
-/*             <a href="login">Connexion</a> | <a href="newEleve">Inscription</a>*/
-/*         {% else %}*/
-/*             <a href="#">{{ user.nom }}</a> | <a href="logout">Deconnexion</a>*/
-/*         {% endif %}*/
-/* */
-/*     </div>*/
-/*     <header>*/
-/*         <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
-/*         <nav>*/
-/*             <ul id="menu">*/
-/*                 <li><a href="#">Cours</a>*/
-/*                     <ul>*/
-/*                         <li><a href="showCours">Trouver un cours</a></li>*/
-/*                         <li><a href="newChapitre">Ajouter un cours</a></li>*/
-/*                     </ul>*/
-/*                 </li>*/
-/*                 <li><a href="exercises">Exercices</a></li>*/
-/*                 <li><a href="progression">Progression</a></li>*/
-/*                 <li><a href="#">Forum</a></li>*/
-/*             </ul>*/
-/*         </nav>*/
-/*     </header>*/
-/* */
-/*     <div id="content">*/
+/*     {% block content %}*/
 /* */
 /*         <div id="welcome">*/
-/*             <h1>Faire des exercices</h1>*/
-/*             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>*/
+/*             <h1></h1>*/
+/*             <p></p>*/
 /*         </div>*/
 /* */
 /*         <aside id = "chapter">*/
@@ -206,13 +115,11 @@ class __TwigTemplate_610c761d5254e67848ba127b8503b149aaf6ff55d80107db9bc847e64ce
 /* */
 /*                 Ce n'est pas la bonne classe ! :o*/
 /*                 <br>*/
-/*                 <a href="exoClass">Réessayer l'éxercice</a>*/
+/* */
+/*                 <p><a href="exoClass">Réessayer l'éxercice</a></p>*/
 /* */
 /*             </article>*/
 /*         </section>*/
 /* */
-/*     </div>*/
-/* </div>*/
-/* </body>*/
-/* </html>*/
+/*     {% endblock %}*/
 /* */

@@ -43,12 +43,13 @@ class Eleve implements UserInterface, \Serializable
     /**
      * @var string
      */
-    private $niveau;
+    private $sexe;
 
     /**
-     * @var string
+     * @var array
      */
-    private $sexe;
+    private $role;
+
 
     /**
      * @var array
@@ -63,7 +64,7 @@ class Eleve implements UserInterface, \Serializable
         $this->nom = "";
         $this->prenom = "";
         $this->dateNaissance = new \DateTime();
-        $this->niveau = "S";
+        $this->role = array('ROLE_USER');
         $this->sexe = "";
         $this->notes = new ArrayCollection();
     }
@@ -111,30 +112,6 @@ class Eleve implements UserInterface, \Serializable
         return $this->notes;
     }
 
-
-    /**
-     * Set string
-     *
-     * @param string $string
-     *
-     * @return eleve
-     */
-    public function setString($string)
-    {
-        $this->string = $string;
-
-        return $this;
-    }
-
-    /**
-     * Get string
-     *
-     * @return string
-     */
-    public function getString()
-    {
-        return $this->string;
-    }
 
     /**
      * Set Username
@@ -256,29 +233,6 @@ class Eleve implements UserInterface, \Serializable
         return $this->dateNaissance;
     }
 
-    /**
-     * Set niveau
-     *
-     * @param string $niveau
-     *
-     * @return eleve
-     */
-    public function setNiveau($niveau)
-    {
-        $this->niveau = $niveau;
-
-        return $this;
-    }
-
-    /**
-     * Get niveau
-     *
-     * @return string
-     */
-    public function getNiveau()
-    {
-        return $this->niveau;
-    }
 
     /**
      * Set sexe
@@ -304,10 +258,15 @@ class Eleve implements UserInterface, \Serializable
         return $this->sexe;
     }
 
+    public function setRoles($roles) {
+
+        $this->role = $roles;
+        return $this;
+    }
 
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return $this->role;
     }
 
     public function getSalt()

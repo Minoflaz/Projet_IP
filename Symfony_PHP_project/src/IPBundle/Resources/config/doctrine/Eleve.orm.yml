@@ -28,8 +28,8 @@ IPBundle\Entity\Eleve:
         dateNaissance:
             type: date
             column: date_naissance
-        niveau:
-            type: string
+        role:
+            type: array
             length: 255
         sexe:
             type: string
