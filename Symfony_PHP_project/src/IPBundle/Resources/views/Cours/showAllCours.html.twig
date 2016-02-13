@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+    {% block content %}
+
+        <div id="welcome">
+            <h1 id="titreChapter">Trouver un cours</h1>
+            <p id="chapterText">Ici vous pouvez consulter la liste des cours et cliquer sur un pour accéder au chapitres correspondants</p>
+        </div>
+
+        <aside id = "chapter">
+            <h1> Reseau </h1>
+            <ul>
+                {% for cour in cours %}
+                    <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+
+        <!--<script>
+            var titreChapter = document.getElementById("titreChapter");
+            var chapterText = document.getElementById("chapterText")
+
+            var chapter = document.getElementsByClassName("chapterName");
+
+            for(var i=0;i<chapter.length;i++) {
+
+                chapter[i].onclick = function (e) {
+                    var nom = ((e.target).innerText);
+
+                };
+            }
+        </script> -->
+
+
+
+  {% endblock %}

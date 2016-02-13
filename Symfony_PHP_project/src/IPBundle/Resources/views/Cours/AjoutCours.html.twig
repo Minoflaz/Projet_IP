@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+    {% block content %}
+
+        <div id="welcome">
+            <h1>Enregistrer un nouveau cours</h1>
+            <p>Ici vous pouvez ajouter votre cours. Il sera enregistré et vous pourrez y ajouter des chapitres.</p>
+        </div>
+
+
+
+        <form id="AjoutCours" method="post">
+            <aside id = "chapter">
+                <h1> Reseau </h1>
+                <ul>
+                    {% for cour in cours %}
+                        <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>
+                    {% endfor %}
+                </ul>
+            </aside>
+
+            <section>
+                <article>
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    <header>
+                        <h1><label for="texte">Nom du cours : </label></h1>
+                        {{ form_widget(form.nom) }}
+                        <hr>
+                        <p>
+                            {{ form_label(form.save, 'Submit lesson') }}
+                            {{ form_widget(form.save) }}
+                            {{ form_end(form) }}
+                        </p>
+                    </header>
+
+
+
+
+                </article>
+            </section>
+        </form>
+    {% endblock %}

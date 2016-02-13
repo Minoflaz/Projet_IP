@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+    {% block content %}
+
+        <div id="welcome">
+            <h1></h1>
+            <p></p>
+        </div>
+
+        <aside id = "chapter">
+            <h1>Exercices</h1>
+            <ul>
+
+                <li><a href="exoClass">Exo classe</a></li>
+
+                <li><a href="exoMask">Exo masque</a></li>
+
+                <li><a href="#">Exo table de routage</a></li>
+
+            </ul>
+        </aside>
+
+        <section>
+            <article>
+
+                Ce n'est pas le bon masque :o
+                <br>
+                <p><a href="exoMask">Réessayer l'éxercice</a></p>
+
+            </article>
+        </section>
+
+    {% endblock %}

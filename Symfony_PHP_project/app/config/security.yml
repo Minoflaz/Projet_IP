@@ -15,6 +15,8 @@ security:
                 class: IPBundle:Eleve
                 property: username
 
+    role_hierarchy:
+            ROLE_PROF: ROLE_USER
 
     firewalls:
 
