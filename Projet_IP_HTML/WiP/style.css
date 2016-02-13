@@ -444,3 +444,40 @@ input#modifier
 {
     padding: 5px 15px;
 }
+
+
+/* TABLE DE ROUTAGE */
+
+form#routage, div.routage
+{
+	background-color: white;
+	height: 15em;
+}
+
+form#routage table
+{
+	margin-top: 3em;
+	width: 100%;
+	text-align: center;
+	border: 2px solid black;
+	border-spacing: 0px;
+}
+
+form#routage table td, form#routage table th
+{
+	border: 2px solid black;
+	padding: 6px 3px;
+}
+
+form#routage table tbody input
+{
+	width: 10em;
+}
+
+
+
+
+
+
+
+
