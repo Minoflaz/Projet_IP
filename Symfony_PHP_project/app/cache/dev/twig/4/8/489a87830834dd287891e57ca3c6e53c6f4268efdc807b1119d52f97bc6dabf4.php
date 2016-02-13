@@ -8,7 +8,7 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "IPBundle:Exercices:exercises.html.twig", 1);
+        $this->parent = $this->loadTemplate("exo.html.twig", "IPBundle:Exercices:exercises.html.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -16,25 +16,25 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "exo.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419 = $this->env->getExtension("native_profiler");
-        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419->enter($__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exercises.html.twig"));
+        $__internal_41bba68a2fec48f9e2f9e5d09a05d5ffbf70bbc5525dba7bb30839748f4a5cce = $this->env->getExtension("native_profiler");
+        $__internal_41bba68a2fec48f9e2f9e5d09a05d5ffbf70bbc5525dba7bb30839748f4a5cce->enter($__internal_41bba68a2fec48f9e2f9e5d09a05d5ffbf70bbc5525dba7bb30839748f4a5cce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:exercises.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419->leave($__internal_f7ff8c975ef748f98e5cb67da0023c17b3a8ac452dbe3214294c84ff6e434419_prof);
+        $__internal_41bba68a2fec48f9e2f9e5d09a05d5ffbf70bbc5525dba7bb30839748f4a5cce->leave($__internal_41bba68a2fec48f9e2f9e5d09a05d5ffbf70bbc5525dba7bb30839748f4a5cce_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e = $this->env->getExtension("native_profiler");
-        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e->enter($__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_7cc0ed66e8a18deca404447f540460973e50a3c54b3db592b3be79f3cdc73265 = $this->env->getExtension("native_profiler");
+        $__internal_7cc0ed66e8a18deca404447f540460973e50a3c54b3db592b3be79f3cdc73265->enter($__internal_7cc0ed66e8a18deca404447f540460973e50a3c54b3db592b3be79f3cdc73265_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -43,33 +43,14 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
         </div>
 
-        <aside id = \"chapter\">
-            <h1>Exercices</h1>
-            <ul>
-
-                <li><a href=\"";
-        // line 14
-        echo $this->env->getExtension('routing')->getPath("convert");
-        echo "\">Exo conversion</a></li>
-
-                <li><a href=\"";
-        // line 16
-        echo $this->env->getExtension('routing')->getPath("exoClass");
-        echo "\">Exo classe</a></li>
-
-                <li><a href=\"";
-        // line 18
-        echo $this->env->getExtension('routing')->getPath("exoMask");
-        echo "\">Exo masque</a></li>
-
-                <li><a href=\"#\">Exo table de routage</a></li>
-
-            </ul>
-        </aside>
+        ";
+        // line 10
+        $this->displayParentBlock("content", $context, $blocks);
+        echo "
 
     ";
         
-        $__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e->leave($__internal_2a64e7ca44dbf789cdacea431dc70dd8929b56e2b40005866e261e7a8a004f6e_prof);
+        $__internal_7cc0ed66e8a18deca404447f540460973e50a3c54b3db592b3be79f3cdc73265->leave($__internal_7cc0ed66e8a18deca404447f540460973e50a3c54b3db592b3be79f3cdc73265_prof);
 
     }
 
@@ -85,10 +66,10 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 
     public function getDebugInfo()
     {
-        return array (  62 => 18,  57 => 16,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* {% extends "base.html.twig" %}*/
+/* {% extends "exo.html.twig" %}*/
 /* */
 /*     {% block content %}*/
 /* */
@@ -97,19 +78,6 @@ class __TwigTemplate_5b85b0237695291a4695faf9238e09151534727d4380ab48c88e93b51d3
 /*             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>*/
 /*         </div>*/
 /* */
-/*         <aside id = "chapter">*/
-/*             <h1>Exercices</h1>*/
-/*             <ul>*/
-/* */
-/*                 <li><a href="{{ path('convert') }}">Exo conversion</a></li>*/
-/* */
-/*                 <li><a href="{{ path('exoClass')}}">Exo classe</a></li>*/
-/* */
-/*                 <li><a href="{{ path('exoMask')}}">Exo masque</a></li>*/
-/* */
-/*                 <li><a href="#">Exo table de routage</a></li>*/
-/* */
-/*             </ul>*/
-/*         </aside>*/
+/*         {{ parent() }}*/
 /* */
 /*     {% endblock %}*/

@@ -37,7 +37,7 @@ class RoutingTableLine {
 	 * @param string $flag      
 	 * @param string $interface 
 	 */
-	public function __construct($ip,$gateway,$mask,$flag,$interface) {
+	public function init($ip,$gateway,$mask,$flag,$interface) {
 
 		$this->ip = $ip;
 		$this->gateway = $gateway; 

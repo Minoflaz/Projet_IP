@@ -21,20 +21,20 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5 = $this->env->getExtension("native_profiler");
-        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5->enter($__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
+        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad = $this->env->getExtension("native_profiler");
+        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad->enter($__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Accueil:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5->leave($__internal_11cf64bd93af43251c866cced9bce1ab1243824f3e3bb72d2616b97f9a7776c5_prof);
+        $__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad->leave($__internal_a691a8b0b1dec7d001101a3e0b11af47cd72224c1b0ff8b4a4adc5b083aef1ad_prof);
 
     }
 
     // line 6
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335 = $this->env->getExtension("native_profiler");
-        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335->enter($__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f = $this->env->getExtension("native_profiler");
+        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f->enter($__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 7
         echo "\t\t
@@ -48,22 +48,22 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t";
         // line 16
-        if ((((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")) != null) && (twig_length_filter($this->env, $this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array())) > 0))) {
+        if (((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")) != null)) {
             // line 17
             echo "                            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")), "chapitres", array()));
-            foreach ($context['_seq'] as $context["_key"] => $context["chapitre"]) {
+            $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) ? $context["cours"] : $this->getContext($context, "cours")));
+            foreach ($context['_seq'] as $context["_key"] => $context["cour"]) {
                 // line 18
                 echo "                                <li class=\"chapterName\"><a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showChapitre", array("id" => $this->getAttribute($context["chapitre"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("showCours", array("id" => $this->getAttribute($context["cour"], "id", array()))), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["chapitre"], "nom", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($context["cour"], "nom", array()), "html", null, true);
                 echo "</a></li>
                             ";
             }
             $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['chapitre'], $context['_parent'], $context['loop']);
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cour'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 20
             echo "                        ";
@@ -123,7 +123,7 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 \t\t\t
 \t\t\t";
         
-        $__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335->leave($__internal_e12bcbc38757477792db795c785ff28ef056f8af421b11711b866facd311d335_prof);
+        $__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f->leave($__internal_15eb5b5d65e8b900e6d6f4475ef3ea1188d46fe3f2c85e3c7d8970c6d0512f1f_prof);
 
     }
 
@@ -157,9 +157,9 @@ class __TwigTemplate_39031de988d9f82136a77f2aba48fce26fa4532cca9bd7ce1e3472f83ab
 /* 				<aside id = "chapter">*/
 /* 					<h1> Reseau </h1>*/
 /* 					<ul>*/
-/* 						{% if cours != null  and cours.chapitres|length>0  %}*/
-/*                             {% for chapitre in cours.chapitres %}*/
-/*                                 <li class="chapterName"><a href="{{ path('showChapitre', {"id": chapitre.id}) }}">{{ chapitre.nom }}</a></li>*/
+/* 						{% if cours != null %}*/
+/*                             {% for cour in cours %}*/
+/*                                 <li class="chapterName"><a href="{{ path('showCours', {"id": cour.id}) }}">{{ cour.nom }}</a></li>*/
 /*                             {% endfor %}*/
 /*                         {% endif %}*/
 /* 					</ul>*/

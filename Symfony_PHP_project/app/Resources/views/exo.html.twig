@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+    {% block content %}
+        <aside id = "chapter">
+            <h1>Exercices</h1>
+            <ul>
+
+                <li><a href="{{ path('convert') }}">Exo conversion</a></li>
+
+                <li><a href="{{ path('exoClass')}}">Exo classe</a></li>
+
+                <li><a href="{{ path('exoMask')}}">Exo masque</a></li>
+
+                <li><a href="{{ path('routingTable')}}">Exo table de routage</a></li>
+
+            </ul>
+        </aside>
+    {% endblock %}

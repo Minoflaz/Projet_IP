@@ -16,44 +16,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DatabaseController extends Controller
 {
 
-	public function addEleveAction() {
-
-		$em = $this->getDoctrine()->getManager();
-
-		$eleve = new Eleve();
-
-		$em->persist($eleve);
-		$em->flush();
-
-		return new Response();
-
-	}	
-
-	public function getEleveAction($id) {
-
-		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($id);
-
-		if (!$eleve) {
-			throw $this->createNotFoundException('No product found for id '.$id);
-		}
-
-		return new Response($eleve);
-
-	}
-
-	public function showEleveAction($id) {
-
-		$eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->find($id);
-
-		if (!$eleve) {
-			throw $this->createNotFoundException('No product found for id '.$id);
-		}
-
-	return new Response($eleve);
-
-	
-
-	}
 
 	public function showAllEleveAction() {
 

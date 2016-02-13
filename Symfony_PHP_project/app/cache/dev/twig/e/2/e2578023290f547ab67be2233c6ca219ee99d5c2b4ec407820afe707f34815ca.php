@@ -8,7 +8,7 @@ class __TwigTemplate_40f887e8b750b89f0d4c2f930a8c74845bc4e878ff4b58a810e06f84645
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "IPBundle:Exercices:maskFailed.html.twig", 1);
+        $this->parent = $this->loadTemplate("exo.html.twig", "IPBundle:Exercices:maskFailed.html.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -16,25 +16,25 @@ class __TwigTemplate_40f887e8b750b89f0d4c2f930a8c74845bc4e878ff4b58a810e06f84645
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "exo.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8c07f027763edb940556b81c8aa5efaec40d60a541dad653ad53a0a74f3db1d = $this->env->getExtension("native_profiler");
-        $__internal_c8c07f027763edb940556b81c8aa5efaec40d60a541dad653ad53a0a74f3db1d->enter($__internal_c8c07f027763edb940556b81c8aa5efaec40d60a541dad653ad53a0a74f3db1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:maskFailed.html.twig"));
+        $__internal_276be819db97a2eecadb72099b50eea262b223d9560eef062b6482a2ccd21290 = $this->env->getExtension("native_profiler");
+        $__internal_276be819db97a2eecadb72099b50eea262b223d9560eef062b6482a2ccd21290->enter($__internal_276be819db97a2eecadb72099b50eea262b223d9560eef062b6482a2ccd21290_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:maskFailed.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c8c07f027763edb940556b81c8aa5efaec40d60a541dad653ad53a0a74f3db1d->leave($__internal_c8c07f027763edb940556b81c8aa5efaec40d60a541dad653ad53a0a74f3db1d_prof);
+        $__internal_276be819db97a2eecadb72099b50eea262b223d9560eef062b6482a2ccd21290->leave($__internal_276be819db97a2eecadb72099b50eea262b223d9560eef062b6482a2ccd21290_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_3256afcce7a62c60a0152bcaf6bebacd29a232fca11046c61fa4c13c194502ad = $this->env->getExtension("native_profiler");
-        $__internal_3256afcce7a62c60a0152bcaf6bebacd29a232fca11046c61fa4c13c194502ad->enter($__internal_3256afcce7a62c60a0152bcaf6bebacd29a232fca11046c61fa4c13c194502ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_3d44e25c4beae8b451b6025ff7b4c150d67f53ecf4845379ffbf5c731a2d3d86 = $this->env->getExtension("native_profiler");
+        $__internal_3d44e25c4beae8b451b6025ff7b4c150d67f53ecf4845379ffbf5c731a2d3d86->enter($__internal_3d44e25c4beae8b451b6025ff7b4c150d67f53ecf4845379ffbf5c731a2d3d86_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -43,36 +43,31 @@ class __TwigTemplate_40f887e8b750b89f0d4c2f930a8c74845bc4e878ff4b58a810e06f84645
             <p></p>
         </div>
 
-        <aside id = \"chapter\">
-            <h1>Exercices</h1>
-            <ul>
-
-                <li><a href=\"exoClass\">Exo classe</a></li>
-
-                <li><a href=\"exoMask\">Exo masque</a></li>
-
-                <li><a href=\"#\">Exo table de routage</a></li>
-
-            </ul>
-        </aside>
+        ";
+        // line 10
+        $this->displayParentBlock("content", $context, $blocks);
+        echo "
 
         <section>
             <article>
-                <h1></h1>
+                <br>
                 <p>Ce n'est pas le bon masque</p>
                 <p>En effet le bon masque était : ";
-        // line 27
+        // line 16
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["mask"]) ? $context["mask"] : $this->getContext($context, "mask")), "bytes", array()), "html", null, true);
         echo "</p>
                 <br>
-                <p><a href=\"exoMask\">Réessayer l'éxercice</a></p>
+                <p><a href=\"";
+        // line 18
+        echo $this->env->getExtension('routing')->getPath("exoMask");
+        echo "\">Réessayer l'éxercice</a></p>
 
             </article>
         </section>
 
     ";
         
-        $__internal_3256afcce7a62c60a0152bcaf6bebacd29a232fca11046c61fa4c13c194502ad->leave($__internal_3256afcce7a62c60a0152bcaf6bebacd29a232fca11046c61fa4c13c194502ad_prof);
+        $__internal_3d44e25c4beae8b451b6025ff7b4c150d67f53ecf4845379ffbf5c731a2d3d86->leave($__internal_3d44e25c4beae8b451b6025ff7b4c150d67f53ecf4845379ffbf5c731a2d3d86_prof);
 
     }
 
@@ -88,10 +83,10 @@ class __TwigTemplate_40f887e8b750b89f0d4c2f930a8c74845bc4e878ff4b58a810e06f84645
 
     public function getDebugInfo()
     {
-        return array (  65 => 27,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  62 => 18,  57 => 16,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* {% extends "base.html.twig" %}*/
+/* {% extends "exo.html.twig" %}*/
 /* */
 /*     {% block content %}*/
 /* */
@@ -100,26 +95,15 @@ class __TwigTemplate_40f887e8b750b89f0d4c2f930a8c74845bc4e878ff4b58a810e06f84645
 /*             <p></p>*/
 /*         </div>*/
 /* */
-/*         <aside id = "chapter">*/
-/*             <h1>Exercices</h1>*/
-/*             <ul>*/
-/* */
-/*                 <li><a href="exoClass">Exo classe</a></li>*/
-/* */
-/*                 <li><a href="exoMask">Exo masque</a></li>*/
-/* */
-/*                 <li><a href="#">Exo table de routage</a></li>*/
-/* */
-/*             </ul>*/
-/*         </aside>*/
+/*         {{ parent() }}*/
 /* */
 /*         <section>*/
 /*             <article>*/
-/*                 <h1></h1>*/
+/*                 <br>*/
 /*                 <p>Ce n'est pas le bon masque</p>*/
 /*                 <p>En effet le bon masque était : {{ mask.bytes }}</p>*/
 /*                 <br>*/
-/*                 <p><a href="exoMask">Réessayer l'éxercice</a></p>*/
+/*                 <p><a href="{{ path('exoMask')}}">Réessayer l'éxercice</a></p>*/
 /* */
 /*             </article>*/
 /*         </section>*/

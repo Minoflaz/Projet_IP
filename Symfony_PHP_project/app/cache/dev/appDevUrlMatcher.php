@@ -146,17 +146,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
         }
 
-        if (0 === strpos($pathinfo, '/add')) {
-            // addEleve
-            if ($pathinfo === '/addEleve') {
-                return array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::addEleveAction',  '_route' => 'addEleve',);
-            }
-
-            // addNoteEleve
-            if (0 === strpos($pathinfo, '/addNoteEleve') && preg_match('#^/addNoteEleve/(?P<valeur>[^/]++)/(?P<cours>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'addNoteEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::addNoteEleveAction',));
-            }
-
+        // addNoteEleve
+        if (0 === strpos($pathinfo, '/addNoteEleve') && preg_match('#^/addNoteEleve/(?P<valeur>[^/]++)/(?P<cours>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'addNoteEleve')), array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::addNoteEleveAction',));
         }
 
         if (0 === strpos($pathinfo, '/show')) {
@@ -187,18 +179,18 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // newEleve
         if ($pathinfo === '/newEleve') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newEleveAction',  '_route' => 'newEleve',);
+            return array (  '_controller' => 'IPBundle\\Controller\\CreateController::newEleveAction',  '_route' => 'newEleve',);
         }
 
         if (0 === strpos($pathinfo, '/exo')) {
             // exoMask
             if ($pathinfo === '/exoMask') {
-                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoMaskAction',  '_route' => 'exoMask',);
+                return array (  '_controller' => 'IPBundle\\Controller\\ExoController::exoMaskAction',  '_route' => 'exoMask',);
             }
 
             // exoClass
             if ($pathinfo === '/exoClass') {
-                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::exoClassAction',  '_route' => 'exoClass',);
+                return array (  '_controller' => 'IPBundle\\Controller\\ExoController::exoClassAction',  '_route' => 'exoClass',);
             }
 
         }
@@ -210,7 +202,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // routingTable
         if ($pathinfo === '/routingTable') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::routingTableAction',  '_route' => 'routingTable',);
+            return array (  '_controller' => 'IPBundle\\Controller\\ExoController::routingTableAction',  '_route' => 'routingTable',);
         }
 
         // login_route
@@ -221,12 +213,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/newC')) {
             // newCours
             if ($pathinfo === '/newCours') {
-                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newCoursAction',  '_route' => 'newCours',);
+                return array (  '_controller' => 'IPBundle\\Controller\\CreateController::newCoursAction',  '_route' => 'newCours',);
             }
 
             // newChapitre
             if ($pathinfo === '/newChapitre') {
-                return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::newChapitreAction',  '_route' => 'newChapitre',);
+                return array (  '_controller' => 'IPBundle\\Controller\\CreateController::newChapitreAction',  '_route' => 'newChapitre',);
             }
 
         }
@@ -251,7 +243,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // convert
         if ($pathinfo === '/convert') {
-            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::convertAction',  '_route' => 'convert',);
+            return array (  '_controller' => 'IPBundle\\Controller\\ExoController::convertAction',  '_route' => 'convert',);
         }
 
         if (0 === strpos($pathinfo, '/progression')) {
@@ -275,6 +267,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // recupNotes
         if ($pathinfo === '/recupNotes') {
             return array (  '_controller' => 'IPBundle\\Controller\\DatabaseController::recupNotesAction',  '_route' => 'recupNotes',);
+        }
+
+        // compte
+        if ($pathinfo === '/compte') {
+            return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::compteAction',  '_route' => 'compte',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {

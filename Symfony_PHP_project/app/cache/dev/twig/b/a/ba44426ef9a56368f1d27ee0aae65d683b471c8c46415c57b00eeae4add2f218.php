@@ -8,7 +8,7 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "IPBundle:Exercices:convert.html.twig", 1);
+        $this->parent = $this->loadTemplate("exo.html.twig", "IPBundle:Exercices:convert.html.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -16,25 +16,25 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "exo.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_199c0a3d7d0791cb58e57f58bc5f0129ec3e58a584ce1e2730145bcc07fdac57 = $this->env->getExtension("native_profiler");
-        $__internal_199c0a3d7d0791cb58e57f58bc5f0129ec3e58a584ce1e2730145bcc07fdac57->enter($__internal_199c0a3d7d0791cb58e57f58bc5f0129ec3e58a584ce1e2730145bcc07fdac57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:convert.html.twig"));
+        $__internal_3787f309abfa918ae520c894a5504a8ad1aaff14f5f134d015117a1a7eeaf4f6 = $this->env->getExtension("native_profiler");
+        $__internal_3787f309abfa918ae520c894a5504a8ad1aaff14f5f134d015117a1a7eeaf4f6->enter($__internal_3787f309abfa918ae520c894a5504a8ad1aaff14f5f134d015117a1a7eeaf4f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IPBundle:Exercices:convert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_199c0a3d7d0791cb58e57f58bc5f0129ec3e58a584ce1e2730145bcc07fdac57->leave($__internal_199c0a3d7d0791cb58e57f58bc5f0129ec3e58a584ce1e2730145bcc07fdac57_prof);
+        $__internal_3787f309abfa918ae520c894a5504a8ad1aaff14f5f134d015117a1a7eeaf4f6->leave($__internal_3787f309abfa918ae520c894a5504a8ad1aaff14f5f134d015117a1a7eeaf4f6_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_1e002edd6101fdd76ab626b22f8bcc74ba60b78b756bbbf52dc9bca73214c704 = $this->env->getExtension("native_profiler");
-        $__internal_1e002edd6101fdd76ab626b22f8bcc74ba60b78b756bbbf52dc9bca73214c704->enter($__internal_1e002edd6101fdd76ab626b22f8bcc74ba60b78b756bbbf52dc9bca73214c704_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e1f29320eb60596659df8af9db702a2cfe557ad98a525d89fe704a39aef98aa8 = $this->env->getExtension("native_profiler");
+        $__internal_e1f29320eb60596659df8af9db702a2cfe557ad98a525d89fe704a39aef98aa8->enter($__internal_e1f29320eb60596659df8af9db702a2cfe557ad98a525d89fe704a39aef98aa8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "
@@ -43,49 +43,30 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
         </div>
 
-        <aside id = \"chapter\">
-            <h1>Exercices</h1>
-            <ul>
-
-                <li><a href=\"";
-        // line 14
-        echo $this->env->getExtension('routing')->getPath("exoClass");
-        echo "\">Exo classe</a></li>
-
-                <li><a href=\"";
-        // line 16
-        echo $this->env->getExtension('routing')->getPath("exoMask");
-        echo "\">Exo masque</a></li>
-
-                <li><a href=\"#\">Exo table de routage</a></li>
-
-                <li><a href=\"";
-        // line 20
-        echo $this->env->getExtension('routing')->getPath("convert");
-        echo "\">Exo conversion</a></li>
-
-            </ul>
-        </aside>
+        ";
+        // line 10
+        $this->displayParentBlock("content", $context, $blocks);
+        echo "
 
         <section>
             <article>
                 <br>
                 <p>Convertir l'adresse IP : ";
-        // line 28
+        // line 15
         echo twig_escape_filter($this->env, (isset($context["ip"]) ? $context["ip"] : $this->getContext($context, "ip")), "html", null, true);
         echo " en decimal</p>
 
                 ";
-        // line 30
+        // line 17
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
                 ";
-        // line 31
+        // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 
                 <p>IP : ";
-        // line 33
+        // line 20
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "string1", array()), 'widget');
         echo ".";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "string2", array()), 'widget');
@@ -98,9 +79,9 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
                 <p id=\"btns\">
                     <input type=\"submit\" id=\"form_save\" name=\"form[save]\" value=\"Valider\" />
                     ";
-        // line 37
+        // line 24
         $this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), "setRendered", array());
-        // line 38
+        // line 25
         echo "                    ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -110,7 +91,7 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
 
     ";
         
-        $__internal_1e002edd6101fdd76ab626b22f8bcc74ba60b78b756bbbf52dc9bca73214c704->leave($__internal_1e002edd6101fdd76ab626b22f8bcc74ba60b78b756bbbf52dc9bca73214c704_prof);
+        $__internal_e1f29320eb60596659df8af9db702a2cfe557ad98a525d89fe704a39aef98aa8->leave($__internal_e1f29320eb60596659df8af9db702a2cfe557ad98a525d89fe704a39aef98aa8_prof);
 
     }
 
@@ -126,10 +107,10 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
 
     public function getDebugInfo()
     {
-        return array (  104 => 38,  102 => 37,  89 => 33,  84 => 31,  80 => 30,  75 => 28,  64 => 20,  57 => 16,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  85 => 25,  83 => 24,  70 => 20,  65 => 18,  61 => 17,  56 => 15,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* {% extends "base.html.twig" %}*/
+/* {% extends "exo.html.twig" %}*/
 /* */
 /*     {% block content %}*/
 /* */
@@ -138,20 +119,7 @@ class __TwigTemplate_ab526283c10416fd4b291cb206d6937f69a0d791894a6407067438dbc08
 /*             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>*/
 /*         </div>*/
 /* */
-/*         <aside id = "chapter">*/
-/*             <h1>Exercices</h1>*/
-/*             <ul>*/
-/* */
-/*                 <li><a href="{{ path('exoClass')}}">Exo classe</a></li>*/
-/* */
-/*                 <li><a href="{{ path('exoMask')}}">Exo masque</a></li>*/
-/* */
-/*                 <li><a href="#">Exo table de routage</a></li>*/
-/* */
-/*                 <li><a href="{{ path('convert') }}">Exo conversion</a></li>*/
-/* */
-/*             </ul>*/
-/*         </aside>*/
+/*         {{ parent() }}*/
 /* */
 /*         <section>*/
 /*             <article>*/

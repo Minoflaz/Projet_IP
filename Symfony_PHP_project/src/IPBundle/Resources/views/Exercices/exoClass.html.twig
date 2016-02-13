@@ -1,4 +1,4 @@
-{% extends "base.html.twig" %}
+{% extends "exo.html.twig" %}
 
     {% block content %}
 
@@ -7,20 +7,7 @@
             <p>Ici vous pouvez faire des exercices sur nimporte quel chapitre.</p>
         </div>
 
-        <aside id = "chapter">
-            <h1>Exercices</h1>
-            <ul>
-
-                <li><a href="{{ path('convert') }}">Exo conversion</a></li>
-
-                <li><a href="{{ path('exoClass')}}">Exo classe</a></li>
-
-                <li><a href="{{ path('exoMask')}}">Exo masque</a></li>
-
-                <li><a href="#">Exo table de routage</a></li>
-
-            </ul>
-        </aside>
+        {{ parent() }}
 
         <section>
             <article>
@@ -54,6 +41,5 @@
 
             </article>
         </section>
-
 
     {% endblock %}

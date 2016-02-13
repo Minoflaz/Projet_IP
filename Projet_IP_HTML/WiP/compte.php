@@ -80,7 +80,7 @@
 				</table>
 
 
-				<script src="doughnut.js"></script>
+				<script src="../../Symfony_PHP_project/web/doughnut.js"></script>
 
 			</article>
 		</section>

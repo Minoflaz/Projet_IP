@@ -1,0 +1,72 @@
+{% extends "exo.html.twig" %}
+
+    {% block content %}
+
+        <div id="welcome" >
+            <h1>Remplir cette table de routage.</h1>
+            <p></p>
+        </div>
+
+        {{ parent() }}
+
+        <section>
+            <article>
+                <form id="routage" method="post">
+
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th id="destination">
+                                <label for="destination">Destination</label>
+                            </th>
+                            <th id="gateway">
+                                <label for="gateway">Gateway</label>
+                            </th>
+                            <th id="netmask">
+                                <label for="netmask">Netmask</label>
+                            </th>
+                            <th id="flags">
+                                <label for="flags">Flags</label>
+                            </th>
+                            <th id="interface">
+                                <label for="interface">Interface</label>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                {{ form_widget(form.ip) }}
+                            </td>
+                            <td>
+                                {{ form_widget(form.gateway) }}
+                            </td>
+                            <td>
+                                {{ form_widget(form.mask) }}
+                            </td>
+                            <td>
+                                {{ form_widget(form.flag) }}
+                            </td>
+                            <td>
+                                {{ form_widget(form.interface) }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p id="btns">
+                        <input type="submit" id="form_save" name="form[save]" value="Valider" />
+                        {% do form.save.setRendered %}
+                        {{ form_end(form) }}
+                    </p>
+
+                </form>
+
+            </article>
+        </section>
+
+
+    {% endblock %}

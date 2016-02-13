@@ -10,10 +10,6 @@ index:
     path: /index
     defaults: {_controller : IPBundle:Default:index}
 
-addEleve:
-    path: /addEleve
-    defaults: {_controller : IPBundle:Database:addEleve}
-
 addNoteEleve:
     path: /addNoteEleve/{valeur}/{cours}
     defaults: {_controller : IPBundle:Database:addNoteEleve}
@@ -36,15 +32,15 @@ showListeCours:
 
 newEleve:
     path: /newEleve
-    defaults: {_controller : IPBundle:Default:newEleve}
+    defaults: {_controller : IPBundle:Create:newEleve}
 
 exoMask:
     path: /exoMask
-    defaults: {_controller : IPBundle:Default:exoMask}
+    defaults: {_controller : IPBundle:Exo:exoMask}
 
 exoClass:
     path: /exoClass
-    defaults: {_controller : IPBundle:Default:exoClass}
+    defaults: {_controller : IPBundle:Exo:exoClass}
 
 giveMask:
     path: /giveMask/{ipBytes}/{nbSubNet}
@@ -52,7 +48,7 @@ giveMask:
 
 routingTable:
     path: /routingTable
-    defaults: {_controller : IPBundle:Default:routingTable}
+    defaults: {_controller : IPBundle:Exo:routingTable}
 
 login_route:
     path:     /login
@@ -60,11 +56,11 @@ login_route:
 
 newCours:
     path: /newCours
-    defaults: {_controller: IPBundle:Default:newCours}
+    defaults: {_controller: IPBundle:Create:newCours}
 
 newChapitre:
     path: /newChapitre
-    defaults: {_controller: IPBundle:Default:newChapitre}
+    defaults: {_controller: IPBundle:Create:newChapitre}
 
 showCours:
     path: /showCours/{id}
@@ -80,7 +76,7 @@ exercises:
 
 convert:
     path: /convert
-    defaults: {_controller: IPBundle:Default:convert}
+    defaults: {_controller: IPBundle:Exo:convert}
 
 progression:
     path: /progression
@@ -97,6 +93,10 @@ showChapitre:
 recupNotes:
     path: /recupNotes
     defaults: {_controller: IPBundle:Database:recupNotes}
+
+compte:
+    path: /compte
+    defaults: {_controller: IPBundle:Default:compte}
 
 
 login_check:
