@@ -6,6 +6,10 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+_welcome:
+    path: /
+    defaults: {_controller : IPBundle:Default:index}
+
 index:
     path: /index
     defaults: {_controller : IPBundle:Default:index}
