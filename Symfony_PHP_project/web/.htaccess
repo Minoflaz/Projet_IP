@@ -25,6 +25,9 @@ DirectoryIndex app.php
         RewriteRule ^app_dev.php - [L]
         RewriteRule ^app.php - [L]
 
+        # Fix the bundles folder
+        RewriteRule ^bundles/(.*)$ /bundles/$1  [QSA,L]
+
         RewriteCond %{REQUEST_FILENAME} !-f
 
         # Change below before deploying to production
