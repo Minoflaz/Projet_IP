@@ -26,7 +26,9 @@
 
             <header>
                 {% block logo %}
-                <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
+                    {% image %}
+                        <a href="index"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>
+                    {% endimage %}
                 {% endblock %}
                 <nav>
                     <ul id="menu">
