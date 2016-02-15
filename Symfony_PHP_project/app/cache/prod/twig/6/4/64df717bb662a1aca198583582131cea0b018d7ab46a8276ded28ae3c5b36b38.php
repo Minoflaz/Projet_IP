@@ -63,31 +63,31 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
                 ";
         // line 28
         $this->displayBlock('logo', $context, $blocks);
-        // line 31
+        // line 33
         echo "                <nav>
                     <ul id=\"menu\">
                         <li><a href=\"#\">Cours</a>
                             <ul>
                                 <li><a href=\"";
-        // line 35
+        // line 37
         echo $this->env->getExtension('routing')->getPath("showAllCours");
         echo "\">Trouver un cours</a></li>
                                 <li><a href=\"";
-        // line 36
+        // line 38
         echo $this->env->getExtension('routing')->getPath("newCours");
         echo "\">Ajouter un cours</a></li>
                                 <li><a href=\"";
-        // line 37
+        // line 39
         echo $this->env->getExtension('routing')->getPath("newChapitre");
         echo "\">Ajouter un chapitre</a></li>
                             </ul>
                         </li>
                         <li><a href=\"";
-        // line 40
+        // line 42
         echo $this->env->getExtension('routing')->getPath("exercises");
         echo "\">Exercices</a></li>
                         <li><a href=\"";
-        // line 41
+        // line 43
         echo $this->env->getExtension('routing')->getPath("progression");
         echo "\">Progression</a></li>
                         <li><a href=\"#\">Forum</a></li>
@@ -96,7 +96,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
             </header>
 
             <div id=\"content\">";
-        // line 47
+        // line 49
         $this->displayBlock('content', $context, $blocks);
         echo "</div>
 
@@ -119,11 +119,23 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
     public function block_logo($context, array $blocks = array())
     {
         // line 29
-        echo "                <a href=\"index\"><img id=\"logo\" src=\"img/logo.png\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
-                ";
+        echo "                    ";
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+        } else {
+            // asset "f7a7b5e"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
+            // line 30
+            echo "                        <a href=\"index\"><img id=\"logo\" src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("/img/logo.png"), "html", null, true);
+            echo "\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
+                    ";
+        }
+        unset($context["asset_url"]);
+        // line 32
+        echo "                ";
     }
 
-    // line 47
+    // line 49
     public function block_content($context, array $blocks = array())
     {
     }
@@ -140,7 +152,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 
     public function getDebugInfo()
     {
-        return array (  127 => 47,  122 => 29,  119 => 28,  112 => 7,  109 => 6,  100 => 47,  91 => 41,  87 => 40,  81 => 37,  77 => 36,  73 => 35,  67 => 31,  65 => 28,  59 => 24,  51 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
+        return array (  139 => 49,  135 => 32,  128 => 30,  122 => 29,  119 => 28,  112 => 7,  109 => 6,  100 => 49,  91 => 43,  87 => 42,  81 => 39,  77 => 38,  73 => 37,  67 => 33,  65 => 28,  59 => 24,  51 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -171,7 +183,9 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /* */
 /*             <header>*/
 /*                 {% block logo %}*/
-/*                 <a href="index"><img id="logo" src="img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                     {% image %}*/
+/*                         <a href="index"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                     {% endimage %}*/
 /*                 {% endblock %}*/
 /*                 <nav>*/
 /*                     <ul id="menu">*/

@@ -1,0 +1,196 @@
+<?php
+
+/* IPBundle:Connexion:login.html.twig */
+class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d276bb0 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+            'stylesheets' => array($this, 'block_stylesheets'),
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=\"UTF-8\"/>
+        ";
+        // line 5
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 8
+        echo "        <title>IP13</title>
+    </head>
+    <body>
+        ";
+        // line 11
+        if ((isset($context["error"]) ? $context["error"] : null)) {
+            // line 12
+            echo "            <div>";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageKey", array()), $this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageData", array()), "security"), "html", null, true);
+            echo "</div>
+        ";
+        }
+        // line 13
+        echo " 
+
+        <div id=\"container\">
+            
+            <header>
+                ";
+        // line 18
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+        } else {
+            // asset "f7a7b5e"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
+            // line 19
+            echo "                    <a href=\"index\"><img id=\"logo\" src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("/img/logo.png"), "html", null, true);
+            echo "\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
+                ";
+        }
+        unset($context["asset_url"]);
+        // line 21
+        echo "            </header>
+
+            <div id=\"content\">
+        
+                <div id=\"welcome\" class=\"identification\">
+                    <h1>Consolide tes bases en Reseau avec IP13</h1>
+
+                    <form id=\"identification\" action=\"";
+        // line 28
+        echo $this->env->getExtension('routing')->getPath("login_check");
+        echo "\" method=\"post\">
+                        <table>
+                            <tr>
+                                <td id=\"nom\">
+                                    <label for=\"username\">Username:</label>
+                                </td>
+                                
+                                <td class=\"fields\">
+                                    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
+        // line 36
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : null), "html", null, true);
+        echo "\" />
+                                </td>
+                                <tr>
+                                <td id=\"mdp\">
+                                    <label for=\"password\">Password:</label>
+                                </td>
+                                <td class=\"fields\">
+                                    <input type=\"password\" id=\"password\" name=\"_password\" />
+                                </td>
+                                ";
+        // line 49
+        echo "                                    <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+
+                            </tr>
+                        </table>
+
+                        <p id=\"btns\">
+                            <input id=\"btnConnexion\" type=\"submit\" value=\"Connexion\"/>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>";
+    }
+
+    // line 5
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        // line 6
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("style.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\">
+        ";
+    }
+
+    public function getTemplateName()
+    {
+        return "IPBundle:Connexion:login.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  113 => 6,  110 => 5,  92 => 49,  80 => 36,  69 => 28,  60 => 21,  53 => 19,  48 => 18,  41 => 13,  35 => 12,  33 => 11,  28 => 8,  26 => 5,  20 => 1,);
+    }
+}
+/* <!DOCTYPE html>*/
+/* <html>*/
+/*     <head>*/
+/*         <meta charset="UTF-8"/>*/
+/*         {% block stylesheets %}*/
+/*         <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">*/
+/*         {% endblock %}*/
+/*         <title>IP13</title>*/
+/*     </head>*/
+/*     <body>*/
+/*         {% if error %}*/
+/*             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>*/
+/*         {% endif %} */
+/* */
+/*         <div id="container">*/
+/*             */
+/*             <header>*/
+/*                 {% image %}*/
+/*                     <a href="index"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                 {% endimage %}*/
+/*             </header>*/
+/* */
+/*             <div id="content">*/
+/*         */
+/*                 <div id="welcome" class="identification">*/
+/*                     <h1>Consolide tes bases en Reseau avec IP13</h1>*/
+/* */
+/*                     <form id="identification" action="{{ path('login_check') }}" method="post">*/
+/*                         <table>*/
+/*                             <tr>*/
+/*                                 <td id="nom">*/
+/*                                     <label for="username">Username:</label>*/
+/*                                 </td>*/
+/*                                 */
+/*                                 <td class="fields">*/
+/*                                     <input type="text" id="username" name="_username" value="{{ last_username }}" />*/
+/*                                 </td>*/
+/*                                 <tr>*/
+/*                                 <td id="mdp">*/
+/*                                     <label for="password">Password:</label>*/
+/*                                 </td>*/
+/*                                 <td class="fields">*/
+/*                                     <input type="password" id="password" name="_password" />*/
+/*                                 </td>*/
+/*                                 {#*/
+/*                                     If you want to control the URL the user*/
+/*                                     is redirected to on success (more details below)*/
+/*                                 #}*/
+/*                                     <input type="hidden" name="_target_path" value="/index" />*/
+/* */
+/*                             </tr>*/
+/*                         </table>*/
+/* */
+/*                         <p id="btns">*/
+/*                             <input id="btnConnexion" type="submit" value="Connexion"/>*/
+/*                         </p>*/
+/* */
+/*                     </form>*/
+/*                 </div>*/
+/*             </div>*/
+/*         </div>*/
+/*     </body>*/
+/* </html>*/
