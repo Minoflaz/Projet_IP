@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'F:\Users\Alexis\Desktop\Projet_IP\Symfony_PHP_project\app/config/routing_dev.yml'
+    resource: /var/www/Projet_IP/Symfony_PHP_project/app/config/routing_dev.yml

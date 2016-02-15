@@ -2,16 +2,16 @@ ip:
     resource: "@IPBundle/Resources/config/routing.yml"
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
 
-_welcome:
-    path: /
-    defaults: {_controller : IPBundle:Default:index}
+
+
+
+
+  
+
 
 index:
-    path: /index
+    path: /
     defaults: {_controller : IPBundle:Default:index}
 
 addNoteEleve:
