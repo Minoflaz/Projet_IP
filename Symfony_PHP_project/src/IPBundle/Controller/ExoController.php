@@ -148,7 +148,7 @@ class ExoController extends Controller
 
             $ipAdress->setAlea();
 
-            $nbSubNet = strval(rand(2,255));
+            $nbSubNet = strval(rand(2,80));
 
             $cookieIp = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
 
@@ -335,6 +335,8 @@ class ExoController extends Controller
 
         $routingTable = new RoutingTable();
         $routingTableLine = new RoutingTableLine();
+        $routingTableLine2 = new RoutingTableLine();
+
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
@@ -347,15 +349,30 @@ class ExoController extends Controller
             ->add('save','submit')
             ->getForm();
 
+        $form2 = $this->createFormBuilder($routingTableLine2)
+            ->add('ip','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))
+            ->add('gateway','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))
+            ->add('mask','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))
+            ->add('flag','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))
+            ->add('interface','textarea', array('attr' => array('cols' => '15', 'rows' => '1')))
+            ->add('save','submit')
+            ->getForm();
+
         $form->handleRequest($request);
+        $form2->handleRequest($request);
 
         if($form->isValid()) {
+
+        }
+
+        if($form2->isValid()) {
 
         }
 
 
         return $this->render('IPBundle:Exercices:testRoutingTable.html.twig',array(
             'form' => $form->createView(),
+            'form2' => $form2->createView(),
             'user' => $this->getUser()
         ));
 

@@ -29,7 +29,9 @@ abstract class Adress
         $alea = array();
 
         for($i=0;$i<4;$i++) {
-            $alea[] = rand(0,255);
+            if(i==0)
+                $alea[] = rand(1,191);
+            $alea[] = rand(1,253);
         }
 
         $this->init($alea);
