@@ -40,7 +40,13 @@
                             </ul>
                         </li>
                         <li><a href="{{ path('exercises')}}">Exercices</a></li>
-                        <li><a href="{{ path('progression')}}">Progression</a></li>
+
+                        {% if role == "prof" %}
+                            <li><a href="{{ path('progressionEleves')}}">Progression</a></li>
+                        {% else %}
+                            <li><a href="{{ path('progression')}}">Progression</a></li>
+                        {% endif %}
+                        
                         <li><a href="#">Forum</a></li>
                     </ul>
                 </nav>

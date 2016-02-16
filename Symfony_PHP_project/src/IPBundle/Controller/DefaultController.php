@@ -31,13 +31,23 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $role = "";
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findAll();
 
+        if($this->getUser()!= null) {
+            if ($this->getUser()->getRoles() == array('ROLE_USER'))
+                $role = "eleve";
+            elseif($this->getUser()->getRoles() == array('ROLE_PROF'))
+                $role = "prof";
+        }
+
         return $this->render('IPBundle:Accueil:index.html.twig',array(
             'user' => $this->getUser(),
             'cours' => $cours,
+            'role' => $role,
             'chapitres' => $chapitres
         ));
     }
