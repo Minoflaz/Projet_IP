@@ -24,13 +24,13 @@ abstract class Adress
         return $this;
     }
 
-    public function setAlea() {
+    public function setAlea($maxClass) {
 
         $alea = array();
 
         for($i=0;$i<4;$i++) {
             if(i==0)
-                $alea[] = rand(1,191);
+                $alea[] = rand(1,$maxClass);
             $alea[] = rand(1,253);
         }
 

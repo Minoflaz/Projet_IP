@@ -52,7 +52,7 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(250);
 
             $session->set('ip',$ipAdress->getBytes());
 
@@ -146,7 +146,7 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(191);
 
             $nbSubNet = strval(rand(2,80));
 
@@ -261,7 +261,7 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(253);
 
             $session->set('ip',$ipAdress->getBytes());
 
