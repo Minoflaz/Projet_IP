@@ -42,6 +42,17 @@ class DefaultController extends Controller
         ));
     }
 
+    public function deleteCoursAction($coursName)
+    {
+        $cours = $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneByNom($coursName);
+
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->remove($cours);
+        $em->flush();
+
+        return new Response("Enlevé le cours");
+    }
+
     /**
      * Temporary account page
      *
