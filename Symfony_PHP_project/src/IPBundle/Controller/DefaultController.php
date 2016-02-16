@@ -85,6 +85,16 @@ class DefaultController extends Controller
         ));
     }
 
+    public function allEleveBDDAction() {
+
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('roles' => array('ROLE_USER')));
+
+        return $this->render('IPBundle:Default:allEleveBDD.html.twig',array(
+            'user' => $this->getUser(),
+            'eleves' => $eleves
+        ));
+    }
+
     /**
      * Progression
      *
@@ -131,7 +141,7 @@ class DefaultController extends Controller
 
         return $this->render('IPBundle:Progression:ProgressionEleves.html.twig',array(
             'user' => $this->getUser(),
-            'eleves' => $eleves,
+            'eleves' => $eleves
         ));
     }
 
