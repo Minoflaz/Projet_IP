@@ -87,7 +87,7 @@ class DefaultController extends Controller
 
     public function allEleveBDDAction() {
 
-        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('role' => array('ROLE_USER')));
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
 
         return $this->render('IPBundle:Default:allEleveBDD.html.twig',array(
             'user' => $this->getUser(),
@@ -137,7 +137,7 @@ class DefaultController extends Controller
 
         $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
 
-        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('role' => array('ROLE_USER')));
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
 
         return $this->render('IPBundle:Progression:ProgressionEleves.html.twig',array(
             'user' => $this->getUser(),
@@ -149,7 +149,7 @@ class DefaultController extends Controller
 
         $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
 
-        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('role' => array('ROLE_USER')));
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
 
         $eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneById($id);
 
