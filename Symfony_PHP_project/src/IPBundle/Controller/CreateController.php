@@ -114,6 +114,7 @@ class CreateController extends Controller
     public function newEleveAction(Request $request) {
 
         $eleve = new Eleve();
+        $eleve->setRoles(array('ROLE_PROF'));
         $form = $this->createFormBuilder($eleve)
             ->add('nom','text')
             ->add('prenom','text')
