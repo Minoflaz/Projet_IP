@@ -24,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExoController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/ExoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35517243">
+            <state vertical-scroll-proportion="-11.884615">
               <caret line="338" column="89" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -737,18 +747,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/.htaccess">
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/ExoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+        <state vertical-scroll-proportion="-11.884615">
+          <caret line="338" column="89" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/ExoController.php">
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35517243">
-          <caret line="338" column="89" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
           <folding />
         </state>
       </provider>

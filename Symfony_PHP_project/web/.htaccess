@@ -1,5 +1,4 @@
 RedirectMatch permanent ^/app\.php/(.*) /$1
-
 # Use the front controller as index file. It serves as a fallback solution when
 # every other rewrite/redirect fails (e.g. in an aliased environment without
 # mod_rewrite). Additionally, this reduces the matching process for the
@@ -20,19 +19,18 @@ DirectoryIndex app.php
 </IfModule>
 
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+        Options +FollowSymlinks
+        RewriteEngine On
 
-    RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
-    RewriteRule ^(.*) - [E=BASE:%1]
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
-    RewriteRule ^app\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
-    # If the requested filename exists, simply serve it.
-    # We only want to let Apache serve files and not directories.
-    RewriteCond %{REQUEST_FILENAME} -f
-    RewriteRule .? - [L]
+        # Explicitly disable rewriting for front controllers
+        RewriteRule ^app_dev.php - [L]
+        RewriteRule ^app.php - [L]
 
-    # Rewrite all other queries to the front controller.
-    RewriteRule .? %{ENV:BASE}/app.php [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+
+        # Change below before deploying to production
+        RewriteRule ^(.*)$ /app.php [QSA,L]
+        RewriteRule ^(.*)$ /app_dev.php [QSA,L]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
