@@ -17,23 +17,26 @@
         <section>
             <article>
                 <ul>
-                    {% set moyenne=0 %}
-                    {% set nbrNote=0 %}
+
 
                     {% for cour in cours %}
 
                         <li class="chapterName">>{{ cour.nom }}</li>
-                        <ul>
-                            {% for note in cour.notes %}
+                        <li>
+                            <ul>
+                                {% set moyenne=0 %}
+                                {% set nbrNote=0 %}
+                                {% for note in cour.notes %}
 
-                                {% if note.eleve == app.user %}
-                                    <li class="chapterName">Note : {{ note.valeur }}</li>
-                                    {% set moyenne =  moyenne  +  note.valeur %}
-                                    {% set nbrNote =  nbrNote  + 1 %}
-                                {% endif %}
+                                    {% if note.eleve == app.user %}
+                                        <li class="chapterName">Note : {{ note.valeur }}</li>
+                                        {% set moyenne =  moyenne  +  note.valeur %}
+                                        {% set nbrNote =  nbrNote  + 1 %}
+                                    {% endif %}
 
-                            {% endfor %}
-                        </ul>
+                                {% endfor %}
+                            </ul>
+                        </li>
                         {% if nbrNote != 0 %}
                             {% set moyenne = moyenne/nbrNote  %}
                         {% endif %}
