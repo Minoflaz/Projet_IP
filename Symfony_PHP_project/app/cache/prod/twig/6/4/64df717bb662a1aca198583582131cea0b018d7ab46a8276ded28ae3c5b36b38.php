@@ -125,7 +125,9 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
             // asset "f7a7b5e"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
             // line 30
-            echo "                        <a href=\"index\"><img id=\"logo\" src=\"";
+            echo "                        <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("index");
+            echo "\"><img id=\"logo\" src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("/img/logo.png"), "html", null, true);
             echo "\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
                     ";
@@ -152,7 +154,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 
     public function getDebugInfo()
     {
-        return array (  139 => 49,  135 => 32,  128 => 30,  122 => 29,  119 => 28,  112 => 7,  109 => 6,  100 => 49,  91 => 43,  87 => 42,  81 => 39,  77 => 38,  73 => 37,  67 => 33,  65 => 28,  59 => 24,  51 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
+        return array (  141 => 49,  137 => 32,  128 => 30,  122 => 29,  119 => 28,  112 => 7,  109 => 6,  100 => 49,  91 => 43,  87 => 42,  81 => 39,  77 => 38,  73 => 37,  67 => 33,  65 => 28,  59 => 24,  51 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -184,7 +186,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /*             <header>*/
 /*                 {% block logo %}*/
 /*                     {% image %}*/
-/*                         <a href="index"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                         <a href="{{ path('index')}}"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /*                     {% endimage %}*/
 /*                 {% endblock %}*/
 /*                 <nav>*/

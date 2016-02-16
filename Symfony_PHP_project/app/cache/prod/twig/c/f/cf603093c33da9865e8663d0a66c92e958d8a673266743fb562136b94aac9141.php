@@ -50,7 +50,9 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
             // asset "f7a7b5e"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
             // line 19
-            echo "                    <a href=\"index\"><img id=\"logo\" src=\"";
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("index");
+            echo "\"><img id=\"logo\" src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("/img/logo.png"), "html", null, true);
             echo "\" alt=\"IP13\" height=\"60\" width=\"60\"></a><span>IP13</span>
                 ";
@@ -128,7 +130,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
 
     public function getDebugInfo()
     {
-        return array (  113 => 6,  110 => 5,  92 => 49,  80 => 36,  69 => 28,  60 => 21,  53 => 19,  48 => 18,  41 => 13,  35 => 12,  33 => 11,  28 => 8,  26 => 5,  20 => 1,);
+        return array (  115 => 6,  112 => 5,  94 => 49,  82 => 36,  71 => 28,  62 => 21,  53 => 19,  48 => 18,  41 => 13,  35 => 12,  33 => 11,  28 => 8,  26 => 5,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -149,7 +151,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
 /*             */
 /*             <header>*/
 /*                 {% image %}*/
-/*                     <a href="index"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
+/*                     <a href="{{ path('index')}}"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>*/
 /*                 {% endimage %}*/
 /*             </header>*/
 /* */
