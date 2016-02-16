@@ -85,15 +85,6 @@ class DefaultController extends Controller
         ));
     }
 
-    public function allEleveBDDAction() {
-
-        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
-
-        return $this->render('IPBundle:Default:allEleveBDD.html.twig',array(
-            'user' => $this->getUser(),
-            'eleves' => $eleves
-        ));
-    }
 
     /**
      * Progression

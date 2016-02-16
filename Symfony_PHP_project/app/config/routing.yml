@@ -98,10 +98,6 @@ progressionEleve:
     path: /progressionEleve\{id}
     defaults: {_controller: IPBundle:Default:progressionEleve}
 
-allEleveBDD:
-    path: /allEleveBDD
-    defaults: {_controller: IPBundle:Default:allEleveBDD}
-
 showChapitre:
     path: /showChapitre/{id}
     defaults: {_controller: IPBundle:Default:showChapitre}
