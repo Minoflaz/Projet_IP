@@ -316,7 +316,7 @@ class ExoController extends Controller
         return $this->render('IPBundle:Exercices:convert.html.twig',array(
             'form' =>$form->createView(),
             'user' => $this->getUser(),
-            'ip' => $ipAdress->getBytesBin()
+            'ip' => $ipAdress->getBytesHex()
 
         ));
 
