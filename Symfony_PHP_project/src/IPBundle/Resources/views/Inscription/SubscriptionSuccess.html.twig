@@ -1,10 +1,10 @@
-{% extends "exo.html.twig" %}
+{% extends "base.html.twig" %}
 
     {% block content %}
 
         <div id="welcome">
             <h1>Inscritpion</h1>
             <p>Vous vous êtes enregistré avec succès !</p>
-            <p><a href="index">Revenir a l'accueil</a></p>
+            <p><a href="{{ path('index')}}">Revenir a l'accueil</a></p>
         </div>
     {% endblock %}
