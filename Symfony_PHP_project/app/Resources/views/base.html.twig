@@ -4,7 +4,7 @@
 
         <meta charset="UTF-8"/>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css" media="all">
+            <link rel="stylesheet" href="{{asset('web/style.css')}}" type="text/css" media="all">
         {% endblock %}
         <title>IP13</title>
 
@@ -27,7 +27,7 @@
             <header>
                 {% block logo %}
                     {% image %}
-                        <a href="{{ path('index')}}"><img id="logo" src="{{asset('img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>
+                        <a href="{{ path('index')}}"><img id="logo" src="{{asset('web/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>
                     {% endimage %}
                 {% endblock %}
                 <nav>
