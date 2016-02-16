@@ -47,14 +47,16 @@
                             </tr>
                         </table>
 
+                        {% if error %}
+                            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+
                         <p id="btns">
                             <input id="btnConnexion" type="submit" value="Connexion"/>
                         </p>
 
                     </form>
-                    {% if error %}
-                        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                    {% endif %}
                 </div>
             </div>
         </div>
