@@ -17,9 +17,9 @@
             <div id="account">
 
                 {% if app.user == null %}
-                    <a href="login">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>
+                    <a href="{{ path('login')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>
                 {% else %}
-                    <a href="{{ path('compte')}}">{{ app.user.username }}</a> | <a href="logout">Deconnexion</a>
+                    <a href="{{ path('compte')}}">{{ app.user.username }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
                 {% endif %}
 
             </div>
