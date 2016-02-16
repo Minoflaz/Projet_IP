@@ -35,8 +35,7 @@ security:
             form_login:
                 login_path: /login
                 check_path: /login_check
-                always_use_default_target_path: true
-                default_target_path: index
+                default_target_path: /
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
 
             provider: our_db_provider
