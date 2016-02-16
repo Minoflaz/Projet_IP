@@ -120,6 +120,36 @@ class DefaultController extends Controller
         ));
     }
 
+    public function progressionElevesAction() {
+
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
+
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('roles' => array('ROLE_USER')));
+
+        return $this->render('IPBundle:Progression:ProgressionEleves.html.twig',array(
+            'user' => $this->getUser(),
+            'eleves' => $eleves,
+        ));
+    }
+
+    public function progressionEleveAction($id) {
+
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
+
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findBy(array('roles' => array('ROLE_USER')));
+
+        $eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneById($id);
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+        return $this->render('IPBundle:Progression:ProgressionEleve.html.twig',array(
+            'user' => $this->getUser(),
+            'eleves' => $eleves,
+            'cours' => $cours,
+            'eleveSelect' => $eleve
+        ));
+    }
+
     /**
      * Course consulting
      *

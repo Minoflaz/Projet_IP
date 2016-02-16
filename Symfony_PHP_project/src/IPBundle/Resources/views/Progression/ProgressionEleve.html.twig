@@ -16,7 +16,11 @@
         </aside>
         <section>
             <article>
-
+                <ul>
+                    {% for cour in cours %}
+                        <li class="chapterName">>{{ cour.nom }}</li>
+                    {% endfor %}
+                </ul>
             </article>
         </section>
     {% endblock %}
