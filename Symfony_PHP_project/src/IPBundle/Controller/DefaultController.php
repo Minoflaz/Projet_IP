@@ -31,6 +31,13 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
+        $coursMask = $this->getDoctrine()->getRepository('IPBundle:Cours')->findByNom('Mask');
+        $coursMask->setNom('Masque');
+
+        $coursClass = $this->getDoctrine()->getRepository('IPBundle:Cours')->findByNom('Class');
+        $coursClass->setNom('Classe');
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
         $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findAll();

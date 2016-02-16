@@ -38,11 +38,11 @@ class ExoController extends Controller
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Class'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Classe'));
 
         if($cours == null) {
             $cours = new Cours();
-            $cours->setNom("Class");
+            $cours->setNom("Classe");
             $em->persist($cours);
             $em->flush();
         }
@@ -126,11 +126,11 @@ class ExoController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Mask'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Masque'));
 
         if($cours == null) {
             $cours = new Cours();
-            $cours->setNom("Mask");
+            $cours->setNom("Masque");
             $em->persist($cours);
             $em->flush();
         }
