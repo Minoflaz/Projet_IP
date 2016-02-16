@@ -102,10 +102,6 @@ compte:
     path: /compte
     defaults: {_controller: IPBundle:Default:compte}
 
-deleteCours:
-    path: /deleteCours/{coursName}
-    defaults: {_controller: IPBundle:Default:deleteCours}
-
 
 login_check:
     path: /login_check
