@@ -28,7 +28,7 @@
                                 {% set nbrNote=0 %}
                                 {% for note in cour.notes %}
 
-                                    {% if note.eleve == user %}
+                                    {% if note.eleve == eleveSelect %}
                                         <li class="chapterName">Note : {{ note.valeur }}</li>
                                         {% set moyenne =  moyenne  +  note.valeur %}
                                         {% set nbrNote =  nbrNote  + 1 %}
