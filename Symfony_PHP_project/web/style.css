@@ -222,6 +222,13 @@ aside li a
 	color: rgb(97,97,97);
 }
 
+#progression li
+{
+    text-decoration: none;
+    font-family: 'Lucid';
+    color: rgb(97,97,97);
+}
+
 aside li a:hover
 {
 	font-weight: bold;
