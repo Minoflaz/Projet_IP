@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f5451e-71a4-4d11-83ae-5beaaf9df3a4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleve.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleve.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig" />
     </list>
     <ignored path="Projet_IP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,149 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Eleve.orm.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/config/doctrine/Eleve.orm.yml">
+      <file leaf-file-name="ProgressionEleves.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-              <folding>
-                <marker date="1455723411947" expanded="true" signature="0:85" placeholder="ip:" />
-                <marker date="1455723411947" expanded="true" signature="86:158" placeholder="index:" />
-                <marker date="1455723411947" expanded="true" signature="109:157" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="159:275" placeholder="addNoteEleve:" />
-                <marker date="1455723411947" expanded="true" signature="218:274" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="276:375" placeholder="showAllEleve:" />
-                <marker date="1455723411947" expanded="true" signature="318:374" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="376:490" placeholder="showNotesEleve:" />
-                <marker date="1455723411947" expanded="true" signature="431:489" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="491:604" placeholder="showNotesCours:" />
-                <marker date="1455723411947" expanded="true" signature="545:603" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="605:710" placeholder="showListeCours:" />
-                <marker date="1455723411947" expanded="true" signature="651:709" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="711:796" placeholder="newEleve:" />
-                <marker date="1455723411947" expanded="true" signature="745:795" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="797:876" placeholder="exoMask:" />
-                <marker date="1455723411947" expanded="true" signature="829:875" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="877:959" placeholder="exoClass:" />
-                <marker date="1455723411947" expanded="true" signature="911:958" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="960:1067" placeholder="giveMask:" />
-                <marker date="1455723411947" expanded="true" signature="1015:1066" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1068:1162" placeholder="routingTable:" />
-                <marker date="1455723411947" expanded="true" signature="1110:1161" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1163:1251" placeholder="login_route:" />
-                <marker date="1455723411947" expanded="true" signature="1201:1250" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1252:1336" placeholder="newCours:" />
-                <marker date="1455723411947" expanded="true" signature="1286:1335" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1337:1430" placeholder="newChapitre:" />
-                <marker date="1455723411947" expanded="true" signature="1377:1429" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1431:1524" placeholder="showCours:" />
-                <marker date="1455723411947" expanded="true" signature="1472:1523" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1525:1622" placeholder="showAllCours:" />
-                <marker date="1455723411947" expanded="true" signature="1567:1621" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1623:1711" placeholder="exercises:" />
-                <marker date="1455723411947" expanded="true" signature="1659:1710" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1712:1790" placeholder="convert:" />
-                <marker date="1455723411947" expanded="true" signature="1744:1789" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1791:1885" placeholder="progression:" />
-                <marker date="1455723411947" expanded="true" signature="1831:1884" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="1886:2000" placeholder="progressionCours:" />
-                <marker date="1455723411947" expanded="true" signature="1941:1999" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2001:2113" placeholder="progressionEleves:" />
-                <marker date="1455723411947" expanded="true" signature="2053:2112" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2114:2228" placeholder="progressionEleve:" />
-                <marker date="1455723411947" expanded="true" signature="2169:2227" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2229:2331" placeholder="showChapitre:" />
-                <marker date="1455723411947" expanded="true" signature="2276:2330" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2332:2424" placeholder="recupNotes:" />
-                <marker date="1455723411947" expanded="true" signature="2370:2423" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2425:2505" placeholder="compte:" />
-                <marker date="1455723411947" expanded="true" signature="2455:2503" placeholder="defaults:" />
-                <marker date="1455723411947" expanded="true" signature="2506:2630" placeholder="login_check:" />
-                <marker date="1455723411947" expanded="true" signature="2631:2656" placeholder="logout:" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-              <folding>
-                <marker date="1455723411947" expanded="true" signature="113:1362" placeholder="security:" />
-                <marker date="1455723411947" expanded="true" signature="127:203" placeholder="encoders:" />
-                <marker date="1455723411947" expanded="true" signature="145:203" placeholder="IPBundle\Entity\Eleve:" />
-                <marker date="1455723411947" expanded="true" signature="299:470" placeholder="providers:" />
-                <marker date="1455723411947" expanded="true" signature="318:351" placeholder="in_memory:" />
-                <marker date="1455723411947" expanded="true" signature="360:470" placeholder="our_db_provider:" />
-                <marker date="1455723411947" expanded="true" signature="389:470" placeholder="entity:" />
-                <marker date="1455723411947" expanded="true" signature="475:524" placeholder="role_hierarchy:" />
-                <marker date="1455723411947" expanded="true" signature="529:1362" placeholder="firewalls:" />
-                <marker date="1455723411947" expanded="true" signature="645:734" placeholder="dev:" />
-                <marker date="1455723411947" expanded="true" signature="743:1362" placeholder="main:" />
-                <marker date="1455723411947" expanded="true" signature="981:1245" placeholder="form_login:" />
-                <marker date="1455723411947" expanded="true" signature="1297:1362" placeholder="logout:" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.307692">
-              <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgressionEleve.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleve.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80104715">
-              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.115385">
-              <caret line="228" column="25" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Eleve.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Entity/Eleve.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="260" column="28" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.4450262">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -221,7 +83,6 @@
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/ExoController.php" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/compte.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Connexion/login.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Model/Adress.php" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionCours.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Default/allEleveBDD.html.twig" />
@@ -232,6 +93,7 @@
         <option value="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/web/style.css" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleve.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig" />
       </list>
     </option>
   </component>
@@ -395,6 +257,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Progression" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -423,10 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accueil" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -822,35 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <marker date="1455723411947" expanded="true" signature="113:1362" placeholder="security:" />
-            <marker date="1455723411947" expanded="true" signature="127:203" placeholder="encoders:" />
-            <marker date="1455723411947" expanded="true" signature="145:203" placeholder="IPBundle\Entity\Eleve:" />
-            <marker date="1455723411947" expanded="true" signature="299:470" placeholder="providers:" />
-            <marker date="1455723411947" expanded="true" signature="318:351" placeholder="in_memory:" />
-            <marker date="1455723411947" expanded="true" signature="360:470" placeholder="our_db_provider:" />
-            <marker date="1455723411947" expanded="true" signature="389:470" placeholder="entity:" />
-            <marker date="1455723411947" expanded="true" signature="475:524" placeholder="role_hierarchy:" />
-            <marker date="1455723411947" expanded="true" signature="529:1362" placeholder="firewalls:" />
-            <marker date="1455723411947" expanded="true" signature="645:734" placeholder="dev:" />
-            <marker date="1455723411947" expanded="true" signature="743:1362" placeholder="main:" />
-            <marker date="1455723411947" expanded="true" signature="981:1245" placeholder="form_login:" />
-            <marker date="1455723411947" expanded="true" signature="1297:1362" placeholder="logout:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/config/doctrine/Cours.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -879,76 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-          <folding>
-            <marker date="1455723411947" expanded="true" signature="0:85" placeholder="ip:" />
-            <marker date="1455723411947" expanded="true" signature="86:158" placeholder="index:" />
-            <marker date="1455723411947" expanded="true" signature="109:157" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="159:275" placeholder="addNoteEleve:" />
-            <marker date="1455723411947" expanded="true" signature="218:274" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="276:375" placeholder="showAllEleve:" />
-            <marker date="1455723411947" expanded="true" signature="318:374" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="376:490" placeholder="showNotesEleve:" />
-            <marker date="1455723411947" expanded="true" signature="431:489" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="491:604" placeholder="showNotesCours:" />
-            <marker date="1455723411947" expanded="true" signature="545:603" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="605:710" placeholder="showListeCours:" />
-            <marker date="1455723411947" expanded="true" signature="651:709" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="711:796" placeholder="newEleve:" />
-            <marker date="1455723411947" expanded="true" signature="745:795" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="797:876" placeholder="exoMask:" />
-            <marker date="1455723411947" expanded="true" signature="829:875" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="877:959" placeholder="exoClass:" />
-            <marker date="1455723411947" expanded="true" signature="911:958" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="960:1067" placeholder="giveMask:" />
-            <marker date="1455723411947" expanded="true" signature="1015:1066" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1068:1162" placeholder="routingTable:" />
-            <marker date="1455723411947" expanded="true" signature="1110:1161" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1163:1251" placeholder="login_route:" />
-            <marker date="1455723411947" expanded="true" signature="1201:1250" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1252:1336" placeholder="newCours:" />
-            <marker date="1455723411947" expanded="true" signature="1286:1335" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1337:1430" placeholder="newChapitre:" />
-            <marker date="1455723411947" expanded="true" signature="1377:1429" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1431:1524" placeholder="showCours:" />
-            <marker date="1455723411947" expanded="true" signature="1472:1523" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1525:1622" placeholder="showAllCours:" />
-            <marker date="1455723411947" expanded="true" signature="1567:1621" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1623:1711" placeholder="exercises:" />
-            <marker date="1455723411947" expanded="true" signature="1659:1710" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1712:1790" placeholder="convert:" />
-            <marker date="1455723411947" expanded="true" signature="1744:1789" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1791:1885" placeholder="progression:" />
-            <marker date="1455723411947" expanded="true" signature="1831:1884" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="1886:2000" placeholder="progressionCours:" />
-            <marker date="1455723411947" expanded="true" signature="1941:1999" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2001:2113" placeholder="progressionEleves:" />
-            <marker date="1455723411947" expanded="true" signature="2053:2112" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2114:2228" placeholder="progressionEleve:" />
-            <marker date="1455723411947" expanded="true" signature="2169:2227" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2229:2331" placeholder="showChapitre:" />
-            <marker date="1455723411947" expanded="true" signature="2276:2330" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2332:2424" placeholder="recupNotes:" />
-            <marker date="1455723411947" expanded="true" signature="2370:2423" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2425:2505" placeholder="compte:" />
-            <marker date="1455723411947" expanded="true" signature="2455:2503" placeholder="defaults:" />
-            <marker date="1455723411947" expanded="true" signature="2506:2630" placeholder="login_check:" />
-            <marker date="1455723411947" expanded="true" signature="2631:2656" placeholder="logout:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/config/doctrine/Eleve.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Entity/Eleve.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
@@ -957,26 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Accueil/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9790576">
           <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.307692">
-          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -993,6 +740,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80104715">
           <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.148342">
+          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5175292">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8297162">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/config/doctrine/Eleve.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6310518">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Progression/ProgressionEleves.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4450262">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
       </provider>
