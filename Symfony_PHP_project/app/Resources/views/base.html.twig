@@ -20,6 +20,8 @@
                     <a href="{{ path('login')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>
                 {% else %}
 
+                    {{ dump(app.user.role) }}
+
                     {% for role in app.user.role %}
                         {% set roleUser = role %}
                     {% endfor %}
