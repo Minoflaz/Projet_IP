@@ -50,61 +50,66 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
                 ";
         } else {
             // line 22
-            echo "                    <a href=\"#\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
+            echo "
+            
+
+                    <a href=\"#\">";
+            // line 25
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "role", array()), 0, array(), "array"), "html", null, true);
             echo "</a> | <a href=\"";
             echo $this->env->getExtension('routing')->getPath("logout");
             echo "\">Deconnexion</a>
+
                 ";
         }
-        // line 24
+        // line 28
         echo "
             </div>
 
             <header>
                 ";
-        // line 28
+        // line 32
         $this->displayBlock('logo', $context, $blocks);
-        // line 33
+        // line 37
         echo "                <nav>
                     <ul id=\"menu\">
                         <li><a href=\"#\">Cours</a>
                             <ul>
                                 <li><a href=\"";
-        // line 37
+        // line 41
         echo $this->env->getExtension('routing')->getPath("showAllCours");
         echo "\">Trouver un cours</a></li>
                                 <li><a href=\"";
-        // line 38
+        // line 42
         echo $this->env->getExtension('routing')->getPath("newCours");
         echo "\">Ajouter un cours</a></li>
                                 <li><a href=\"";
-        // line 39
+        // line 43
         echo $this->env->getExtension('routing')->getPath("newChapitre");
         echo "\">Ajouter un chapitre</a></li>
                             </ul>
                         </li>
                         <li><a href=\"";
-        // line 42
+        // line 46
         echo $this->env->getExtension('routing')->getPath("exercises");
         echo "\">Exercices</a></li>
 
                         ";
-        // line 44
+        // line 48
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "role", array()), 0, array(), "array") == "ROLE_PROF")) {
-            // line 45
+            // line 49
             echo "                            <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("progressionEleves");
             echo "\">Progression</a></li>
                         ";
         } else {
-            // line 47
+            // line 51
             echo "                            <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("progression");
             echo "\">Progression</a></li>
                         ";
         }
-        // line 49
+        // line 53
         echo "
                         <li><a href=\"#\">Forum</a></li>
                     </ul>
@@ -112,7 +117,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
             </header>
 
             <div id=\"content\">";
-        // line 55
+        // line 59
         $this->displayBlock('content', $context, $blocks);
         echo "</div>
 
@@ -132,16 +137,16 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
         ";
     }
 
-    // line 28
+    // line 32
     public function block_logo($context, array $blocks = array())
     {
-        // line 29
+        // line 33
         echo "                    ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
         } else {
             // asset "f7a7b5e"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
-            // line 30
+            // line 34
             echo "                        <a href=\"";
             echo $this->env->getExtension('routing')->getPath("index");
             echo "\"><img id=\"logo\" src=\"";
@@ -150,11 +155,11 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
                     ";
         }
         unset($context["asset_url"]);
-        // line 32
+        // line 36
         echo "                ";
     }
 
-    // line 55
+    // line 59
     public function block_content($context, array $blocks = array())
     {
     }
@@ -171,7 +176,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 
     public function getDebugInfo()
     {
-        return array (  158 => 55,  154 => 32,  145 => 30,  139 => 29,  136 => 28,  129 => 7,  126 => 6,  116 => 55,  108 => 49,  102 => 47,  96 => 45,  94 => 44,  89 => 42,  83 => 39,  79 => 38,  75 => 37,  69 => 33,  67 => 28,  61 => 24,  53 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
+        return array (  163 => 59,  159 => 36,  150 => 34,  144 => 33,  141 => 32,  134 => 7,  131 => 6,  121 => 59,  113 => 53,  107 => 51,  101 => 49,  99 => 48,  94 => 46,  88 => 43,  84 => 42,  80 => 41,  74 => 37,  72 => 32,  66 => 28,  58 => 25,  53 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -195,7 +200,11 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /*                 {% if app.user == null %}*/
 /*                     <a href="{{ path('login')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>*/
 /*                 {% else %}*/
-/*                     <a href="#">{{ app.user.username }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>*/
+/* */
+/*             */
+/* */
+/*                     <a href="#">{{ app.user.role[0] }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>*/
+/* */
 /*                 {% endif %}*/
 /* */
 /*             </div>*/
