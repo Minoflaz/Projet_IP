@@ -39,6 +39,8 @@
                         </li>
                         {% if nbrNote != 0 %}
                             {% set moyenne = moyenne/nbrNote  %}
+                        {% else %}
+                            {% set moyenne = '-' %}
                         {% endif %}
                         <li><p>Moyenne : {{ moyenne }}</p></li>
                     {% endfor %}
