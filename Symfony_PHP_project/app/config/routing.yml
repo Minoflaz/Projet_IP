@@ -118,3 +118,6 @@ login_check:
 
 logout:
     path: /logout
+
+login:
+    path: /login
