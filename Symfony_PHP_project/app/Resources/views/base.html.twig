@@ -21,13 +21,10 @@
                 {% else %}
 
 
-                    {% set roleUser = 0 %}
-                    {% for role in app.user.role %}
-                        {% set roleUser = roleUser + 1 %}
-                    {% endfor %}
+
             
 
-                    <a href="#">{{ roleUser }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
+                    <a href="#">{{ app.user.username }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
 
                 {% endif %}
 
@@ -50,7 +47,7 @@
                         </li>
                         <li><a href="{{ path('exercises')}}">Exercices</a></li>
 
-                        {% if app.user.role[0] == "ROLE_PROF" %}
+                        {% if is_granted('ROLE_PROF') %}
                             <li><a href="{{ path('progressionEleves')}}">Progression</a></li>
                         {% else %}
                             <li><a href="{{ path('progression')}}">Progression</a></li>
