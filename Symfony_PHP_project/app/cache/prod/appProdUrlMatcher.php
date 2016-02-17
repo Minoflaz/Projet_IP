@@ -152,6 +152,19 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'progressionCours')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::progressionCoursAction',));
             }
 
+            if (0 === strpos($pathinfo, '/progressionEleve')) {
+                // progressionEleves
+                if ($pathinfo === '/progressionEleves') {
+                    return array (  '_controller' => 'IPBundle\\Controller\\DefaultController::progressionElevesAction',  '_route' => 'progressionEleves',);
+                }
+
+                // progressionEleve
+                if (0 === strpos($pathinfo, '/progressionEleve\\') && preg_match('#^/progressionEleve\\\\(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'progressionEleve')), array (  '_controller' => 'IPBundle\\Controller\\DefaultController::progressionEleveAction',));
+                }
+
+            }
+
         }
 
         // showChapitre
@@ -178,6 +191,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             // logout
             if ($pathinfo === '/logout') {
                 return array('_route' => 'logout');
+            }
+
+            // login
+            if ($pathinfo === '/login') {
+                return array('_route' => 'login');
             }
 
         }

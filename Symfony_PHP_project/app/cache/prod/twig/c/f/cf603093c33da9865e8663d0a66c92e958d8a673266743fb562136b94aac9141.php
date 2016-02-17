@@ -28,28 +28,16 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
         echo "        <title>IP13</title>
     </head>
     <body>
-        ";
-        // line 11
-        if ((isset($context["error"]) ? $context["error"] : null)) {
-            // line 12
-            echo "            <div>";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageKey", array()), $this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageData", array()), "security"), "html", null, true);
-            echo "</div>
-        ";
-        }
-        // line 13
-        echo " 
-
         <div id=\"container\">
             
             <header>
                 ";
-        // line 18
+        // line 14
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
         } else {
             // asset "f7a7b5e"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7a7b5e") : $this->env->getExtension('asset')->getAssetUrl("images/f7a7b5e");
-            // line 19
+            // line 15
             echo "                    <a href=\"";
             echo $this->env->getExtension('routing')->getPath("index");
             echo "\"><img id=\"logo\" src=\"";
@@ -58,7 +46,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
                 ";
         }
         unset($context["asset_url"]);
-        // line 21
+        // line 17
         echo "            </header>
 
             <div id=\"content\">
@@ -67,7 +55,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
                     <h1>Consolide tes bases en Reseau avec IP13</h1>
 
                     <form id=\"identification\" action=\"";
-        // line 28
+        // line 24
         echo $this->env->getExtension('routing')->getPath("login_check");
         echo "\" method=\"post\">
                         <table>
@@ -78,7 +66,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
                                 
                                 <td class=\"fields\">
                                     <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 36
+        // line 32
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : null), "html", null, true);
         echo "\" />
                                 </td>
@@ -90,11 +78,23 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
                                     <input type=\"password\" id=\"password\" name=\"_password\" />
                                 </td>
                                 ";
-        // line 49
+        // line 45
         echo "                                    <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
 
                             </tr>
                         </table>
+
+                        ";
+        // line 50
+        if ((isset($context["error"]) ? $context["error"] : null)) {
+            // line 51
+            echo "                            <div>";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageKey", array()), $this->getAttribute((isset($context["error"]) ? $context["error"] : null), "messageData", array()), "security"), "html", null, true);
+            echo "</div>
+                        ";
+        }
+        // line 53
+        echo "
 
                         <p id=\"btns\">
                             <input id=\"btnConnexion\" type=\"submit\" value=\"Connexion\"/>
@@ -130,7 +130,7 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
 
     public function getDebugInfo()
     {
-        return array (  115 => 6,  112 => 5,  94 => 49,  82 => 36,  71 => 28,  62 => 21,  53 => 19,  48 => 18,  41 => 13,  35 => 12,  33 => 11,  28 => 8,  26 => 5,  20 => 1,);
+        return array (  115 => 6,  112 => 5,  97 => 53,  91 => 51,  89 => 50,  82 => 45,  70 => 32,  59 => 24,  50 => 17,  41 => 15,  36 => 14,  28 => 8,  26 => 5,  20 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -143,10 +143,6 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
 /*         <title>IP13</title>*/
 /*     </head>*/
 /*     <body>*/
-/*         {% if error %}*/
-/*             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>*/
-/*         {% endif %} */
-/* */
 /*         <div id="container">*/
 /*             */
 /*             <header>*/
@@ -185,6 +181,11 @@ class __TwigTemplate_cf7cf270c50bfc888a368d95c05a1647d5b6a9102713f9185277328c6d2
 /* */
 /*                             </tr>*/
 /*                         </table>*/
+/* */
+/*                         {% if error %}*/
+/*                             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>*/
+/*                         {% endif %}*/
+/* */
 /* */
 /*                         <p id="btns">*/
 /*                             <input id="btnConnexion" type="submit" value="Connexion"/>*/

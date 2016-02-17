@@ -42,17 +42,19 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
         // line 19
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()) == null)) {
             // line 20
-            echo "                    <a href=\"login\">Connexion</a> | <a href=\"";
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("login");
+            echo "\">Connexion</a> | <a href=\"";
             echo $this->env->getExtension('routing')->getPath("newEleve");
             echo "\">Inscription</a>
                 ";
         } else {
             // line 22
-            echo "                    <a href=\"";
-            echo $this->env->getExtension('routing')->getPath("compte");
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "nom", array()), "html", null, true);
-            echo "</a> | <a href=\"logout\">Deconnexion</a>
+            echo "                    <a href=\"#\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
+            echo "</a> | <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("logout");
+            echo "\">Deconnexion</a>
                 ";
         }
         // line 24
@@ -86,23 +88,38 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
         // line 42
         echo $this->env->getExtension('routing')->getPath("exercises");
         echo "\">Exercices</a></li>
-                        <li><a href=\"";
-        // line 43
-        echo $this->env->getExtension('routing')->getPath("progression");
-        echo "\">Progression</a></li>
+
+                        ";
+        // line 44
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "role", array()), 0, array(), "array") == "ROLE_PROF")) {
+            // line 45
+            echo "                            <li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("progressionEleves");
+            echo "\">Progression</a></li>
+                        ";
+        } else {
+            // line 47
+            echo "                            <li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("progression");
+            echo "\">Progression</a></li>
+                        ";
+        }
+        // line 49
+        echo "
                         <li><a href=\"#\">Forum</a></li>
                     </ul>
                 </nav>
             </header>
 
             <div id=\"content\">";
-        // line 49
+        // line 55
         $this->displayBlock('content', $context, $blocks);
         echo "</div>
 
         </div>
     </body>
-</html>";
+</html>
+";
     }
 
     // line 6
@@ -137,7 +154,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
         echo "                ";
     }
 
-    // line 49
+    // line 55
     public function block_content($context, array $blocks = array())
     {
     }
@@ -154,7 +171,7 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 
     public function getDebugInfo()
     {
-        return array (  141 => 49,  137 => 32,  128 => 30,  122 => 29,  119 => 28,  112 => 7,  109 => 6,  100 => 49,  91 => 43,  87 => 42,  81 => 39,  77 => 38,  73 => 37,  67 => 33,  65 => 28,  59 => 24,  51 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
+        return array (  158 => 55,  154 => 32,  145 => 30,  139 => 29,  136 => 28,  129 => 7,  126 => 6,  116 => 55,  108 => 49,  102 => 47,  96 => 45,  94 => 44,  89 => 42,  83 => 39,  79 => 38,  75 => 37,  69 => 33,  67 => 28,  61 => 24,  53 => 22,  45 => 20,  43 => 19,  31 => 9,  29 => 6,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -176,9 +193,9 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /*             <div id="account">*/
 /* */
 /*                 {% if app.user == null %}*/
-/*                     <a href="login">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>*/
+/*                     <a href="{{ path('login')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>*/
 /*                 {% else %}*/
-/*                     <a href="{{ path('compte')}}">{{ app.user.nom }}</a> | <a href="logout">Deconnexion</a>*/
+/*                     <a href="#">{{ app.user.username }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>*/
 /*                 {% endif %}*/
 /* */
 /*             </div>*/
@@ -199,7 +216,13 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /*                             </ul>*/
 /*                         </li>*/
 /*                         <li><a href="{{ path('exercises')}}">Exercices</a></li>*/
-/*                         <li><a href="{{ path('progression')}}">Progression</a></li>*/
+/* */
+/*                         {% if app.user.role[0] == "ROLE_PROF" %}*/
+/*                             <li><a href="{{ path('progressionEleves')}}">Progression</a></li>*/
+/*                         {% else %}*/
+/*                             <li><a href="{{ path('progression')}}">Progression</a></li>*/
+/*                         {% endif %}*/
+/* */
 /*                         <li><a href="#">Forum</a></li>*/
 /*                     </ul>*/
 /*                 </nav>*/
@@ -210,3 +233,4 @@ class __TwigTemplate_6dbe22361074fb0ea305c879fe2ad959fd040c88eb935fb40ccd4ca8450
 /*         </div>*/
 /*     </body>*/
 /* </html>*/
+/* */

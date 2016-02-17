@@ -1,6 +1,6 @@
 <?php
 
-// IPBundle:Exercices:exoMask.html.twig
+// IPBundle:Progression:ProgressionEleve.html.twig
 return array (
   'f7a7b5e' => 
   array (
@@ -12,7 +12,7 @@ return array (
     ),
     2 => 
     array (
-      'output' => '_controller/images/f7a7b5e',
+      'output' => 'images/f7a7b5e',
       'name' => 'f7a7b5e',
       'debug' => NULL,
       'combine' => NULL,
