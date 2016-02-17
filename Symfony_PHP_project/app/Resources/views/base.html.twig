@@ -20,9 +20,12 @@
                     <a href="{{ path('login')}}">Connexion</a> | <a href="{{ path('newEleve')}}">Inscription</a>
                 {% else %}
 
+                    {% for role in app.user.role %}
+                        {% set roleUser = role %}
+                    {% endfor %}
             
 
-                    <a href="#">{{ app.user.role[0] }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
+                    <a href="#">{{ roleUser }}</a> | <a href="{{ path('logout')}}">Deconnexion</a>
 
                 {% endif %}
 
