@@ -113,8 +113,8 @@ class CreateController extends Controller
      */
     public function newEleveAction(Request $request) {
 
-        $eleve = new Eleve();
-        $form = $this->createFormBuilder($eleve)
+        $eleve = new Eleve();  // Création de l'objet Eleve
+        $form = $this->createFormBuilder($eleve)  // Ajout des attributs de l'ojet Eleve aux champs du formulaire
             ->add('nom','text')
             ->add('prenom','text')
             ->add('username','text')
@@ -124,16 +124,17 @@ class CreateController extends Controller
             ->add('save','submit')
             ->getForm();
 
-        $form->handleRequest($request);
+        $form->handleRequest($request);  // Gestion automatique de la requête reçue ( La requête POST dans notre cas )
 
-        if($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $encoder = $this->container->get('security.password_encoder');
+        if($form->isValid()) {  // Vérification de la validité du formulaire
+            $em = $this->getDoctrine()->getManager();  //Manager de la base de données
+            $encoder = $this->container->get('security.password_encoder');  // Encodage du mot de passe
             $encoded = $encoder->encodePassword($eleve, $eleve->getPassword());
             $eleve->setPassword($encoded);
-            $em->persist($eleve);
+            $em->persist($eleve); // Persistance de l'éleve dans la base de donnée
             $em->flush();
 
+            // Rendu de la page d'affichage d'inscription réussie
             return $this->render('IPBundle:Inscription:SubscriptionSuccess.html.twig',array(
                 'user'=> $this->getUser(),
             ));
@@ -143,7 +144,7 @@ class CreateController extends Controller
 
         }
 
-
+        // Rendu de la page d'affichage du formulaire avec l'envoi a cette page de l'utilisateur actuel de la page
         return $this->render('IPBundle:Inscription:inscription.html.twig',array(
             'form' => $form->createView(),
         ));

@@ -47,6 +47,16 @@
                         </li>
                         <li><a href="{{ path('exercises')}}">Exercices</a></li>
 
+                        <!-- Ici avec Twig on peut effectuer des vérifications très simplifiées
+
+                             Twig est utilisé dans du code HTML avec les doubles accolades.
+
+                             On peut voir ici l'utilisation de la méthode Twig is_granted()
+                             qui va simplement vérifier le rôle de l'utilisateur courant
+                             afin de déterminer si c'est un éleve ou un professeur.
+
+                             les redirections vers une url sont fait avec la méthode path().
+                        -->
                         {% if is_granted('ROLE_PROF') %}
                             <li><a href="{{ path('progressionEleves')}}">Progression</a></li>
                         {% else %}

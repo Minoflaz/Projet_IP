@@ -1,6 +1,6 @@
 IPBundle\Entity\Eleve:
     type: entity
-    oneToMany: 
+    oneToMany:
         notes:
             targetEntity: IPBundle\Entity\Note
             mappedBy: eleve
