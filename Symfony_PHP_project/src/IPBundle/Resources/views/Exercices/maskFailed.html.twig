@@ -13,7 +13,10 @@
             <article>
                 <br>
                 <p>Ce n'est pas le bon masque</p>
-                <p>En effet le bon masque était : {{ mask.bytes }}</p>
+                <details>
+                    <summary>Correction</summary>
+                    <p>En effet le bon masque était : {{ mask.bytes }}</p>
+                </details>
                 <br>
                 <p><a href="{{ path('exoMask')}}">Réessayer l'exercice</a></p>
 

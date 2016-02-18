@@ -13,8 +13,10 @@
             <article>
                 <br>
                 <p>Ce n'est pas la bonne réponse !</p>
-                <p> IP de base : {{ ip }} </p>
-                <p>IP rentrée : {{ ipFourStr.bytes }}</p>
+                <details>
+                    <summary>Correction</summary>
+                    <p> En effet la bonne conversion donne : {{ ip }} </p>
+                </details>
                 <br>
                 <p><a href="{{ path('convert')}}">Réessayer l'exercice</a></p>
             </article>
