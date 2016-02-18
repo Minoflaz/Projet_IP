@@ -14,7 +14,11 @@
             <article>
                 <br>
                 <p>Ce n'est pas la bonne classe ! </p>
-                <p>En effet la bonne classe était {{ ipClass }} Pour l'adresse {{ ip.bytes }}</p>
+                <summary>
+                    <details>
+                        <p>En effet la bonne classe était {{ ipClass }} Pour l'adresse {{ ip.bytes }}</p>
+                    </details>
+                </summary>
                 <br>
 
                 <p><a href="{{ path('exoClass')}}">Réessayer l'exercice</a></p>
