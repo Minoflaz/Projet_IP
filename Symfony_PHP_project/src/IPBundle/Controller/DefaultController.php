@@ -34,7 +34,7 @@ class DefaultController extends Controller
 
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
-        $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findAll();
+        $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findBy([], ['id' => 'ASC']);
 
 
 
