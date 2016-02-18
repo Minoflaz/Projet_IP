@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+    {% block logo %}
+        <a href="{{ path('index')}}"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>
+    {% endblock %}
+
+    {% block content %}
+
+        <aside id = "chapter">
+            <h1> ELEVES </h1>
+            <ul>
+                {% for eleve in eleves %}
+                    <li class="chapterName"><a href="{{ path('progressionEleve', {"id": eleve.id}) }}">{{ eleve.username }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+    {% endblock %}

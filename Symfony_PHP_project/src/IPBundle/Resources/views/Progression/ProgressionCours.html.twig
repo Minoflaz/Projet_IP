@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 
     {% block logo %}
-        <a href="{{ path('index')}}"><img id="logo" src="../img/logo.png" alt="IP13" height="60" width="60"></a><span>IP13</span>
+        <a href="{{ path('index')}}"><img id="logo" src="{{asset('/img/logo.png')}}" alt="IP13" height="60" width="60"></a><span>IP13</span>
     {% endblock %}
 
     {% block content %}
@@ -35,9 +35,9 @@
                             {% endif %}
                         {% endfor %}
                     </ul>
-
-                    {% set moyenne = moyenne/nbrNote  %}
-
+                    {% if nbrNote != 0 %}
+                        {% set moyenne = moyenne/nbrNote  %}
+                    {% endif %}
                     <p>Moyenne : {{ moyenne }}</p>
 
                     <!-- <div style="width:100%">

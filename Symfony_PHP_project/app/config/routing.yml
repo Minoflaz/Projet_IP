@@ -2,16 +2,16 @@ ip:
     resource: "@IPBundle/Resources/config/routing.yml"
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
 
-_welcome:
-    path: /
-    defaults: {_controller : IPBundle:Default:index}
+
+
+
+
+  
+
 
 index:
-    path: /index
+    path: /
     defaults: {_controller : IPBundle:Default:index}
 
 addNoteEleve:
@@ -90,6 +90,14 @@ progressionCours:
     path: /progressionCours/{id}
     defaults: {_controller: IPBundle:Default:progressionCours}
 
+progressionEleves:
+    path: /progressionEleves
+    defaults: {_controller: IPBundle:Default:progressionEleves}
+
+progressionEleve:
+    path: /progressionEleve\{id}
+    defaults: {_controller: IPBundle:Default:progressionEleve}
+
 showChapitre:
     path: /showChapitre/{id}
     defaults: {_controller: IPBundle:Default:showChapitre}
@@ -110,3 +118,6 @@ login_check:
 
 logout:
     path: /logout
+
+login:
+    path: /login

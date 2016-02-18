@@ -24,12 +24,14 @@ abstract class Adress
         return $this;
     }
 
-    public function setAlea() {
+    public function setAlea($maxClass) {
 
         $alea = array();
 
         for($i=0;$i<4;$i++) {
-            $alea[] = rand(0,255);
+            if($i==0)
+                $alea[] = rand(1,$maxClass);
+            $alea[] = rand(1,253);
         }
 
         $this->init($alea);
@@ -126,6 +128,16 @@ abstract class Adress
     }
 
     /**
+     * Get the wanted byte in hexa
+     * @param $index
+     * @return string
+     */
+    public function getByteHex($index) {
+
+        return dechex(intval($this->getByte($index)));
+    }
+
+    /**
      * Get the Ip Adress in binary
      * @return string
      */
@@ -140,6 +152,24 @@ abstract class Adress
                 $strBin.=$this->getByteBin($i);
         }
         return $strBin;
+    }
+
+    /**
+     * Get the Ip Adress in hexadecimal
+     * @return string
+     */
+    public function getBytesHex(){
+
+        $strHex = "";
+
+        for($i=0;$i<4;$i++) {
+            if($i<3)
+                $strHex.=$this->getByteHex($i).".";
+            else
+                $strHex.=$this->getByteHex($i);
+        }
+        return $strHex;
+
     }
 
     /**

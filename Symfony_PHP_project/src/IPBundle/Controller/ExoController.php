@@ -38,11 +38,11 @@ class ExoController extends Controller
 
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Class'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Classe'));
 
         if($cours == null) {
             $cours = new Cours();
-            $cours->setNom("Class");
+            $cours->setNom("Classe");
             $em->persist($cours);
             $em->flush();
         }
@@ -52,7 +52,7 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(250);
 
             $session->set('ip',$ipAdress->getBytes());
 
@@ -126,11 +126,11 @@ class ExoController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Mask'));
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneBy(array('nom' => 'Masque'));
 
         if($cours == null) {
             $cours = new Cours();
-            $cours->setNom("Mask");
+            $cours->setNom("Masque");
             $em->persist($cours);
             $em->flush();
         }
@@ -146,9 +146,9 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(191);
 
-            $nbSubNet = strval(rand(2,255));
+            $nbSubNet = strval(rand(2,80));
 
             $cookieIp = new Cookie('ip',$ipAdress->getBytes(),(time() + 3600 * 48));
 
@@ -261,7 +261,7 @@ class ExoController extends Controller
 
         else {
 
-            $ipAdress->setAlea();
+            $ipAdress->setAlea(253);
 
             $session->set('ip',$ipAdress->getBytes());
 
@@ -316,7 +316,7 @@ class ExoController extends Controller
         return $this->render('IPBundle:Exercices:convert.html.twig',array(
             'form' =>$form->createView(),
             'user' => $this->getUser(),
-            'ip' => $ipAdress->getBytesBin()
+            'ip' => $ipAdress->getBytesHex()
 
         ));
 
@@ -336,6 +336,7 @@ class ExoController extends Controller
         $routingTable = new RoutingTable();
         $routingTableLine = new RoutingTableLine();
 
+
         $this->denyAccessUnlessGranted('ROLE_USER', null, 'Unable to access this page!');
 
         $form = $this->createFormBuilder($routingTableLine)
@@ -347,11 +348,15 @@ class ExoController extends Controller
             ->add('save','submit')
             ->getForm();
 
+
+
         $form->handleRequest($request);
 
         if($form->isValid()) {
 
         }
+
+
 
 
         return $this->render('IPBundle:Exercices:testRoutingTable.html.twig',array(

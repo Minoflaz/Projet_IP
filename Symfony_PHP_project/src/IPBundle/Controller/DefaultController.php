@@ -31,9 +31,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
         $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
 
-        $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findAll();
+        $chapitres = $this->getDoctrine()->getRepository('IPBundle:Chapitre')->findBy([], ['id' => 'DESC']);
+
+
 
         return $this->render('IPBundle:Accueil:index.html.twig',array(
             'user' => $this->getUser(),
@@ -41,6 +44,18 @@ class DefaultController extends Controller
             'chapitres' => $chapitres
         ));
     }
+
+    /*
+    public function deleteCoursAction($coursName)
+    {
+        $cours = $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findOneByNom($coursName);
+
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->remove($cours);
+        $em->flush();
+
+        return new Response("Enlevé le cours");
+    }*/
 
     /**
      * Temporary account page
@@ -69,6 +84,7 @@ class DefaultController extends Controller
             'user' => $this->getUser(),
         ));
     }
+
 
     /**
      * Progression
@@ -105,6 +121,36 @@ class DefaultController extends Controller
             'user' => $this->getUser(),
             'cours' => $cours,
             'cour' => $cour
+        ));
+    }
+
+    public function progressionElevesAction() {
+
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
+
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
+
+        return $this->render('IPBundle:Progression:ProgressionEleves.html.twig',array(
+            'user' => $this->getUser(),
+            'eleves' => $eleves
+        ));
+    }
+
+    public function progressionEleveAction($id) {
+
+        $this->denyAccessUnlessGranted('ROLE_PROF', null, 'Unable to access this page!');
+
+        $eleves = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findAll();
+
+        $eleve = $this->getDoctrine()->getRepository('IPBundle:Eleve')->findOneById($id);
+
+        $cours = $this->getDoctrine()->getRepository('IPBundle:Cours')->findAll();
+
+        return $this->render('IPBundle:Progression:ProgressionEleve.html.twig',array(
+            'user' => $this->getUser(),
+            'eleves' => $eleves,
+            'cours' => $cours,
+            'eleveSelect' => $eleve
         ));
     }
 
