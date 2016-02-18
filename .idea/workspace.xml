@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f5451e-71a4-4d11-83ae-5beaaf9df3a4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/TwigBundle/views/Exception/error403.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/TwigBundle/views/Exception/error403.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Accueil/index.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Accueil/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Cours/showAllCours.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Cours/showAllCours.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig" />
     </list>
     <ignored path="Projet_IP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAllCours.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="showAllCours.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Cours/showAllCours.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17832167">
+            <state vertical-scroll-proportion="-3.9230769">
               <caret line="6" column="94" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5944056">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -156,7 +164,6 @@
         <option value="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/Exception/error403.html.twig" />
         <option value="$USER_HOME$/Alexis/Downloads/tableAlex.html" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/CreateController.php" />
-        <option value="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/config/doctrine/Eleve.orm.yml" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/web/style.css" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Exercices/classFailed.html.twig" />
@@ -166,6 +173,7 @@
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Accueil/index.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Cours/showAllCours.html.twig" />
         <option value="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/TwigBundle/views/Exception/error403.html.twig" />
+        <option value="$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -412,6 +420,10 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -432,18 +444,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TwigBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exception" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -841,13 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6179002">
-          <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/web/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.576923">
@@ -922,8 +915,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Resources/views/Cours/showAllCours.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17832167">
+        <state vertical-scroll-proportion="-3.9230769">
           <caret line="6" column="94" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5944056">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>
       </provider>
