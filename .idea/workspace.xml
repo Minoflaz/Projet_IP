@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.55593807">
-              <caret line="36" column="107" selection-start-line="36" selection-start-column="107" selection-end-line="36" selection-end-column="107" />
+              <caret line="36" column="104" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -799,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/Symfony_PHP_project/src/IPBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55593807">
-          <caret line="36" column="107" selection-start-line="36" selection-start-column="107" selection-end-line="36" selection-end-column="107" />
+          <caret line="36" column="104" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
           <folding />
         </state>
       </provider>
